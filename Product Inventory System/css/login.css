@@ -1,0 +1,103 @@
+body {
+    background: rgb(182, 176, 176);
+}
+
+.log {
+    background: white;
+    text-align: center;
+    width: 300px;
+    margin: auto;
+    margin-top: auto;
+    border-radius: 10%;
+    transform: translateY(30%);
+    box-shadow: 0px 5px 6px 8px #888888;
+}
+
+.log::after {
+    clear: both;
+    display: block;
+}
+
+input {
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    background: rgb(189, 188, 188);
+    border: 0px;
+    transition: all 0.4s ease-in;
+}
+
+input::placeholder {
+    color: rgb(87, 85, 85);
+}
+
+input:hover {
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    color: rgb(19, 18, 18);
+    background: rgb(168, 167, 167);
+    transition: all 0.4s ease-in;
+}
+
+.center {
+    display: flex;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background: rgb(226, 226, 226);
+}
+
+section {
+    padding-bottom: 50px;
+}
+
+button {
+    background: rgb(76, 76, 230);
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: 0px;
+    transition: all 0.2s ease-in;
+}
+
+button:hover {
+    background: rgb(37, 37, 158);
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: 0px;
+    transition: all 0.2s ease-in;
+}
+
+a:hover {
+    color: black;
+    transition: all 0.2s ease-in;
+}
+
+footer {
+    background: rgb(36, 35, 35);
+    color: white;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
