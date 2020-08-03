@@ -7,19 +7,30 @@ header {
     background: rgb(39, 38, 38);
     overflow: hidden;
     color: azure;
+    /* position: fixed;
+    left: 0;
+    right: 0;
+    top: 0; */
 }
 
-.element{
+header:after {
+    content: "";
+    display:inline-flexbox;
+    clear: both;
+}
+
+.element {
     float: left;
     padding-left: 2%;
     margin-left: 5%;
 }
-.tables{
+
+.tables {
     float: right;
-    margin-right:2%;
+    margin-right: 2%;
 }
 
-td{
+td {
     width: 40%;
     text-align: center;
 }
@@ -32,7 +43,7 @@ td{
     background: rgb(226, 226, 226);
 }
 
-section{
+section {
     float: left;
     display: flexbox;
     width: 32.3%;
@@ -42,14 +53,19 @@ section{
     background: white;
 }
 
-.row:after{
+.row:after {
     content: "";
     display: table;
     clear: both;
 }
+
 footer {
     background: rgb(36, 35, 35);
     color: white;
     overflow: hidden;
     text-align: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }

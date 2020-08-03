@@ -61,6 +61,50 @@
                 vAxis: { scaleType: 'mirrorLog' }
             };
 
+            var option3 = {
+                title: 'Country Populations',
+                legend: { position: 'none' },
+                colors: ['#e7711c'],
+                histogram: { bucketSize: 10000000 }
+            };
+
+            var option4 = {
+                title: 'Approximating Normal Distribution',
+                legend: { position: 'none' },
+                colors: ['#4285F4'],
+
+                chartArea: { width: 405 },
+                hAxis: {
+                    ticks: [-1, -0.75, -0.5, -0.25, 0, 0.25, 0.5, 0.75, 1]
+                },
+                bar: { gap: 0 },
+
+                histogram: {
+                    bucketSize: 0.01,
+                    maxNumBuckets: 400,
+                    minValue: -1,
+                    maxValue: 1
+                }
+            };
+
+            var data = google.visualization.arrayToDataTable([
+                ['Quarks', 'Leptons', 'Gauge Bosons', 'Scalar Bosons'],
+                [2 / 3, -1, 0, 0],
+                [2 / 3, -1, 0, null],
+                [2 / 3, -1, 0, null],
+                [-1 / 3, 0, 1, null],
+                [-1 / 3, 0, -1, null],
+                [-1 / 3, 0, null, null],
+                [-1 / 3, 0, null, null]
+            ]);
+
+            var option5 = {
+                title: 'Charges of subatomic particles',
+                legend: { position: 'top', maxLines: 2 },
+                colors: ['#5C3292', '#1A8763', '#871B47', '#999999'],
+                interpolateNulls: false,
+            };
+
             var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
             chart.draw(data, options);
 
@@ -69,7 +113,17 @@
 
             var chart = new google.visualization.Histogram(document.getElementById('chart_d'));
             chart.draw(data, option2);
+
+            var chart = new google.visualization.Histogram(document.getElementById('chart'));
+            chart.draw(data, option3);
+
+            var chart = new google.visualization.Histogram(document.getElementById('char'));
+            chart.draw(data, option4);
+
+            var chart = new google.visualization.Histogram(document.getElementById('cha'));
+            chart.draw(data, option5);
         }
+
     </script>
 </head>
 
@@ -105,12 +159,15 @@
             </section>
             <section id="stats">
                 <p>Monthly Statistics</p>
+                <div id="chart"></div>
             </section>
             <section id="sub">
                 <p>Sub-Category</p>
+                <div id="char"></div>
             </section>
             <section id="inventory">
                 <p>Inventory Management</p>
+                <div id="cha"></div>
             </section>
         </div>
     </div>
