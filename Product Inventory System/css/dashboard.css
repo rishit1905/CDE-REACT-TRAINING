@@ -39,7 +39,7 @@ section{
     height: fit-content;
     margin: 0.5%;
     text-align: center;
-    background: whitesmoke;
+    background: white;
 }
 
 .row:after{
