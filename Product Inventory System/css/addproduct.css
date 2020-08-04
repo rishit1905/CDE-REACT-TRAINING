@@ -68,6 +68,16 @@ form{
     padding: 5px;
     background: white;
 }
+.columns{
+    margin: 3%;
+}
+
+fieldset legend{
+    font-size: x-large;
+}
+fieldset label{
+    padding: 3px;
+}
 
 footer {
     background: rgb(36, 35, 35);
