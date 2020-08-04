@@ -7,7 +7,6 @@ class Login extends React.Component {
     render() { 
         return ( 
             <div>
-                Login is fun
                 <Signup></Signup>
                 <HeaderFooter></HeaderFooter>
             </div>
