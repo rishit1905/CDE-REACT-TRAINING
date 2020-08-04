@@ -30,7 +30,7 @@ header:after {
     margin-right: 2%;
 }
 
-td {
+#menu td {
     width: 40%;
     text-align: center;
 }
@@ -43,15 +43,7 @@ td {
     background: rgb(226, 226, 226);
 }
 
-section {
-    float: left;
-    display: flexbox;
-    width: 32.3%;
-    height: fit-content;
-    margin: 0.5%;
-    text-align: center;
-    background: white;
-}
+
 
 section:hover{
     cursor: pointer;
@@ -63,7 +55,22 @@ section:hover{
     clear: both;
 }
 
+#product{
+    width: 100%;
+    text-align: center;
+}
 
+#product thead, #product tbody{
+    background: white;
+}
+
+#product td, #product th{
+    padding: 30px;
+}
+
+#product td:hover{
+    cursor: pointer;
+}
 
 footer {
     background: rgb(36, 35, 35);
