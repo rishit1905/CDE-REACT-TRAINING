@@ -65,11 +65,11 @@ section:hover{
 
 form{
     margin: 0.5%;
-    padding: 5px;
+    padding: 1%;
     background: white;
 }
 .columns{
-    margin: 3%;
+    margin: 2%;
 }
 
 fieldset legend{
@@ -77,6 +77,10 @@ fieldset legend{
 }
 fieldset label{
     padding: 3px;
+}
+
+form input{
+    width: 100%;
 }
 
 footer {
