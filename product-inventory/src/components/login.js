@@ -1,17 +1,20 @@
 import React from 'react';
-import Signup from './signup';
 import HeaderFooter from './headerfooter';
+import ContentComponent from './contentcomponent';
+import { Switch, Route } from 'react-router-dom';
+import Signup from './signup';
+
+// import './css/login.css';
 
 class Login extends React.Component {
-    state = {  }
-    render() { 
-        return ( 
-            <div>
-                <Signup></Signup>
-                <HeaderFooter></HeaderFooter>
-            </div>
-         );
+    state = {}
+    render() {
+        return (
+            <div>Login</div>
+
+
+        );
     }
 }
- 
+
 export default Login;

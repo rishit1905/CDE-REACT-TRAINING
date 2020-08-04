@@ -2,12 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { HashRouter } from 'react-router-dom';
-import Login from './components/login';
-import Signup from './components/signup';
+import RootComponent from './components/rootcomponent';
 
 ReactDOM.render(
     <HashRouter>
-      <Login></Login>
+      <RootComponent></RootComponent>
     </HashRouter>,
   document.getElementById('root')
 );

@@ -1,0 +1,95 @@
+body {
+    background: rgb(182, 176, 176);
+    margin: 0;
+}
+
+header {
+    background: rgb(39, 38, 38);
+    overflow: hidden;
+    color: azure;
+    /* position: fixed;
+    left: 0;
+    right: 0;
+    top: 0; */
+}
+
+header:after {
+    content: "";
+    display:inline-flexbox;
+    clear: both;
+}
+
+.element {
+    float: left;
+    padding-left: 2%;
+    margin-left: 5%;
+}
+
+.tables {
+    float: right;
+    margin-right: 2%;
+}
+
+td {
+    width: 40%;
+    text-align: center;
+}
+
+.profile {
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    background: rgb(226, 226, 226);
+}
+
+section {
+    float: left;
+    display: flexbox;
+    width: 32.3%;
+    height: fit-content;
+    margin: 0.5%;
+    text-align: center;
+    background: white;
+}
+
+section:hover{
+    cursor: pointer;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+form{
+    margin: 0.5%;
+    padding: 1%;
+    background: white;
+}
+.columns{
+    margin: 2%;
+}
+
+fieldset legend{
+    font-size: x-large;
+}
+fieldset label{
+    padding: 3px;
+}
+
+form input{
+    width: 100%;
+}
+
+footer {
+    background: rgb(36, 35, 35);
+    color: white;
+    overflow: hidden;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
