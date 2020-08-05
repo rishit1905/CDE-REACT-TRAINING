@@ -9,7 +9,7 @@
     box-shadow: 0px 5px 6px 8px #888888;
 }
 
-.log:after {
+.log::after {
     clear: both;
     display: block;
 }
@@ -23,7 +23,7 @@ input {
     transition: all 0.4s ease-in;
 }
 
-input:placeholder {
+input::placeholder {
     color: rgb(87, 85, 85);
 }
 
@@ -36,12 +36,13 @@ input:hover {
     transition: all 0.4s ease-in;
 }
 
-/* .center {
-    display: flex;
+.center {
+    display: block;
     margin-top: 12px;
+    margin-bottom: 6px;
     justify-content: center;
     align-items: center;
-} */
+}
 
 img {
     width: 100px;
@@ -51,10 +52,6 @@ img {
     margin-bottom: 20px;
     border-radius: 50%;
     background: rgb(226, 226, 226);
-}
-
-section {
-    padding-bottom: 50px;
 }
 
 button {
@@ -84,15 +81,4 @@ button:hover {
 #signup:hover {
     color: black;
     transition: all 0.2s ease-in;
-}
-
-footer {
-    background: rgb(36, 35, 35);
-    color: white;
-    display: block;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
 }

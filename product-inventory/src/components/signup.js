@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './signup.css';
 
 
@@ -10,7 +10,7 @@ class Signup extends React.Component {
             <div>
                 <div class="log">
                     <figure>
-                        <input class="profile" type="image" src="./image/profile-icon-9.png"  alt="./image/profile-icon-9.png"/>
+                        <input class="profile" type="image" src="./image/profile-icon-9.png" />
                         <figcaption>ADD PHOTO</figcaption>
                     </figure>
 
@@ -24,10 +24,6 @@ class Signup extends React.Component {
 
                     </form>
                 </div>
-
-                <footer>
-                    <p>Copyright &copy; Rishabh</p>
-                </footer>
             </div>
 
         );

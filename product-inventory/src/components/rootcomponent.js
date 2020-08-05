@@ -1,7 +1,4 @@
 import React from 'react';
-import Login from './login';
-import { Switch, Route } from 'react-router-dom';
-import Signup from './signup';
 import HeaderFooter from './headerfooter';
 import ContentComponent from './contentcomponent';
 
