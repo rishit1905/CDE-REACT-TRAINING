@@ -12,7 +12,7 @@ class Login extends React.Component {
                     <form>
                         <input type="text" placeholder="Username" required /><br />
                         <input type="text" placeholder="Password" required /><br />
-                        <Link to="/dashboard" class="center">
+                        <Link to="/dashboard">
                             <button>Login</button>
                         </Link>
                         <section>
