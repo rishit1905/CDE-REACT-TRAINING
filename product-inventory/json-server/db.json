@@ -32,43 +32,23 @@
     },
     {
       "thumbnailUrl": "https://www.domain.com/images/heh-9133_600x600.png",
-      "id": 16,
       "name": "On Cloud Nine Pillow",
-      "brand": "FabDecor",
+      "brand": "Fab",
       "description": "Sociosqu facilisis duis ...",
       "category": "Home>Home Decor>Pillows|Back In Stock",
       "price": 24.99,
-      "stock": 200
+      "stock": 200,
+      "id": 16
     },
     {
       "thumbnailUrl": "https://www.domain.com/images/heh-9133_600x600.png",
-      "id": 17,
       "name": "On Cloud Nine Pillow",
       "brand": "FabDecor",
       "description": "Sociosqu facilisis duis ...",
       "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
-      "stock": 200
-    },
-    {
-      "thumbnailUrl": "https://www.domain.com/images/heh-9133_600x600.png",
-      "id": 18,
-      "name": "On Cloud Nine Pillow",
-      "brand": "FabDecor",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
-      "stock": 200
-    },
-    {
-      "thumbnailUrl": "https://www.domain.com/images/heh-9133_600x600.png",
-      "id": 19,
-      "name": "On Cloud Nine Pillow",
-      "brand": "FabDecor",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
-      "stock": 200
+      "price": "24",
+      "stock": 200,
+      "id": 18
     },
     {
       "thumbnailUrl": "https://www.domain.com/images/heh-9133_600x600.png",
@@ -82,13 +62,13 @@
     },
     {
       "thumbnailUrl": "https://www.domain.com/images/heh-9133_600x600.png",
-      "id": 21,
       "name": "On Cloud Nine Pillow",
       "brand": "FabDecor",
       "description": "Sociosqu facilisis duis ...",
       "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
-      "stock": 200
+      "price": "24",
+      "stock": 200,
+      "id": 21
     },
     {
       "thumbnailUrl": "https://www.domain.com/images/heh-9133_600x600.png",
@@ -359,6 +339,26 @@
       "price": 0,
       "stock": 0,
       "id": 48
+    },
+    {
+      "thumbnailUrl": "",
+      "name": "",
+      "brand": "",
+      "description": "",
+      "category": "",
+      "price": 0,
+      "stock": 0,
+      "id": 49
+    },
+    {
+      "thumbnailUrl": "",
+      "name": "",
+      "brand": "",
+      "description": "",
+      "category": "",
+      "price": 0,
+      "stock": 0,
+      "id": 50
     }
   ]
 }
