@@ -1,16 +1,34 @@
 import React from 'react';
+import { confirmAlert } from 'react-confirm-alert'; 
+import 'react-confirm-alert/src/react-confirm-alert.css';
 
 class ProductDetail extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props)
-        this.state={
+        this.state = {
 
         }
     }
 
-    delCurrentProduct=()=>{
-        console.log("delete product with id: "+this.props.id)
-        this.props.delete(this.props.id)
+    delCurrentProduct = () => {
+        confirmAlert({
+            customUI: ({ onClose }) => {
+                return (
+                    <div className="custom-ui">
+                        <h1>Are you sure ?</h1>
+                        <p>You want to delete this product?</p>
+                        <button onClick={onClose}>No</button>
+                        &nbsp;
+                        <button onClick={() => {
+                            console.log("delete product with id: " + this.props.id)
+                            this.props.delete(this.props.id)
+                            onClose()
+                        }}>Yes, Delete It</button>
+                    </div>
+                )
+            }
+        })
+
     }
     render() {
         return (
@@ -23,6 +41,7 @@ class ProductDetail extends React.Component {
                 <td>{this.props.category}</td>
                 <td>{this.props.price}</td>
                 <td>{this.props.stock}</td>
+                <td><button onClick={this.updCurrentProduct}>Update</button></td>
                 <td><button onClick={this.delCurrentProduct}>Delete</button></td>
             </tr>
         );

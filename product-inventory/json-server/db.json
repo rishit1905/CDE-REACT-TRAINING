@@ -2,16 +2,6 @@
   "products": [
     {
       "thumbnailUrl": "https://www.domain.com/images/heh-9133_600x600.png",
-      "id": 1,
-      "name": "On Cloud Nine Pillow",
-      "brand": "FabDecor",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
-      "stock": 200
-    },
-    {
-      "thumbnailUrl": "https://www.domain.com/images/heh-9133_600x600.png",
       "id": 3,
       "name": "On Cloud Nine Pillow",
       "brand": "FabDecor",
@@ -52,26 +42,6 @@
     },
     {
       "thumbnailUrl": "https://www.domain.com/images/heh-9133_600x600.png",
-      "id": 9,
-      "name": "On Cloud Nine Pillow",
-      "brand": "FabDecor",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
-      "stock": 200
-    },
-    {
-      "thumbnailUrl": "https://www.domain.com/images/heh-9133_600x600.png",
-      "id": 10,
-      "name": "On Cloud Nine Pillow",
-      "brand": "FabDecor",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
-      "stock": 200
-    },
-    {
-      "thumbnailUrl": "https://www.domain.com/images/heh-9133_600x600.png",
       "id": 11,
       "name": "On Cloud Nine Pillow",
       "brand": "FabDecor",
@@ -82,27 +52,7 @@
     },
     {
       "thumbnailUrl": "https://www.domain.com/images/heh-9133_600x600.png",
-      "id": 12,
-      "name": "On Cloud Nine Pillow",
-      "brand": "FabDecor",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
-      "stock": 200
-    },
-    {
-      "thumbnailUrl": "https://www.domain.com/images/heh-9133_600x600.png",
       "id": 13,
-      "name": "On Cloud Nine Pillow",
-      "brand": "FabDecor",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
-      "stock": 200
-    },
-    {
-      "thumbnailUrl": "https://www.domain.com/images/heh-9133_600x600.png",
-      "id": 14,
       "name": "On Cloud Nine Pillow",
       "brand": "FabDecor",
       "description": "Sociosqu facilisis duis ...",
