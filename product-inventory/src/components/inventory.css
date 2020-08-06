@@ -50,12 +50,12 @@ section:hover{
     clear: both;
 }
 
-#product{
+#product, Link{
     width: 100%;
     text-align: center;
 }
 
-#product thead, #product tbody{
+#product thead,#product tbody{
     background: white;
 }
 

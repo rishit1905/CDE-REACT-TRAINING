@@ -1,28 +1,13 @@
 import React from 'react';
 import Chart from "react-google-charts";
 import './dashboard.css';
+import { Link } from 'react-router-dom';
 
 class Dashboard extends React.Component {
     state = {}
     render() {
         return (
             <span>
-                <header>
-                    <div class="element">
-                        <p>DASHBOARD</p>
-                    </div>
-                    <div class="tables">
-                        <table>
-                            <tr>
-                                <td><input type="search" placeholder="Search" /></td>
-                                <td>
-                                    <p>Welcome User</p>
-                                </td>
-                                <td><img class="profile" src="./image/profile-icon-9.png" alt="./image/profile-icon-9.png" /></td>
-                            </tr>
-                        </table>
-                    </div>
-                </header>
                 <div class="row">
                     <div class="columns">
                         <section id="feature">
@@ -238,33 +223,32 @@ class Dashboard extends React.Component {
                                 rootProps={{ 'data-testid': '5' }}
                             />
                         </section>
-                        <section id="inventory" onclick="location.href='inventory.html'">
-                            <p>Inventory Management</p>
-                            <Chart
-                                chartType="PieChart"
-                                loader={<div>Loading Chart</div>}
-                                data={[
-                                    ['Task', 'Hours per Day'],
-                                    ['Work', 11],
-                                    ['Eat', 2],
-                                    ['Commute', 2],
-                                    ['Watch TV', 2],
-                                    ['Sleep', 7],
-                                ]}
-                                options={{
-                                    title: 'My Daily Activities',
-                                    // Just add this option
-                                    is3D: true,
-                                }}
-                                rootProps={{ 'data-testid': '2' }}
-                            />
-                        </section>
+                        <Link to="/inventory">
+                            <section id="inventory" onclick="location.href='inventory.html'">
+                                <p>Inventory Management</p>
+                                <Chart
+                                    chartType="PieChart"
+                                    loader={<div>Loading Chart</div>}
+                                    data={[
+                                        ['Task', 'Hours per Day'],
+                                        ['Work', 11],
+                                        ['Eat', 2],
+                                        ['Commute', 2],
+                                        ['Watch TV', 2],
+                                        ['Sleep', 7],
+                                    ]}
+                                    options={{
+                                        title: 'My Daily Activities',
+                                        // Just add this option
+                                        is3D: true,
+                                    }}
+                                    rootProps={{ 'data-testid': '2' }}
+                                />
+                            </section>
+                        </Link>
+
                     </div>
                 </div>
-
-                <footer>
-                    <p>Copyright &copy; Rishabh</p>
-                </footer>
             </span>
         );
     }
