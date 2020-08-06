@@ -53,6 +53,9 @@ class Inventory extends React.Component {
              })
     }
 
+    goToAddProduct=()=>{
+        this.props.history.push("/addproduct")
+    }
     renderAllProducts = () => {
         return this.state.products.map(product => {
             return (
@@ -76,6 +79,7 @@ class Inventory extends React.Component {
         return (
             <span>
                 <div class="row">
+                    <button onClick={this.goToAddProduct}>Add Product</button>
                     <table id="product">
                         <thead>
                             <tr>
