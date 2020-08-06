@@ -9,7 +9,8 @@ class Inventory extends React.Component {
         super(props)
         this.state = {
             products: [],
-            deleted: false
+            deleted: false,
+            pid:0
         }
     }
 
@@ -56,6 +57,14 @@ class Inventory extends React.Component {
     goToAddProduct=()=>{
         this.props.history.push("/addproduct")
     }
+
+    updCurrentId=(id)=>{
+        this.setState({pid:id})
+        this.props.history.push({
+            pathname:"/updateproduct",
+            state:{pid:id}
+        })
+    }
     renderAllProducts = () => {
         return this.state.products.map(product => {
             return (
@@ -70,6 +79,7 @@ class Inventory extends React.Component {
                     price={product.price}
                     stock={product.stock}
                     delete={this.deleteCurrentId}
+                    update={this.updCurrentId}
                 ></ProductDetail>
             )
         })

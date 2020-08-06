@@ -16,10 +16,9 @@ import InventoryManagement from './inventorymanagement';
 import Product from './product';
 import AddProduct from './addproduct';
 import ProductDescription from './productdescription';
-import Update from './update';
-import Delete from './delete';
 import Login from './login';
 import Signup from './signup';
+import UpdateProduct from './updateproduct';
 
 class ContentComponent extends React.Component {
     state = {}
@@ -44,8 +43,7 @@ class ContentComponent extends React.Component {
                 <Route path="/product" exact component={Product}></Route>
                 <Route path="/addproduct" exact component={AddProduct}></Route>
                 <Route path="/productdescription" exact component={ProductDescription}></Route>
-                <Route path="/update" exact component={Update}></Route>
-                <Route path="/delete" exact component={Delete}></Route>
+                <Route path="/updateproduct" exact component={UpdateProduct}></Route>
             </Switch>
 
         );

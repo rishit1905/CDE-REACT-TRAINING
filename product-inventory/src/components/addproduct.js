@@ -68,7 +68,7 @@ class AddProduct extends React.Component {
     }
 
     addProduct=()=>{
-        console.log("Adding friend..")
+        console.log("Adding product..")
         let productRequestBody={
             "thumbnailUrl":this.state.thumbnailUrl,
             "name":this.state.name,

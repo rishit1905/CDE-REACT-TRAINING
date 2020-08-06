@@ -12,13 +12,13 @@
     },
     {
       "thumbnailUrl": "https://www.domain.com/images/heh-9133_600x600.png",
-      "id": 4,
       "name": "On Cloud Nine Pillow",
-      "brand": "FabDecor",
+      "brand": "Fab",
       "description": "Sociosqu facilisis duis ...",
       "category": "Home>Home Decor>Pillows|Back In Stock",
       "price": 24.99,
-      "stock": 200
+      "stock": 200,
+      "id": 4
     },
     {
       "thumbnailUrl": "https://www.domain.com/images/heh-9133_600x600.png",

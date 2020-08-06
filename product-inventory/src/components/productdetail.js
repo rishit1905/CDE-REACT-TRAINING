@@ -1,5 +1,5 @@
 import React from 'react';
-import { confirmAlert } from 'react-confirm-alert'; 
+import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 
 class ProductDetail extends React.Component {
@@ -8,6 +8,11 @@ class ProductDetail extends React.Component {
         this.state = {
 
         }
+    }
+    
+    updCurrentProduct = () => {
+        console.log("Update product with id: " + this.props.id);
+        this.props.update(this.props.id)
     }
 
     delCurrentProduct = () => {
