@@ -1,15 +1,22 @@
 import React from 'react';
 // import "./inventory.css";
 import { Link } from 'react-router-dom';
-import Axios from 'axios';
+import axios from 'axios';
 import ProductDetail from './productdetail';
 
 class Inventory extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            products: []
+            products: [],
+            deleted: false
         }
+    }
+
+    initializeState=()=>{
+        setTimeout(()=>{
+            this.setState({deleted:false})
+        }, 3000)
     }
     componentWillMount() {
         console.log("Component Mounting")
@@ -21,7 +28,7 @@ class Inventory extends React.Component {
     }
 
     getAllProducts = () => {
-        Axios.get("http://localhost:3000/products")
+        axios.get("http://localhost:3000/products")
             .then(response => {
                 console.log(response)
                 console.log(response.data)
@@ -32,19 +39,34 @@ class Inventory extends React.Component {
             })
     }
 
+    deleteCurrentId = (id) => {
+        console.log("Delete product with received id: " + id)
+        axios.delete("http://localhost:3000/products/" + id)
+            .then(response => {
+                console.log(response)
+                console.log(response.data)
+                this.setState({deleted:true})
+                this.getAllProducts()
+                this.initializeState()
+             }, error => { 
+                 console.log(error)
+             })
+    }
+
     renderAllProducts = () => {
         return this.state.products.map(product => {
             return (
                 <ProductDetail
-                    key={product.productId}
+                    key={product.id}
                     thumbnailUrl={product.thumbnailUrl}
-                    productId={product.productId}
+                    id={product.id}
                     name={product.name}
                     brand={product.brand}
                     description={product.description}
                     category={product.category}
                     price={product.price}
                     stock={product.stock}
+                    delete={this.deleteCurrentId}
                 ></ProductDetail>
             )
         })
