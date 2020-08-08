@@ -8,8 +8,8 @@ class Dashboard extends React.Component {
     render() {
         return (
             <span>
-                <div class="row">
-                    <div class="columns">
+                <div className="row">
+                    <div className="columns">
                         <section id="feature">
                             <p>Featuring</p>
                             <Chart
@@ -224,7 +224,7 @@ class Dashboard extends React.Component {
                             />
                         </section>
                         <Link to="/inventory">
-                            <section id="inventory" onclick="location.href='inventory.html'">
+                            <section id="inventory">
                                 <p>Inventory Management</p>
                                 <Chart
                                     chartType="PieChart"

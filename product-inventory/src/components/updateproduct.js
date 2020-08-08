@@ -113,16 +113,16 @@ class UpdateProduct extends React.Component {
         if (this.props.location.state === undefined) {
             return (
                 <div>
-                    Please select a correct product!
+                    Not found!!
                 </div>
             );
         }
         return (
-            <div class="row">
+            <div className="row">
                 <form>
                     <fieldset>
                         <legend>UPDATE PRODUCT</legend>
-                        <div class="columns">
+                        <div className="columns">
                             <label>Thumbnail URL:</label>
                             <input type="text" id="thumbnailUrl" value={this.state.thumbnailUrl} onChange={this.getUrl} /><br /><br />
                             <label>Product ID:</label>
@@ -140,7 +140,7 @@ class UpdateProduct extends React.Component {
                             <label>Stock:</label>
                             <input type="text" id="stock" value={this.state.stock} onChange={this.getStock} /><br /><br />
                         </div>
-                        <button onClick={this.updateProduct} disabled={this.state.buttonStatus}>Update</button>
+                        <button onClick={this.updateProduct}>Update</button>
                     </fieldset>
                 </form>
             </div>

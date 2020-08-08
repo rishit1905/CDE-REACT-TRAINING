@@ -13,10 +13,13 @@ class AddProduct extends React.Component {
             category:"",
             price:0,
             stock:0,
-            buttonStatus:false
+            buttonStatus:true
         }
     }
 
+    // checkValidation=()=>{
+
+    // }
     getUrl=(event)=>{
         console.log(event)
         console.log(event.target)
@@ -81,7 +84,7 @@ class AddProduct extends React.Component {
         axios.post("http://localhost:3000/products",productRequestBody)
         .then(response=>{
             console.log(response)
-            console.log("Dne")
+            console.log("Done")
             this.props.history.push("/inventory")
         },error=>{
             console.log(error)
@@ -90,11 +93,11 @@ class AddProduct extends React.Component {
     
     render() {
         return (
-            <div class="row">
+            <div className="row">
                 <form>
                     <fieldset>
                         <legend>ADD PRODUCT</legend>
-                        <div class="columns">
+                        <div className="columns">
                             <label>Thumbnail URL:</label>
                             <input type="text" id="thumbnailUrl" onChange={this.getUrl} /><br /><br />
                             <label>Product Name:</label>
@@ -110,7 +113,7 @@ class AddProduct extends React.Component {
                             <label>Stock:</label>
                             <input type="text" id="stock" onChange={this.getStock}/><br /><br />
                         </div>
-                        <button onClick={this.addProduct} disabled={this.state.buttonStatus}>Add</button>
+                        <button onClick={this.addProduct}>Add</button>
                     </fieldset>
                 </form>
             </div>

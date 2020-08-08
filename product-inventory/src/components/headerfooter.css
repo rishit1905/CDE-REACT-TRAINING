@@ -10,7 +10,7 @@ header {
 
 header:after {
     content: "";
-    display: inline-flexbox;
+    display: flexbox;
     clear: both;
 }
 
@@ -28,6 +28,30 @@ header:after {
 td {
     width: 40%;
     text-align: center;
+}
+
+#signout {
+    background: rgb(39, 38, 38);
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: 0px;
+    transition: all 0.2s ease-in;
+}
+
+#signout:hover {
+    background: rgb(29, 28, 28);
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: 0px;
+    transition: all 0.2s ease-in;
 }
 
 .profile {

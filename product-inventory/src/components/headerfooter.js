@@ -1,27 +1,29 @@
 import React from 'react';
 import "./headerfooter.css";
+import { Link } from 'react-router-dom'
+import HeaderContent from './headercontent';
 
 class HeaderFooter extends React.Component {
-    state = {}
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            searchValue: ""
+        }
+    }
+
+    getSearch = (event) => {
+        this.setState({ searchValue: event.target.value })
+        this.props.history.push({
+            pathname: "/search",
+            state: { searchValue: event.target.value }
+        })
+    }
+
     render() {
         return (
             <div>
-                <header>
-                    <div class="element">
-                        <p>DASHBOARD</p>
-                    </div>
-                    <div class="tables">
-                        <table>
-                            <tr>
-                                <td><input type="search" placeholder="Search" /></td>
-                                <td>
-                                    <p>Welcome User</p>
-                                </td>
-                                <td><img class="profile" src="./image/profile-icon-9.png" alt="./image/profile-icon-9.png" /></td>
-                            </tr>
-                        </table>
-                    </div>
-                </header>
+                <HeaderContent></HeaderContent>
                 <footer>
                     <p>Copyright &copy; Rishabh</p>
                 </footer>

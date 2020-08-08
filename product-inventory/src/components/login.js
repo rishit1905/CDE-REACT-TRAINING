@@ -6,12 +6,12 @@ class Login extends React.Component {
     state = {}
     render() {
         return (
-            <div class="log">
+            <div className="log">
                 <img src="./image/profile-icon-9.png" />
                 <form>
                     <input type="text" placeholder="Username" required /><br />
                     <input type="text" placeholder="Password" required /><br />
-                    <Link to="/dashboard" class="center">
+                    <Link to="/dashboard" className="center">
                         <button>Login</button>
                     </Link>
                     <Link to="/signup" id="#signup">New User? Signup</Link>

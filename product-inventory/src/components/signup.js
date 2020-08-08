@@ -8,9 +8,9 @@ class Signup extends React.Component {
     render() {
         return (
             <div>
-                <div class="log">
+                <div className="log">
                     <figure>
-                        <input class="profile" type="image" src="./image/profile-icon-9.png" />
+                        <input className="profile" type="image" src="./image/profile-icon-9.png" />
                         <figcaption>ADD PHOTO</figcaption>
                     </figure>
 
@@ -18,8 +18,8 @@ class Signup extends React.Component {
                         <input type="email" placeholder="Email" required /><br />
                         <input type="password" placeholder="Password" required /><br />
                         <input type="password" placeholder="Confirm Password" required /><br />
-                        <Link to="/" class="center">
-                            <button class="center">Create Account</button>
+                        <Link to="/" className="center">
+                            <button className="center">Create Account</button>
                         </Link>
 
                     </form>

@@ -88,8 +88,9 @@ class Inventory extends React.Component {
     render() {
         return (
             <span>
-                <div class="row">
+                <div className="row">
                     <button onClick={this.goToAddProduct}>Add Product</button>
+                    <input type="search" placeholder="Search" value={this.state.searchValue} onChange={this.getSearch} />
                     <table id="product">
                         <thead>
                             <tr>
