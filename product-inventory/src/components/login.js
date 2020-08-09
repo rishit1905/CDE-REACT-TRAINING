@@ -7,7 +7,7 @@ class Login extends React.Component {
     render() {
         return (
             <div className="log">
-                <img src="./image/profile-icon-9.png" />
+                <img src="./image/profile-icon-9.png" alt=""/>
                 <form>
                     <input type="text" placeholder="Username" required /><br />
                     <input type="text" placeholder="Password" required /><br />

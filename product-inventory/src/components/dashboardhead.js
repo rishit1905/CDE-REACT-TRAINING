@@ -19,7 +19,7 @@ class DashboardHead extends React.Component {
                                         <button id="signout">Signout</button>
                                     </Link>
                                 </td>
-                                <td><img className="profile" src="./image/profile-icon-9.png" /></td>
+                                <td><img className="profile" src="./image/profile-icon-9.png" alt=""/></td>
                             </tr>
                         </tbody>
 

@@ -5,8 +5,9 @@ import axios from "axios";
 class UpdateProduct extends React.Component {
     constructor(props) {
         super(props)
+        console.group(this.props.location)
         this.state = {
-            thumbnailUrl: "",
+            imageURL: "",
             id: 0,
             name: "",
             brand: "",
@@ -18,13 +19,13 @@ class UpdateProduct extends React.Component {
         }
     }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         if (this.props.location.state !== undefined) {
             axios.get("http://localhost:3000/products/" + this.props.location.state.pid)
                 .then(response => {
                     console.log(response)
                     this.setState({
-                        thumbnailUrl: response.data.thumbnailUrl,
+                        imageURL: response.data.imageURL,
                         id: response.data.id,
                         name: response.data.name,
                         brand: response.data.brand,
@@ -42,7 +43,7 @@ class UpdateProduct extends React.Component {
         console.log(event)
         console.log(event.target)
         console.log(event.target.value)
-        this.setState({ thumbnailUrl: event.target.value })
+        this.setState({ imageURL: event.target.value })
 
     }
     getName = (event) => {
@@ -91,7 +92,7 @@ class UpdateProduct extends React.Component {
     updateProduct = () => {
         console.log("Updating Product..")
         let productRequestBody = {
-            "thumbnailUrl": this.state.thumbnailUrl,
+            "imageURL": this.state.imageURL,
             "name": this.state.name,
             "brand": this.state.brand,
             "description": this.state.description,
@@ -123,8 +124,8 @@ class UpdateProduct extends React.Component {
                     <fieldset>
                         <legend>UPDATE PRODUCT</legend>
                         <div className="columns">
-                            <label>Thumbnail URL:</label>
-                            <input type="text" id="thumbnailUrl" value={this.state.thumbnailUrl} onChange={this.getUrl} /><br /><br />
+                            <label>Image URL:</label>
+                            <input type="text" id="imageURL" value={this.state.imageURL} onChange={this.getUrl} /><br /><br />
                             <label>Product ID:</label>
                             <input type="text" value={this.state.id} readOnly /><br /><br />
                             <label>Product Name:</label>

@@ -98,7 +98,7 @@ class AddProduct extends React.Component {
                     <fieldset>
                         <legend>ADD PRODUCT</legend>
                         <div className="columns">
-                            <label>Thumbnail URL:</label>
+                            <label>Image URL:</label>
                             <input type="text" id="thumbnailUrl" onChange={this.getUrl} /><br /><br />
                             <label>Product Name:</label>
                             <input type="text" id="name" onChange={this.getName}/><br /><br />

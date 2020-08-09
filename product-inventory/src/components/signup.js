@@ -10,7 +10,7 @@ class Signup extends React.Component {
             <div>
                 <div className="log">
                     <figure>
-                        <input className="profile" type="image" src="./image/profile-icon-9.png" />
+                        <input className="profile" type="image" src="./image/profile-icon-9.png" alt=""/>
                         <figcaption>ADD PHOTO</figcaption>
                     </figure>
 

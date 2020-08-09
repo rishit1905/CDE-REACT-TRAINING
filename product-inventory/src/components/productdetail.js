@@ -9,7 +9,7 @@ class ProductDetail extends React.Component {
 
         }
     }
-    
+
     updCurrentProduct = () => {
         console.log("Update product with id: " + this.props.id);
         this.props.update(this.props.id)
@@ -36,9 +36,16 @@ class ProductDetail extends React.Component {
 
     }
     render() {
+        let imgStyle = {
+            width: '80px',
+            height: '80px',
+            padding: '5px',
+            borderRadius: '50%',
+            background: 'white'
+        }
         return (
             <tr>
-                <td>{this.props.thumbnailUrl}</td>
+                <td><img src={this.props.imageURL} alt="Unavailabe" style={imgStyle}></img></td>
                 <td>{this.props.id}</td>
                 <td>{this.props.name}</td>
                 <td>{this.props.brand}</td>

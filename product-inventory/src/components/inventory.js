@@ -1,25 +1,28 @@
 import React from 'react';
 // import "./inventory.css";
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import ProductDetail from './productdetail';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 class Inventory extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             products: [],
+            filteredProducts: [],
             deleted: false,
-            pid:0
+            pid: 0,
+            searchValue: ""
         }
     }
 
-    initializeState=()=>{
-        setTimeout(()=>{
-            this.setState({deleted:false})
+    initializeState = () => {
+        setTimeout(() => {
+            this.setState({ deleted: false })
         }, 3000)
     }
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         console.log("Component Mounting")
         this.getAllProducts()
     }
@@ -46,51 +49,94 @@ class Inventory extends React.Component {
             .then(response => {
                 console.log(response)
                 console.log(response.data)
-                this.setState({deleted:true})
+                this.setState({ deleted: true })
                 this.getAllProducts()
                 this.initializeState()
-             }, error => { 
-                 console.log(error)
-             })
+            }, error => {
+                console.log(error)
+            })
     }
 
-    goToAddProduct=()=>{
+    goToAddProduct = () => {
         this.props.history.push("/addproduct")
     }
 
-    updCurrentId=(id)=>{
-        this.setState({pid:id})
+    updCurrentId = (id) => {
+        this.setState({ pid: id })
         this.props.history.push({
-            pathname:"/updateproduct",
-            state:{pid:id}
+            pathname: "/updateproduct",
+            state: { pid: id }
         })
     }
-    renderAllProducts = () => {
-        return this.state.products.map(product => {
-            return (
-                <ProductDetail
-                    key={product.id}
-                    thumbnailUrl={product.thumbnailUrl}
-                    id={product.id}
-                    name={product.name}
-                    brand={product.brand}
-                    description={product.description}
-                    category={product.category}
-                    price={product.price}
-                    stock={product.stock}
-                    delete={this.deleteCurrentId}
-                    update={this.updCurrentId}
-                ></ProductDetail>
-            )
+
+    searchProduct = (event) => {
+        let searchV = event.target.value
+        if (searchV === "") {
+            this.getAllProducts()
+        }
+        this.setState({ searchValue: searchV })
+        console.log(searchV)
+        let searchF = this.state.products.filter(f => {
+            return f.name.toLowerCase().startsWith(searchV.trim().toLowerCase())
         })
+        this.setState({ filteredProducts: searchF })
+        console.log(searchF)
+    }
+
+    renderAllProducts = () => {
+        if (this.state.searchValue !== "") {
+            if (this.state.filteredProducts.length === 0) {
+                return toast("Sorry ! No Such Product Found !")
+            }
+            else {
+                return this.state.filteredProducts.map(product => {
+                    return (
+                        <ProductDetail
+                            key={product.id}
+                            imageURL={product.imageURL}
+                            id={product.id}
+                            name={product.name}
+                            brand={product.brand}
+                            description={product.description}
+                            category={product.category}
+                            price={product.price}
+                            stock={product.stock}
+                            delete={this.deleteCurrentId}
+                            update={this.updCurrentId}
+                        ></ProductDetail>
+                    )
+                })
+            }
+        }
+        else {
+            return this.state.products.map(product => {
+                return (
+                    <ProductDetail
+                        key={product.id}
+                        imageURL={product.imageURL}
+                        id={product.id}
+                        name={product.name}
+                        brand={product.brand}
+                        description={product.description}
+                        category={product.category}
+                        price={product.price}
+                        stock={product.stock}
+                        delete={this.deleteCurrentId}
+                        update={this.updCurrentId}
+                    ></ProductDetail>
+                )
+            })
+        }
+
     }
 
     render() {
         return (
             <span>
                 <div className="row">
-                    <button onClick={this.goToAddProduct}>Add Product</button>
-                    <input type="search" placeholder="Search" value={this.state.searchValue} onChange={this.getSearch} />
+                        <button onClick={this.goToAddProduct}>Add Product</button>
+                        <input type="search" placeholder="Search" value={this.state.searchValue} onChange={this.searchProduct} />
+                        <ToastContainer autoClose={2250}/>
                     <table id="product">
                         <thead>
                             <tr>

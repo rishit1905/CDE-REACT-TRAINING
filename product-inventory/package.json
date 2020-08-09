@@ -14,7 +14,9 @@
     "react-dom": "^16.13.1",
     "react-google-charts": "^3.0.15",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-toastify": "^6.0.8",
+    "simple-react-notifications": "^1.2.16"
   },
   "scripts": {
     "start": "set PORT=4444 && react-scripts start",
