@@ -15,11 +15,16 @@ class InventoryHead extends React.Component {
                         <tbody>
                             <tr>
                                 <td>
+                                    <Link to="/dashboard">
+                                        <button className="headerButton">Dashboard</button>
+                                    </Link>
+                                </td>
+                                <td>
                                     <Link to="/">
                                         <button className="headerButton">Signout</button>
                                     </Link>
                                 </td>
-                                <td><img className="profile" src="./image/profile-icon-9.png" alt=""/></td>
+                                <td><img className="profile" src="./image/profile-icon-9.png" alt="" /></td>
                             </tr>
                         </tbody>
 

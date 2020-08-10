@@ -8,9 +8,6 @@ class HeaderFooter extends React.Component {
         return (
             <div>
                 <HeaderContent></HeaderContent>
-                <footer>
-                    <p>Copyright &copy; Rishabh</p>
-                </footer>
             </div>
 
         );

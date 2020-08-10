@@ -27,7 +27,7 @@ class AddProduct extends React.Component {
                 priceError: "",
                 stockError: ""
             },
-            buttonStatus: true,
+            buttonStatus: false,
             selectedValue: "Mobiles"
         }
     }
@@ -35,7 +35,7 @@ class AddProduct extends React.Component {
     getUrl = (event) => {
         console.log(event)
         console.log(event.target)
-        console.log(event.target.files[0])
+        console.log(event.target.value.substr(12))
         // let errors = this.state.errors
         // let imageFile = event.target.files[0]
 
@@ -46,7 +46,7 @@ class AddProduct extends React.Component {
         //     errors.imageError = "Please upload jpg | jpeg | png | gif only"
         // }
         // else {
-        this.setState({ imageURL: event.target.files[0] })
+        this.setState({ imageURL: event.target.value.substr(12) })
         // }
 
     }
@@ -154,7 +154,7 @@ class AddProduct extends React.Component {
                         <legend>ADD PRODUCT</legend>
                         <div className="columns">
                             <label>Image:</label>
-                            <input type="file" id="imageURL" onChange={this.getUrl} noValidate />
+                            <input type="file" id="imageURL" onChange={this.getUrl} multiple accept="image/*" noValidate />
                             {errors.imageError.length > 0 && <span className="error">{errors.imageError}</span>}
                             <br /><br />
                             <label>Product Name:</label>

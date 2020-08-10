@@ -57,8 +57,8 @@ class UpdateProduct extends React.Component {
     getUrl = (event) => {
         console.log(event)
         console.log(event.target)
-        console.log(event.target.value)
-        this.setState({ imageURL: event.target.value })
+        console.log(event.target.value.substr(12))
+        this.setState({ imageURL: event.target.value.substr(12) })
 
     }
     getName = (event) => {
@@ -164,7 +164,7 @@ class UpdateProduct extends React.Component {
                         <legend>UPDATE PRODUCT</legend>
                         <div className="columns">
                             <label>Image:</label>
-                            <input type="file" id="imageURL" onChange={this.getUrl} noValidate />
+                            <input type="file" id="imageURL" onChange={this.getUrl} multiple accept="image/*" noValidate />
                             {errors.imageError.length > 0 && <span className="error">{errors.imageError}</span>}
                             <br /><br />
                             <label>Product ID:</label>

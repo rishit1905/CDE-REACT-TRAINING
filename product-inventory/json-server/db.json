@@ -82,12 +82,12 @@
     },
     {
       "imageURL": "nikon2.jpg",
-      "name": "Nikon Camera",
-      "brand": "Samsung",
-      "description": "Camera to use",
+      "name": "Nikon D750",
+      "brand": "Nikon",
+      "description": "Camera Uses",
       "category": "Cameras",
-      "price": 20000,
-      "stock": 200,
+      "price": "178550",
+      "stock": "103",
       "id": 9
     }
   ]

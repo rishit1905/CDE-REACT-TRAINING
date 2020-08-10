@@ -71,7 +71,7 @@ class Login extends React.Component {
                     {errors.password.length > 0 && <span className='error'>{errors.password}</span>}
                     <br />
                     <Link to="/dashboard" className="center">
-                        <button className="centre">Login</button>
+                        <button id="login">Login</button>
                     </Link>
                     <Link to="/signup" id="#signup">New User? Signup</Link>
                 </form>

@@ -51,14 +51,3 @@ td {
     background: rgb(226, 226, 226);
 }
 
-footer {
-    background: rgb(36, 35, 35);
-    color: white;
-    display: block;
-    position: fixed;
-    margin-top: 200px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
