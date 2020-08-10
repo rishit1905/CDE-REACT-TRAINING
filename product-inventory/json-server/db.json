@@ -1,184 +1,94 @@
 {
   "products": [
     {
-      "imageURL": "1.png",
-      "name": "Puma",
-      "brand": "FabDecor",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
+      "imageURL": "mob2.jpg",
+      "name": "Samsung",
+      "brand": "Samsung",
+      "description": "Mobiles to use",
+      "category": "Mobiles",
+      "price": "200000",
       "stock": 200,
-      "id": 24
+      "id": 1
     },
     {
-      "imageURL": "1.png",
-      "name": "Puma S50",
-      "brand": "FabDecor",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
+      "imageURL": "mob4.jpg",
+      "name": "Asus ",
+      "brand": "Samsung",
+      "description": "Mobiles to use",
+      "category": "Mobiles",
+      "price": 20000,
       "stock": 200,
-      "id": 27
+      "id": 2
     },
     {
-      "imageURL": "1.png",
-      "name": "Puma Storm",
-      "brand": "FabDecor",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
+      "imageURL": "mob1.jpg",
+      "name": "One Plus",
+      "brand": "Samsung",
+      "description": "Mobiles to use",
+      "category": "Mobiles",
+      "price": 20000,
       "stock": 200,
-      "id": 28
+      "id": 3
     },
     {
-      "imageURL": "1.png",
-      "name": "Nike",
-      "brand": "FabDecor",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
+      "imageURL": "lap1.jpg",
+      "name": "HP Laptop",
+      "brand": "Samsung",
+      "description": "Laptops to use",
+      "category": "Laptops",
+      "price": 20000,
       "stock": 200,
-      "id": 29
+      "id": 4
     },
     {
-      "imageURL": "1.png",
-      "name": "Nike 10",
-      "brand": "Nike ",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
+      "imageURL": "lap2.jpg",
+      "name": "Dell Inspiron",
+      "brand": "Samsung",
+      "description": "Laptops to use",
+      "category": "Laptops",
+      "price": 20000,
       "stock": 200,
-      "id": 30
+      "id": 5
     },
     {
-      "imageURL": "1.png",
-      "name": "Adidas flex",
-      "brand": "Adidas",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
+      "imageURL": "lap.jpg",
+      "name": "ASUS Classic",
+      "brand": "Samsung",
+      "description": "Laptop to use",
+      "category": "Laptops",
+      "price": 20000,
       "stock": 200,
-      "id": 31
+      "id": 6
     },
     {
-      "imageURL": "1.png",
-      "name": "Adidas Air",
-      "brand": "FabDecor",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
+      "imageURL": "cannon.jpg",
+      "name": "Cannon EOS",
+      "brand": "Samsung",
+      "description": "Camera to use",
+      "category": "Cameras",
+      "price": 20000,
       "stock": 200,
-      "id": 32
+      "id": 7
     },
     {
-      "imageURL": "1.png",
-      "name": "Adidas Glass",
-      "brand": "FabDecor",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
+      "imageURL": "sony.jpg",
+      "name": "Sony Camera",
+      "brand": "Samsung",
+      "description": "Cameras to use",
+      "category": "Cameras",
+      "price": 20000,
       "stock": 200,
-      "id": 33
+      "id": 8
     },
     {
-      "imageURL": "1.png",
-      "name": "Nike Reboot",
-      "brand": "FabDecor",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
+      "imageURL": "nikon2.jpg",
+      "name": "Nikon Camera",
+      "brand": "Samsung",
+      "description": "Camera to use",
+      "category": "Cameras",
+      "price": 20000,
       "stock": 200,
-      "id": 34
-    },
-    {
-      "imageURL": "1.png",
-      "name": "Sparx Air",
-      "brand": "FabDecor",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
-      "stock": 200,
-      "id": 35
-    },
-    {
-      "imageURL": "1.png",
-      "name": "Sparx Scoot",
-      "brand": "FabDecor",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
-      "stock": 200,
-      "id": 36
-    },
-    {
-      "imageURL": "1.png",
-      "name": "Bata",
-      "brand": "FabDecor",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
-      "stock": 200,
-      "id": 37
-    },
-    {
-      "imageURL": "1.png",
-      "name": "Khadim",
-      "brand": "Khadim",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
-      "stock": 200,
-      "id": 38
-    },
-    {
-      "imageURL": "1.png",
-      "name": "Bata Hitman",
-      "brand": "FabDecor",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
-      "stock": 200,
-      "id": 39
-    },
-    {
-      "imageURL": {},
-      "name": "Bata Reborn",
-      "brand": "",
-      "description": "",
-      "category": "",
-      "price": 0,
-      "stock": 0,
-      "id": 40
-    },
-    {
-      "imageURL": {},
-      "name": "vd",
-      "brand": "",
-      "description": "",
-      "category": "",
-      "price": 0,
-      "stock": 0,
-      "id": 41
-    },
-    {
-      "imageURL": {},
-      "name": "vf",
-      "brand": "",
-      "description": "",
-      "category": "",
-      "price": 0,
-      "stock": 0,
-      "id": 42
-    },
-    {
-      "imageURL": {},
-      "name": "vc",
-      "brand": "",
-      "description": "",
-      "category": "",
-      "price": 0,
-      "stock": 0,
-      "id": 43
+      "id": 9
     }
   ]
 }

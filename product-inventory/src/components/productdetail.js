@@ -52,7 +52,7 @@ class ProductDetail extends React.Component {
                 <td>PRICE: {this.props.price}</td>
                 <td>STOCK: {this.props.stock}</td>
                 <td><button onClick={this.updCurrentProduct}>Update</button></td>
-                <td><button onClick={this.delCurrentProduct}>Delete</button></td>
+                <td><button id="deleteButton" onClick={this.delCurrentProduct}>Delete</button></td>
             </tr>
         );
     }

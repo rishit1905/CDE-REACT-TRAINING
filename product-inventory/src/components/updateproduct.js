@@ -114,7 +114,8 @@ class UpdateProduct extends React.Component {
 
     }
 
-    updateProduct = () => {
+    updateProduct = (e) => {
+        e.preventDefault()
         console.log("Updating Product..")
         let productRequestBody = {
             "imageURL": this.state.imageURL,
@@ -181,7 +182,12 @@ class UpdateProduct extends React.Component {
                             {errors.descriptionError.length > 0 && <span className="error">{errors.descriptionError}</span>}
                             <br /><br />
                             <label>Category:</label>
-                            <input type="text" id="category" value={this.state.category} onChange={this.getCategory} />
+                            <select value={this.state.category} id="category" onChange={this.getCategory}>
+                                <option value="">--select--</option>
+                                <option value="Mobiles">Mobiles</option>
+                                <option value="Cameras">Cameras</option>
+                                <option value="Laptops">Laptops</option>
+                            </select><br /><br />
                             <br /><br />
                             <label>Price:</label>
                             <input type="text" id="price" value={this.state.price} onChange={this.getPrice} noValidate />

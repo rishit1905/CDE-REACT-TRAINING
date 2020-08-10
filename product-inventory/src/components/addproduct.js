@@ -27,7 +27,8 @@ class AddProduct extends React.Component {
                 priceError: "",
                 stockError: ""
             },
-            buttonStatus: true
+            buttonStatus: true,
+            selectedValue: "Mobiles"
         }
     }
 
@@ -113,12 +114,11 @@ class AddProduct extends React.Component {
 
     }
 
-    addProduct = () => {
+    addProduct = (e) => {
+        e.preventDefault()
         console.log("Adding product..")
-        const data = new FormData()
-        data.append("image", this.state.imageURL)
         let productRequestBody = {
-            "imageURL": data,
+            "imageURL": this.state.imageURL,
             "name": this.state.name,
             "brand": this.state.brand,
             "description": this.state.description,
@@ -140,10 +140,8 @@ class AddProduct extends React.Component {
         event.preventDefault()
         if (validateForm(this.state.errors)) {
             console.log("Valid")
-            this.setState({buttonStatus:false})
         } else {
             console.log("Not Valid")
-            this.setState({buttonStatus:true})
         }
     }
 
@@ -172,7 +170,12 @@ class AddProduct extends React.Component {
                             {errors.descriptionError.length > 0 && <span className="error">{errors.descriptionError}</span>}
                             <br /><br />
                             <label>Category:</label>
-                            <input type="text" id="category" onChange={this.getCategory} /><br /><br />
+                            <select defaultValue={this.state.selectedValue} id="category" onChange={this.getCategory}>
+                                <option value="">--select--</option>
+                                <option value="Mobiles">Mobiles</option>
+                                <option value="Cameras">Cameras</option>
+                                <option value="Laptops">Laptops</option>
+                            </select><br /><br />
                             <label>Price:</label>
                             <input type="text" id="price" onChange={this.getPrice} noValidate />
                             {errors.priceError.length > 0 && <span className="error">{errors.priceError}</span>}
