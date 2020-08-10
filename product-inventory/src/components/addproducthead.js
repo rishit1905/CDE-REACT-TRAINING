@@ -16,12 +16,12 @@ class AddProductHead extends React.Component {
                             <tr>
                                 <td>
                                     <Link to="/inventory">
-                                        <button class="headerButton">Inventory</button>
+                                        <button className="headerButton">Inventory</button>
                                     </Link>
                                 </td>
                                 <td>
                                     <Link to="/">
-                                        <button class="headerButton">Signout</button>
+                                        <button className="headerButton">Signout</button>
                                     </Link>
                                 </td>
                                 <td><img className="profile" src="./image/profile-icon-9.png" alt="" /></td>

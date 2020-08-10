@@ -157,7 +157,7 @@ class UpdateProduct extends React.Component {
             );
         }
         return (
-            <div className="row">
+            <div>
                 <form onChange={this.handleSubmit} noValidate>
                     <fieldset>
                         <legend>UPDATE PRODUCT</legend>

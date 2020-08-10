@@ -9,11 +9,6 @@ form input{
     width: 100%;
 }
 
-.row:after {
-    clear: both;
-    height: 60px;
-}
-
 .error {
     color: #db2269;
     font-size: medium;
@@ -44,7 +39,7 @@ button:disabled:hover{
     transition: all 0.2s ease-in;
 }
 
-.columns input[type=text], input[type=file]{
+.columns input[type=text], .columns input[type=file]{
     width:100%;
     text-align: left;
 }

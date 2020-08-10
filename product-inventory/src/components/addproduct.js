@@ -150,7 +150,7 @@ class AddProduct extends React.Component {
     render() {
         const { errors } = this.state;
         return (
-            <div className="row">
+            <div>
                 <form onChange={this.handleSubmit} noValidate>
                     <fieldset>
                         <legend>ADD PRODUCT</legend>
