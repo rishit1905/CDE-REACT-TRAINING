@@ -133,7 +133,7 @@ class Inventory extends React.Component {
     render() {
         return (
             <div className="row">
-                <button onClick={this.goToAddProduct}>Add Product</button>
+                <button className="inventoryButton" onClick={this.goToAddProduct}>Add Product</button>
                 <input type="search" placeholder="Search" value={this.state.searchValue} onChange={this.searchProduct} />
                 <ToastContainer autoClose={2250} />
                 <table id="product">

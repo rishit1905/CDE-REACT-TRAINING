@@ -1,6 +1,7 @@
 #product tr {
     display: block;
     float: left;
+    width: 28.5%;
     margin: 1.5rem;
     padding: 1rem 0.5rem 0.5rem 1rem;
     background: white;
@@ -15,21 +16,59 @@
     width: 100%;
 }
 
-#product td img{
-    margin: 0px;
-    width:400px;
-    height:200px;
+#product td img {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    height: 200px;
+    width: 420px;
     border-radius: 0%;
-    background:rgb(128, 127, 127); 
-    
-}
-
-#product button{
-    display: flex;
-    flex-flow: wrap;
+    background: rgb(128, 127, 127);
 }
 
 .row:after {
     clear: both;
     height: 60px;
+}
+
+.inventoryButton {
+    display: inline;
+    background: rgb(76, 76, 230);
+    color: white;
+    margin-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: 0px;
+    transition: all 0.2s ease-in;
+}
+
+.inventoryButton:hover {
+    background: rgb(37, 37, 158);
+    color: white;
+    margin-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: 0px;
+    transition: all 0.2s ease-in;
+}
+
+input[type=search] {
+    width: 90%;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    background: white;
+}
+
+input[type=search]:hover {
+    width: 90%;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    background: rgb(223, 222, 222);
 }
