@@ -4,7 +4,8 @@ section {
     float: left;
     display: flexbox;
     width: 32.3%;
-    height: fit-content;
+    /* height: fit-content; */
+    height:310px;
     margin: 0.5%;
     text-align: center;
     background: white;
