@@ -2,7 +2,7 @@
   "products": [
     {
       "imageURL": "1.png",
-      "name": "On Cloud Nine Pillow",
+      "name": "Puma",
       "brand": "FabDecor",
       "description": "Sociosqu facilisis duis ...",
       "category": "Home>Home Decor>Pillows|Back In Stock",
@@ -12,118 +12,118 @@
     },
     {
       "imageURL": "1.png",
-      "id": 27,
-      "name": "On Cloud Nine Pillow",
+      "name": "Puma S50",
       "brand": "FabDecor",
       "description": "Sociosqu facilisis duis ...",
       "category": "Home>Home Decor>Pillows|Back In Stock",
       "price": 24.99,
-      "stock": 200
+      "stock": 200,
+      "id": 27
     },
     {
       "imageURL": "1.png",
-      "id": 28,
-      "name": "On Cloud Nine Pillow",
+      "name": "Puma Storm",
       "brand": "FabDecor",
       "description": "Sociosqu facilisis duis ...",
       "category": "Home>Home Decor>Pillows|Back In Stock",
       "price": 24.99,
-      "stock": 200
+      "stock": 200,
+      "id": 28
     },
     {
       "imageURL": "1.png",
-      "id": 29,
-      "name": "On Cloud Nine Pillow",
+      "name": "Nike",
       "brand": "FabDecor",
       "description": "Sociosqu facilisis duis ...",
       "category": "Home>Home Decor>Pillows|Back In Stock",
       "price": 24.99,
-      "stock": 200
+      "stock": 200,
+      "id": 29
     },
     {
       "imageURL": "1.png",
-      "id": 30,
-      "name": "On Cloud Nine Pillow",
+      "name": "Nike 10",
+      "brand": "Nike ",
+      "description": "Sociosqu facilisis duis ...",
+      "category": "Home>Home Decor>Pillows|Back In Stock",
+      "price": 24.99,
+      "stock": 200,
+      "id": 30
+    },
+    {
+      "imageURL": "1.png",
+      "name": "Adidas flex",
+      "brand": "Adidas",
+      "description": "Sociosqu facilisis duis ...",
+      "category": "Home>Home Decor>Pillows|Back In Stock",
+      "price": 24.99,
+      "stock": 200,
+      "id": 31
+    },
+    {
+      "imageURL": "1.png",
+      "name": "Adidas Air",
       "brand": "FabDecor",
       "description": "Sociosqu facilisis duis ...",
       "category": "Home>Home Decor>Pillows|Back In Stock",
       "price": 24.99,
-      "stock": 200
+      "stock": 200,
+      "id": 32
     },
     {
       "imageURL": "1.png",
-      "id": 31,
-      "name": "On Cloud Nine Pillow",
+      "name": "Adidas Glass",
       "brand": "FabDecor",
       "description": "Sociosqu facilisis duis ...",
       "category": "Home>Home Decor>Pillows|Back In Stock",
       "price": 24.99,
-      "stock": 200
+      "stock": 200,
+      "id": 33
     },
     {
       "imageURL": "1.png",
-      "id": 32,
-      "name": "On Cloud Nine Pillow",
+      "name": "Nike Reboot",
       "brand": "FabDecor",
       "description": "Sociosqu facilisis duis ...",
       "category": "Home>Home Decor>Pillows|Back In Stock",
       "price": 24.99,
-      "stock": 200
+      "stock": 200,
+      "id": 34
     },
     {
       "imageURL": "1.png",
-      "id": 33,
-      "name": "On Cloud Nine Pillow",
+      "name": "Sparx Air",
       "brand": "FabDecor",
       "description": "Sociosqu facilisis duis ...",
       "category": "Home>Home Decor>Pillows|Back In Stock",
       "price": 24.99,
-      "stock": 200
+      "stock": 200,
+      "id": 35
     },
     {
       "imageURL": "1.png",
-      "id": 34,
-      "name": "On Cloud Nine Pillow",
+      "name": "Sparx Scoot",
       "brand": "FabDecor",
       "description": "Sociosqu facilisis duis ...",
       "category": "Home>Home Decor>Pillows|Back In Stock",
       "price": 24.99,
-      "stock": 200
+      "stock": 200,
+      "id": 36
     },
     {
       "imageURL": "1.png",
-      "id": 35,
-      "name": "On Cloud Nine Pillow",
+      "name": "Bata",
       "brand": "FabDecor",
       "description": "Sociosqu facilisis duis ...",
       "category": "Home>Home Decor>Pillows|Back In Stock",
       "price": 24.99,
-      "stock": 200
+      "stock": 200,
+      "id": 37
     },
     {
       "imageURL": "1.png",
-      "id": 36,
-      "name": "On Cloud Nine Pillow",
-      "brand": "FabDecor",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
-      "stock": 200
-    },
-    {
-      "imageURL": "1.png",
-      "id": 37,
-      "name": "On Cloud Nine Pillow",
-      "brand": "FabDecor",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": 24.99,
-      "stock": 200
-    },
-    {
-      "imageURL": "1.png",
-      "name": "On Cloud Nine Pillow",
-      "brand": "Fab",
+      "name": "Khadim",
+      "brand": "Khadim",
       "description": "Sociosqu facilisis duis ...",
       "category": "Home>Home Decor>Pillows|Back In Stock",
       "price": 24.99,
@@ -132,17 +132,17 @@
     },
     {
       "imageURL": "1.png",
-      "id": 39,
-      "name": "On Cloud Nine Pillow",
+      "name": "Bata Hitman",
       "brand": "FabDecor",
       "description": "Sociosqu facilisis duis ...",
       "category": "Home>Home Decor>Pillows|Back In Stock",
       "price": 24.99,
-      "stock": 200
+      "stock": 200,
+      "id": 39
     },
     {
       "imageURL": {},
-      "name": "lknlkzdn",
+      "name": "Bata Reborn",
       "brand": "",
       "description": "",
       "category": "",
