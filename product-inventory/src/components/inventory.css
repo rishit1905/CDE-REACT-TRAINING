@@ -96,5 +96,5 @@ input[type=search]:hover {
 
 .row:after{
     clear: both;
-    margin-bottom: 2.5rem;
+    display: block;
 }

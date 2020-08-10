@@ -15,7 +15,7 @@ section:hover{
     cursor: pointer;
 }
 
-.row:after {
+.row:after{
     clear: both;
-    height: 60px;
+    display: block;
 }

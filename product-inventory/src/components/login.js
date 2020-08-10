@@ -64,7 +64,7 @@ class Login extends React.Component {
             <div className="log">
                 <img src="./image/profile-icon-9.png" alt="" />
                 <form onChange={this.handleSubmit} noValidate>
-                    <input type="text" id="username" placeholder="Username" onChange={this.handleChange} required noValidate />
+                    <input type="email" id="username" placeholder="Username" onChange={this.handleChange} required noValidate />
                     {errors.username.length > 0 && <span className='error'>{errors.username}</span>}
                     <br />
                     <input type="password" id="password" placeholder="Password" onChange={this.handleChange} required noValidate />

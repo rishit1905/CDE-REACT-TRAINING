@@ -80,10 +80,10 @@ class Signup extends React.Component {
                         <input id="username" type="email" onChange={this.handleChange} noValidate placeholder="Email" required />
                         {errors.username.length > 0 && <span className='error'>{errors.username}</span>}
                         <br />
-                        <input id="password" type="text" onChange={this.handleChange} noValidate placeholder="Password" required />
+                        <input id="password" type="password" onChange={this.handleChange} noValidate placeholder="Password" required />
                         {errors.password.length > 0 && <span className='error'>{errors.password}</span>}
                         <br />
-                        <input id="confirmpassword" type="text" onChange={this.handleChange} noValidate placeholder="Confirm Password" required />
+                        <input id="confirmpassword" type="password" onChange={this.handleChange} noValidate placeholder="Confirm Password" required />
                         {errors.confirmpassword.length > 0 && <span className='error'>{errors.confirmpassword}</span>}
                         <br />
                         <Link to="/" className="center">
