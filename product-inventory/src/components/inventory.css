@@ -9,11 +9,6 @@
     text-align: center;
 }
 
-#product tr img {
-    padding: 0px;
-    margin: 0px;
-}
-
 #product td {
     display: block;
     text-align: left;

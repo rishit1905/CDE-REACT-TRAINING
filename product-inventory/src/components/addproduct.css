@@ -54,3 +54,8 @@ button:disabled:hover{
     clear: both;
     height: 60px;
 }
+
+.columns input[type=text], input[type=file]{
+    width:100%;
+    text-align: left;
+}

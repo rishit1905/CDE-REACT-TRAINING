@@ -43,3 +43,8 @@ button:disabled:hover{
     border: 0px;
     transition: all 0.2s ease-in;
 }
+
+.columns input[type=text], input[type=file]{
+    width:100%;
+    text-align: left;
+}
