@@ -8,7 +8,7 @@ class Signup extends React.Component {
     render() {
         return (
             <div>
-                <div className="log">
+                <div className="logsign">
                     <figure>
                         <input type="image" src="./image/profile-icon-9.png" alt=""/>
                         <figcaption>ADD PHOTO</figcaption>

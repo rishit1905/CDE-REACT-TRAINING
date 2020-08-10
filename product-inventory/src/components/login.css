@@ -2,10 +2,11 @@
     background: white;
     text-align: center;
     width: 300px;
+    height: 450px;
     margin: auto;
-    margin-top: auto;
+    margin-top: auto;   
     border-radius: 10%;
-    transform: translateY(30%);
+    transform: translateY(14%);
     box-shadow: 0px 5px 6px 8px #888888;
 }
 
@@ -20,6 +21,7 @@ input {
     text-align: center;
     background: rgb(189, 188, 188);
     border: 0px;
+
     transition: all 0.4s ease-in;
 }
 
@@ -87,4 +89,9 @@ button:disabled:hover{
     border-radius: 10px;
     border: 0px;
     transition: all 0.2s ease-in;
+}
+
+input[type=text], input[type=password]{
+    box-sizing: border-box;
+    width: 100%;
 }

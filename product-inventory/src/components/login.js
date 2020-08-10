@@ -67,7 +67,7 @@ class Login extends React.Component {
                     <input type="text" id="username" placeholder="Username" onChange={this.handleChange} required noValidate />
                     {errors.username.length > 0 && <span className='error'>{errors.username}</span>}
                     <br />
-                    <input type="text" id="password" placeholder="Password" onChange={this.handleChange} required noValidate />
+                    <input type="password" id="password" placeholder="Password" onChange={this.handleChange} required noValidate />
                     {errors.password.length > 0 && <span className='error'>{errors.password}</span>}
                     <br />
                     <Link to="/dashboard" className="center">
