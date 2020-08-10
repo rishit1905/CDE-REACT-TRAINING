@@ -1,7 +1,7 @@
 #product tr {
     display: block;
     float: left;
-    width: 20.5%;
+    width: 310px;
     margin: 0.5rem 1.6rem 0.5rem 1.6rem;
     padding: 0 0 0.5rem 1rem;
     background: white;
@@ -18,7 +18,7 @@
 
 #product td img {
     display: block;
-    margin: 0.5rem 0 4rem 0;
+    margin: 1.5rem 1.5rem 2rem 2.5rem;
     height: 200px;
     border-radius: 0%;
     background: rgb(255, 255, 255);

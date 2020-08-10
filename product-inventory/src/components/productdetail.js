@@ -22,9 +22,9 @@ class ProductDetail extends React.Component {
                     <div className="custom-ui">
                         <h1>Are you sure ?</h1>
                         <p>You want to delete this product?</p>
-                        <button className="deleteButton" onClick={onClose}>No</button>
+                        <button className="delete" onClick={onClose}>No</button>
                         &nbsp;
-                        <button className="deleteButton" onClick={() => {
+                        <button className="delete" onClick={() => {
                             console.log("delete product with id: " + this.props.id)
                             this.props.delete(this.props.id)
                             onClose()
@@ -39,7 +39,8 @@ class ProductDetail extends React.Component {
         let titleStyle={
             textDecoration:"underline",
             textTransform:"uppercase",
-            fontFamily:"Arial, Helvetica, sans-serif"
+            fontFamily:"Arial, Helvetica, sans-serif",
+            marginBottom:"1.5rem"
         }
         return (
             <tr>
