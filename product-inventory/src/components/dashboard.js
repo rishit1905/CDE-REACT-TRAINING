@@ -198,7 +198,7 @@ class Dashboard extends React.Component {
                     />
                 </section>
                 <section id="sub">
-                    <p>Sub-Category</p>
+                    <p>Stock</p>
                     <Chart
                         chartType="Histogram"
                         loader={<div>Loading Chart</div>}
