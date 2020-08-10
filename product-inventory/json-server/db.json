@@ -6,18 +6,8 @@
       "brand": "FabDecor",
       "description": "Sociosqu facilisis duis ...",
       "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": "240",
-      "stock": "200",
-      "id": 21
-    },
-    {
-      "imageURL": "1.png",
-      "name": "On Cloud Nine Pillow",
-      "brand": "FabDecor",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
       "price": 24.99,
-      "stock": 200,
+      "stock": "20",
       "id": 22
     },
     {
