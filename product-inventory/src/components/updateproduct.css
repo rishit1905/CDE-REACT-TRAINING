@@ -13,3 +13,33 @@ form input{
     clear: both;
     height: 60px;
 }
+
+.error {
+    color: #db2269;
+    font-size: medium;
+    display: relative;
+}
+
+button:disabled {
+    background: rgb(38, 38, 44);
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: 0px;
+    transition: all 0.2s ease-in;
+}
+
+button:disabled:hover{
+    background: rgb(38, 38, 44);
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: 0px;
+    transition: all 0.2s ease-in;
+}

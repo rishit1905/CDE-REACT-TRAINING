@@ -2,6 +2,12 @@ import React from 'react';
 import "./updateproduct.css";
 import axios from "axios";
 
+const validateForm = errors => {
+    let valid = true;
+    Object.values(errors).forEach(val => val.length > 0 && (valid = false));
+    return valid;
+};
+
 class UpdateProduct extends React.Component {
     constructor(props) {
         super(props)
@@ -15,7 +21,15 @@ class UpdateProduct extends React.Component {
             category: "",
             price: 0,
             stock: 0,
-            buttonStatus: false
+            errors: {
+                imageError: "",
+                nameError: "",
+                brandError: "",
+                descriptionError: "",
+                priceError: "",
+                stockError: ""
+            },
+            buttonStatus: true
         }
     }
 
@@ -36,9 +50,10 @@ class UpdateProduct extends React.Component {
                     })
                 }, error => {
                     console.log(error);
-                 })
+                })
         }
     }
+
     getUrl = (event) => {
         console.log(event)
         console.log(event.target)
@@ -50,6 +65,8 @@ class UpdateProduct extends React.Component {
         console.log(event)
         console.log(event.target)
         console.log(event.target.value)
+        let errors = this.state.errors
+        errors.nameError = "" || (!event.target.value.trim().match(/^([a-zA-Z0-9 _-]+)$/)) ? "Only non-empty alphanumeric values allowed !!" : ""
         this.setState({ name: event.target.value })
 
     }
@@ -57,6 +74,8 @@ class UpdateProduct extends React.Component {
         console.log(event)
         console.log(event.target)
         console.log(event.target.value)
+        let errors = this.state.errors
+        errors.brandError = "" || (!event.target.value.trim().match(/^([a-zA-Z0-9 _-]+)$/)) ? "Only non-empty alphanumeric values allowed !!" : ""
         this.setState({ brand: event.target.value })
 
     }
@@ -64,6 +83,8 @@ class UpdateProduct extends React.Component {
         console.log(event)
         console.log(event.target)
         console.log(event.target.value)
+        let errors = this.state.errors
+        errors.descriptionError = "" || event.target.value.trim().length === 0 ? "Description is required !!" : ""
         this.setState({ description: event.target.value })
 
     }
@@ -78,6 +99,8 @@ class UpdateProduct extends React.Component {
         console.log(event)
         console.log(event.target)
         console.log(event.target.value)
+        let errors = this.state.errors
+        errors.priceError = (!event.target.value.match(/^(?:0|[1-9]\d*)(?:\.(?!.*000)\d+)?$/)) ? "Invalid price !!" : ""
         this.setState({ price: event.target.value })
 
     }
@@ -85,6 +108,8 @@ class UpdateProduct extends React.Component {
         console.log(event)
         console.log(event.target)
         console.log(event.target.value)
+        let errors = this.state.errors
+        errors.stockError = (!event.target.value.match(/^[1-9]+[0-9]*$/)) ? "Invalid stock amount !!" : ""
         this.setState({ stock: event.target.value })
 
     }
@@ -100,7 +125,7 @@ class UpdateProduct extends React.Component {
             "price": this.state.price,
             "stock": this.state.stock,
         }
-        axios.put("http://localhost:3000/products/"+this.state.id, productRequestBody)
+        axios.put("http://localhost:3000/products/" + this.state.id, productRequestBody)
             .then(response => {
                 console.log(response)
                 console.log("Done")
@@ -110,7 +135,20 @@ class UpdateProduct extends React.Component {
             })
     }
 
+    handleSubmit = (event) => {
+        event.preventDefault()
+        if (validateForm(this.state.errors)) {
+            console.log("Valid")
+            this.setState({ buttonStatus: false })
+        } else {
+            console.log("Not Valid")
+            this.setState({ buttonStatus: true })
+        }
+    }
+
     render() {
+        const { errors } = this.state;
+
         if (this.props.location.state === undefined) {
             return (
                 <div>
@@ -120,28 +158,41 @@ class UpdateProduct extends React.Component {
         }
         return (
             <div className="row">
-                <form>
+                <form onChange={this.handleSubmit} noValidate>
                     <fieldset>
                         <legend>UPDATE PRODUCT</legend>
                         <div className="columns">
-                            <label>Image URL:</label>
-                            <input type="text" id="imageURL" value={this.state.imageURL} onChange={this.getUrl} /><br /><br />
+                            <label>Image:</label>
+                            <input type="file" id="imageURL" onChange={this.getUrl} noValidate />
+                            {errors.imageError.length > 0 && <span className="error">{errors.imageError}</span>}
+                            <br /><br />
                             <label>Product ID:</label>
                             <input type="text" value={this.state.id} readOnly /><br /><br />
                             <label>Product Name:</label>
-                            <input type="text" id="name" value={this.state.name} onChange={this.getName} /><br /><br />
+                            <input type="text" id="name" value={this.state.name} onChange={this.getName} noValidate />
+                            {errors.nameError.length > 0 && <span className="error">{errors.nameError}</span>}
+                            <br /><br />
                             <label>Brand:</label>
-                            <input type="text" id="brand" value={this.state.brand} onChange={this.getBrand} /><br /><br />
+                            <input type="text" id="brand" value={this.state.brand} onChange={this.getBrand} noValidate />
+                            {errors.brandError.length > 0 && <span className="error">{errors.brandError}</span>}
+                            <br /><br />
                             <label>Description:</label>
-                            <input type="text" id="description" value={this.state.description} onChange={this.getDescription} /><br /><br />
+                            <input type="text" id="description" value={this.state.description} onChange={this.getDescription} noValidate />
+                            {errors.descriptionError.length > 0 && <span className="error">{errors.descriptionError}</span>}
+                            <br /><br />
                             <label>Category:</label>
-                            <input type="text" id="category" value={this.state.category} onChange={this.getCategory} /><br /><br />
+                            <input type="text" id="category" value={this.state.category} onChange={this.getCategory} />
+                            <br /><br />
                             <label>Price:</label>
-                            <input type="text" id="price" value={this.state.price} onChange={this.getPrice} /><br /><br />
+                            <input type="text" id="price" value={this.state.price} onChange={this.getPrice} noValidate />
+                            {errors.priceError.length > 0 && <span className="error">{errors.priceError}</span>}
+                            <br /><br />
                             <label>Stock:</label>
-                            <input type="text" id="stock" value={this.state.stock} onChange={this.getStock} /><br /><br />
+                            <input type="text" id="stock" value={this.state.stock} onChange={this.getStock} noValidate />
+                            {errors.stockError.length > 0 && <span className="error">{errors.stockError}</span>}
+                            <br /><br />
                         </div>
-                        <button onClick={this.updateProduct}>Update</button>
+                        <button onClick={this.updateProduct} disabled={this.state.buttonStatus}>Update</button>
                     </fieldset>
                 </form>
             </div>

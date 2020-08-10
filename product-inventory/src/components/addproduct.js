@@ -49,6 +49,7 @@ class AddProduct extends React.Component {
         // }
 
     }
+
     getName = (event) => {
         console.log(event)
         console.log(event.target)
@@ -142,6 +143,7 @@ class AddProduct extends React.Component {
             this.setState({buttonStatus:false})
         } else {
             console.log("Not Valid")
+            this.setState({buttonStatus:true})
         }
     }
 

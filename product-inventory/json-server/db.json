@@ -3,21 +3,11 @@
     {
       "imageURL": "1.png",
       "name": "On Cloud Nine Pillow",
-      "brand": "Shoes",
-      "description": "Sociosqu facilisis duis ...",
-      "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": "29",
-      "stock": "22",
-      "id": 16
-    },
-    {
-      "imageURL": "1.png",
-      "name": "On Cloud Nine Pillow",
       "brand": "FabDecor",
       "description": "Sociosqu facilisis duis ...",
       "category": "Home>Home Decor>Pillows|Back In Stock",
-      "price": "24",
-      "stock": "201",
+      "price": "240",
+      "stock": "205",
       "id": 21
     },
     {
