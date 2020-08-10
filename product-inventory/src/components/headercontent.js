@@ -5,6 +5,7 @@ import DashboardHead from './dashboardhead';
 import InventoryHead from './inventoryhead';
 import AddProductHead from './addproducthead';
 import UpdateProductHead from './updateproducthead';
+import FeaturingHead from './featuringhead';
 
 class HeaderContent extends React.Component {
     state = {}
@@ -17,6 +18,7 @@ class HeaderContent extends React.Component {
                 <Route path="/inventory" exact component={InventoryHead}></Route>
                 <Route path="/addproduct" exact component={AddProductHead}></Route>
                 <Route path="/updateproduct" exact component={UpdateProductHead}></Route>
+                <Route path="/featuring" exact component={FeaturingHead}></Route>
             </Switch>
         );
     }
