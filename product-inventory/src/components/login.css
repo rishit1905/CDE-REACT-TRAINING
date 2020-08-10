@@ -139,13 +139,13 @@ button:disabled:hover{
 
 input[type=text], input[type=password], input[type=email]{
     box-sizing: border-box;
-    width:80%
+    width:85%;
 }
 
 .center {
     display: flex;
     margin-top: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 60px;
     justify-content: center;
     align-items: center;
 }

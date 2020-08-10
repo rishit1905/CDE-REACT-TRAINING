@@ -130,5 +130,5 @@ button:disabled:hover{
 
 input[type=text], input[type=password], input[type=email]{
     box-sizing: border-box;
-    width:80%
+    width:85%;
 }
