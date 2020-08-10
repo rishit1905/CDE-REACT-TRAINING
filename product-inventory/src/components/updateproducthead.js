@@ -14,9 +14,14 @@ class UpdateProductHead extends React.Component {
                     <table>
                         <tbody>
                             <tr>
+                            <td>
+                                    <Link to="/inventory">
+                                        <button class="headerButton">Inventory</button>
+                                    </Link>
+                                </td>
                                 <td>
                                     <Link to="/">
-                                        <button id="signout">Signout</button>
+                                        <button class="headerButton">Signout</button>
                                     </Link>
                                 </td>
                                 <td><img className="profile" src="./image/profile-icon-9.png" alt=""/></td>

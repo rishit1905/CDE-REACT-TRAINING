@@ -15,11 +15,16 @@ class AddProductHead extends React.Component {
                         <tbody>
                             <tr>
                                 <td>
-                                    <Link to="/">
-                                        <button id="signout">Signout</button>
+                                    <Link to="/inventory">
+                                        <button class="headerButton">Inventory</button>
                                     </Link>
                                 </td>
-                                <td><img className="profile" src="./image/profile-icon-9.png" alt=""/></td>
+                                <td>
+                                    <Link to="/">
+                                        <button class="headerButton">Signout</button>
+                                    </Link>
+                                </td>
+                                <td><img className="profile" src="./image/profile-icon-9.png" alt="" /></td>
                             </tr>
                         </tbody>
 

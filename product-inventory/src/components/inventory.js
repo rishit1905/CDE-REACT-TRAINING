@@ -142,8 +142,6 @@ class Inventory extends React.Component {
                     </tbody>
                 </table>
             </div>
-
-
         );
     }
 }

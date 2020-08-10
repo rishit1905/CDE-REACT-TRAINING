@@ -22,9 +22,9 @@ class ProductDetail extends React.Component {
                     <div className="custom-ui">
                         <h1>Are you sure ?</h1>
                         <p>You want to delete this product?</p>
-                        <button onClick={onClose}>No</button>
+                        <button className="deleteButton" onClick={onClose}>No</button>
                         &nbsp;
-                        <button onClick={() => {
+                        <button className="deleteButton" onClick={() => {
                             console.log("delete product with id: " + this.props.id)
                             this.props.delete(this.props.id)
                             onClose()

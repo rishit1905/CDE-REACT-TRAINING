@@ -3,10 +3,15 @@
     float: left;
     width: 28.5%;
     margin: 1.5rem;
-    padding: 1rem 0.5rem 0.5rem 1rem;
+    padding: 0 0.5rem 0.5rem 1rem;
     background: white;
     box-shadow: 0 0 1rem black;
     text-align: center;
+}
+
+#product tr img {
+    padding: 0px;
+    margin: 0px;
 }
 
 #product td {
@@ -20,17 +25,12 @@
     box-sizing: border-box;
     margin-bottom: 20px;
     height: 200px;
-    width: 420px;
+    width: 100%;
     border-radius: 0%;
     background: rgb(128, 127, 127);
 }
 
-.row:after {
-    clear: both;
-    height: 60px;
-}
-
-.inventoryButton {
+.inventoryButton, .deleteButton {
     display: inline;
     background: rgb(76, 76, 230);
     color: white;
@@ -56,6 +56,20 @@
     border: 0px;
     transition: all 0.2s ease-in;
 }
+
+.deleteButton:hover {
+    background: rgb(37, 37, 158);
+    color: white;
+    margin-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: 0px;
+    transition: all 0.2s ease-in;
+}
+
 
 input[type=search] {
     width: 90%;

@@ -16,7 +16,7 @@ class DashboardHead extends React.Component {
                             <tr>
                                 <td>
                                     <Link to="/">
-                                        <button id="signout">Signout</button>
+                                        <button className="headerButton">Signout</button>
                                     </Link>
                                 </td>
                                 <td><img className="profile" src="./image/profile-icon-9.png" alt=""/></td>
