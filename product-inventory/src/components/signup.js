@@ -19,7 +19,7 @@ class Signup extends React.Component {
                         <input type="password" placeholder="Password" required /><br />
                         <input type="password" placeholder="Confirm Password" required /><br />
                         <Link to="/" className="center">
-                            <button className="center">Create Account</button>
+                            <button className="centersign">Create Account</button>
                         </Link>
 
                     </form>
