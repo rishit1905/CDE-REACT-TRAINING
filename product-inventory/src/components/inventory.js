@@ -1,5 +1,5 @@
 import React from 'react';
-// import "./inventory.css";
+import "./inventory.css";
 import axios from 'axios';
 import ProductDetail from './productdetail';
 import { ToastContainer, toast } from 'react-toastify';
@@ -132,31 +132,17 @@ class Inventory extends React.Component {
 
     render() {
         return (
-            <span>
-                <div className="row">
-                        <button onClick={this.goToAddProduct}>Add Product</button>
-                        <input type="search" placeholder="Search" value={this.state.searchValue} onChange={this.searchProduct} />
-                        <ToastContainer autoClose={2250}/>
-                    <table id="product">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Product ID</th>
-                                <th>Product Name</th>
-                                <th>Brand</th>
-                                <th>Description</th>
-                                <th>Category</th>
-                                <th>Price</th>
-                                <th>Stock</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {this.renderAllProducts()}
-                        </tbody>
-                    </table>
-                </div>
-            </span>
+            <div className="row">
+                <button onClick={this.goToAddProduct}>Add Product</button>
+                <input type="search" placeholder="Search" value={this.state.searchValue} onChange={this.searchProduct} />
+                <ToastContainer autoClose={2250} />
+                <table id="product">
+                    <tbody>
+                        {this.renderAllProducts()}
+                    </tbody>
+                </table>
+            </div>
+
 
         );
     }

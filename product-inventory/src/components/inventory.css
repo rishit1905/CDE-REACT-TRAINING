@@ -1,79 +1,35 @@
- header {
-    background: rgb(39, 38, 38);
-    overflow: hidden;
-    color: azure;
-    /* position: fixed;
-    left: 0;
-    right: 0;
-    top: 0; */
-}
-
-header:after {
-    content: "";
-    display:inline-flexbox;
-    clear: both;
-}
-
-.element {
+#product tr {
+    display: block;
     float: left;
-    padding-left: 2%;
-    margin-left: 5%;
-}
-
-.tables {
-    float: right;
-    margin-right: 2%;
-}
-
-#menu td {
-    width: 40%;
+    margin: 1.5rem;
+    padding: 1rem 0.5rem 0.5rem 1rem;
+    background: white;
+    box-shadow: 0 0 1rem black;
     text-align: center;
 }
 
-.profile {
-    width: 20px;
-    height: 20px;
-    padding: 5px;
-    border-radius: 50%;
-    background: rgb(226, 226, 226);
+#product td {
+    display: block;
+    text-align: left;
+    margin: 0 0.5rem 0.5rem 0;
+    width: 100%;
 }
 
+#product td img{
+    margin: 0px;
+    width:400px;
+    height:200px;
+    border-radius: 0%;
+    background:rgb(128, 127, 127); 
+    
+}
 
-
-section:hover{
-    cursor: pointer;
+#product button{
+    display: flex;
+    flex-flow: wrap;
 }
 
 .row:after {
-    content: "";
-    display: table;
     clear: both;
+    height: 60px;
 }
-
-#product, Link{
-    width: 100%;
-    text-align: center;
-}
-
-#product thead,#product tbody{
-    background: white;
-}
-
-#product td, #product th{
-    padding: 30px;
-}
-
-#product td:hover{
-    cursor: pointer;
-}
-
-footer {
-    background: rgb(36, 35, 35);
-    color: white;
-    overflow: hidden;
-    text-align: center;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-} 

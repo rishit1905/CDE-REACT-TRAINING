@@ -15,20 +15,6 @@ section:hover{
 }
 
 .row:after {
-    content: "";
-    display: table;
     clear: both;
-}
-
-
-
-footer {
-    background: rgb(36, 35, 35);
-    color: white;
-    overflow: hidden;
-    text-align: center;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    height: 60px;
 }

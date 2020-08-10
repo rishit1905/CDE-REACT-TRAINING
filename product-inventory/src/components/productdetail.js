@@ -36,23 +36,21 @@ class ProductDetail extends React.Component {
 
     }
     render() {
-        let imgStyle = {
-            width: '80px',
-            height: '80px',
-            padding: '5px',
-            borderRadius: '50%',
-            background: 'white'
+        let titleStyle={
+            textDecoration:"underline",
+            textTransform:"uppercase",
+            fontFamily:"Arial, Helvetica, sans-serif"
         }
         return (
             <tr>
-                <td><img src={this.props.imageURL} alt="Unavailabe" style={imgStyle}></img></td>
-                <td>{this.props.id}</td>
-                <td>{this.props.name}</td>
-                <td>{this.props.brand}</td>
-                <td>{this.props.description}</td>
-                <td>{this.props.category}</td>
-                <td>{this.props.price}</td>
-                <td>{this.props.stock}</td>
+                <td><img src={"image/"+this.props.imageURL} alt="Unavailabe"></img></td>
+                <td style={titleStyle}>{this.props.name}</td>
+                <td>ID: {this.props.id}</td>
+                <td>BRAND: {this.props.brand}</td>
+                <td>DESCRIPTION: {this.props.description}</td>
+                <td>CATEGORY: {this.props.category}</td>
+                <td>PRICE: {this.props.price}</td>
+                <td>STOCK: {this.props.stock}</td>
                 <td><button onClick={this.updCurrentProduct}>Update</button></td>
                 <td><button onClick={this.delCurrentProduct}>Delete</button></td>
             </tr>

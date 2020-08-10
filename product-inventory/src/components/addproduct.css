@@ -1,90 +1,56 @@
-header {
-    background: rgb(39, 38, 38);
-    overflow: hidden;
-    color: azure;
-    /* position: fixed;
-    left: 0;
-    right: 0;
-    top: 0; */
-}
-
-header:after {
-    content: "";
-    display:inline-flexbox;
-    clear: both;
-}
-
-.element {
-    float: left;
-    padding-left: 2%;
-    margin-left: 5%;
-}
-
-.tables {
-    float: right;
-    margin-right: 2%;
-}
-
-td {
-    width: 40%;
-    text-align: center;
-}
-
-.profile {
-    width: 20px;
-    height: 20px;
-    padding: 5px;
-    border-radius: 50%;
-    background: rgb(226, 226, 226);
-}
-
-section {
-    float: left;
-    display: flexbox;
-    width: 32.3%;
-    height: fit-content;
-    margin: 0.5%;
-    text-align: center;
-    background: white;
-}
-
-section:hover{
-    cursor: pointer;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-form{
+form {
     margin: 0.5%;
     padding: 1%;
     background: white;
 }
-.columns{
+
+.columns {
     margin: 2%;
 }
 
-fieldset legend{
+fieldset legend {
     font-size: x-large;
 }
-fieldset label{
+
+fieldset label {
     padding: 3px;
 }
 
-form input{
+form input {
     width: 100%;
 }
 
-footer {
-    background: rgb(36, 35, 35);
+.error {
+    color: #db2269;
+    font-size: medium;
+    display: relative;
+}
+
+button:disabled {
+    background: rgb(38, 38, 44);
     color: white;
-    overflow: hidden;
-    text-align: center;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: 0px;
+    transition: all 0.2s ease-in;
+}
+
+button:disabled:hover{
+    background: rgb(38, 38, 44);
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: 0px;
+    transition: all 0.2s ease-in;
+}
+
+.row:after {
+    clear: both;
+    height: 60px;
 }

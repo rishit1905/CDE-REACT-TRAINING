@@ -45,7 +45,7 @@ figcaption{
     align-items: center;
 }
 
-.profile {
+figure input {
     width: 100px;
     height: 100px;
     padding: 5px;
@@ -65,10 +65,6 @@ figcaption{
     color: rgb(19, 18, 18);
     background: rgb(168, 167, 167);
     transition: all 0.4s ease-in;
-}
-
-section {
-    padding-bottom: 50px;
 }
 
 button {
@@ -93,15 +89,4 @@ button:hover {
     border-radius: 10px;
     border: 0px;
     transition: all 0.2s ease-in;
-}
-
-footer {
-    background: rgb(36, 35, 35);
-    color: white;
-    display: block;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
 }

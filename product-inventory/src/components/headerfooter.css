@@ -1,23 +1,17 @@
 header {
     background: rgb(39, 38, 38);
-    overflow: hidden;
     color: azure;
-    /* position: fixed;
+    display: block;
     left: 0;
     right: 0;
-    top: 0; */
-}
-
-header:after {
-    content: "";
-    display: flexbox;
-    clear: both;
+    top: 0;
 }
 
 .element {
     float: left;
     padding-left: 2%;
     margin-left: 5%;
+    vertical-align: middle;
 }
 
 .tables {
@@ -28,15 +22,12 @@ header:after {
 td {
     width: 40%;
     text-align: center;
+    vertical-align: middle;
 }
 
 #signout {
     background: rgb(39, 38, 38);
     color: white;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
     border-radius: 10px;
     border: 0px;
     transition: all 0.2s ease-in;
@@ -47,8 +38,6 @@ td {
     color: white;
     padding-left: 50px;
     padding-right: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
     border-radius: 10px;
     border: 0px;
     transition: all 0.2s ease-in;

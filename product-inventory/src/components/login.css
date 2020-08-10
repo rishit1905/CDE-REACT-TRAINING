@@ -44,7 +44,7 @@ input:hover {
     align-items: center;
 }
 
-img {
+.log img {
     width: 100px;
     height: 100px;
     padding: 5px;

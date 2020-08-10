@@ -4,21 +4,6 @@ import HeaderContent from './headercontent';
 
 class HeaderFooter extends React.Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            searchValue: ""
-        }
-    }
-
-    getSearch = (event) => {
-        this.setState({ searchValue: event.target.value })
-        this.props.history.push({
-            pathname: "/search",
-            state: { searchValue: event.target.value }
-        })
-    }
-
     render() {
         return (
             <div>
