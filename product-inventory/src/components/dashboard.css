@@ -1,13 +1,11 @@
-
-
 section {
+    display: block;
     float: left;
-    display: flexbox;
-    width: 32.3%;
-    /* height: fit-content; */
+    width: 495px;
     height:310px;
-    margin: 0.5%;
+    margin: 9.5rem 0.5rem 9.5rem 0.5rem;
     text-align: center;
+    box-shadow: 0 0 1rem black;
     background: white;
 }
 

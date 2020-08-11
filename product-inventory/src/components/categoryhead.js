@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class FeaturingHead extends React.Component {
+class CategoryHead extends React.Component {
     state = {}
     render() {
         return (
             <header>
                 <div className="element">
-                    <p>Featuring</p>
+                    <p>CATEGORY BASED</p>
                 </div>
                 <div className="tables">
                     <table>
@@ -16,6 +16,11 @@ class FeaturingHead extends React.Component {
                                 <td>
                                     <Link to="/dashboard">
                                         <button className="headerButton">Dashboard</button>
+                                    </Link>
+                                </td>
+                                <td>
+                                    <Link to="/inventory">
+                                        <button className="headerButton">Inventory</button>
                                     </Link>
                                 </td>
                                 <td>
@@ -29,9 +34,8 @@ class FeaturingHead extends React.Component {
 
                     </table>
                 </div>
-            </header>
-        );
+            </header>);
     }
 }
 
-export default FeaturingHead;
+export default CategoryHead;

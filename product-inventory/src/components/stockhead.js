@@ -1,22 +1,21 @@
 import React from 'react';
-import "./headerfooter.css";
 import { Link } from 'react-router-dom';
 
-class DashboardHead extends React.Component {
-    state = {}
-    render() {
-        return (
+class StockHead extends React.Component {
+    state = {  }
+    render() { 
+        return ( 
             <header>
                 <div className="element">
-                    <p>DASHBOARD</p>
+                    <p>STOCK BASED</p>
                 </div>
                 <div className="tables">
                     <table>
                         <tbody>
                             <tr>
                                 <td>
-                                    <Link to="/inventory">
-                                        <button className="headerButton">Inventory</button>
+                                    <Link to="/dashboard">
+                                        <button className="headerButton">Dashboard</button>
                                     </Link>
                                 </td>
                                 <td>
@@ -31,8 +30,8 @@ class DashboardHead extends React.Component {
                     </table>
                 </div>
             </header>
-        );
+         );
     }
 }
-
-export default DashboardHead;
+ 
+export default StockHead;

@@ -1,22 +1,21 @@
 import React from 'react';
-import "./headerfooter.css";
 import { Link } from 'react-router-dom';
 
-class DashboardHead extends React.Component {
+class VendorHead extends React.Component {
     state = {}
     render() {
         return (
             <header>
                 <div className="element">
-                    <p>DASHBOARD</p>
+                    <p>BRAND BASED</p>
                 </div>
                 <div className="tables">
                     <table>
                         <tbody>
                             <tr>
                                 <td>
-                                    <Link to="/inventory">
-                                        <button className="headerButton">Inventory</button>
+                                    <Link to="/dashboard">
+                                        <button className="headerButton">Dashboard</button>
                                     </Link>
                                 </td>
                                 <td>
@@ -35,4 +34,4 @@ class DashboardHead extends React.Component {
     }
 }
 
-export default DashboardHead;
+export default VendorHead;
