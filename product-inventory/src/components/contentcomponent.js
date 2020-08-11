@@ -10,6 +10,7 @@ import UpdateProduct from './updateproduct';
 import Category from './category';
 import Vendor from './vendor';
 import Stock from './stock';
+import Price from './price';
 
 class ContentComponent extends React.Component {
     state = {}
@@ -25,6 +26,7 @@ class ContentComponent extends React.Component {
                 <Route path="/category" exact component={Category}></Route>
                 <Route path="/vendor" exact component={Vendor}></Route>
                 <Route path="/stock" exact component={Stock}></Route>
+                <Route path="/price" exact component={Price}></Route>
             </Switch>
 
         );

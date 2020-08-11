@@ -1,15 +1,15 @@
 import React from 'react';
+import ProductDetail from './productdetail';
 import "./headerfooter.css";
 import axios from "axios";
-import ProductDetail from './productdetail';
 
-class Stock extends React.Component {
+class Price extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             products: [],
             filteredProducts: [],
-            stocked: [],
+            priced: [],
             deleted: false,
             pid: 0,
             searchValue: ""
@@ -70,20 +70,20 @@ class Stock extends React.Component {
     }
 
     sortByKey=(products)=>{
-        products.sort((a,b)=>{return a.stock-b.stock})
-        this.setState({stocked:products})
+        products.sort((a,b)=>{return a.price-b.price})
+        this.setState({priced:products})
     }
 
     reverse=()=>{
-        this.setState({stocked:this.state.stocked.sort((a,b)=>{return b.stock-a.stock})})
+        this.setState({price:this.state.stocked.sort((a,b)=>{return b.price-a.price})})
     }
 
     sort=()=>{
-        this.setState({stocked:this.state.stocked.sort((a,b)=>{return a.stock-b.stock})})
+        this.setState({price:this.state.stocked.sort((a,b)=>{return a.price-b.price})})
     }
 
     renderAllProducts = () => {
-        return this.state.stocked.map(product => {
+        return this.state.priced.map(product => {
             return (
                 <ProductDetail
                     key={product.id}
@@ -116,5 +116,5 @@ class Stock extends React.Component {
         )
     }
 }
-
-export default Stock;
+ 
+export default Price;

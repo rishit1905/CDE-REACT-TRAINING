@@ -42,6 +42,16 @@
     background: rgb(81, 23, 146);
 }
 
+#product td button:hover{
+    background: rgb(231, 54, 54);
+    transition: all 0.2s ease-in;
+}
+
+#product td #deleteButton:hover{
+    background: rgb(106, 29, 194);
+    transition: all 0.2s ease-in;
+}
+
 .inventoryButton {
     display: inline;
     background: rgb(76, 76, 230);

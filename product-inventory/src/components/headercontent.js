@@ -8,6 +8,7 @@ import UpdateProductHead from './updateproducthead';
 import CategoryHead from './categoryhead';
 import VendorHead from './vendorhead';
 import StockHead from './stockhead';
+import PriceHead from './pricehead';
 
 class HeaderContent extends React.Component {
     state = {}
@@ -23,6 +24,7 @@ class HeaderContent extends React.Component {
                 <Route path="/category" exact component={CategoryHead}></Route>
                 <Route path="/vendor" exact component={VendorHead}></Route>
                 <Route path="/stock" exact component={StockHead}></Route>
+                <Route path="/price" exact component={PriceHead}></Route>
             </Switch>
         );
     }
