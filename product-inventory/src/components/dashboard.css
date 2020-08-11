@@ -18,6 +18,13 @@ section:hover{
     display: block;
 }
 
-section #price{
+#price{
+    display: block;
+    float: left;
+    width: 495px;
+    height:310px;
+    margin:0.8rem 32.5rem 0 32.5rem;
     text-align: center;
+    box-shadow: 0 0 1rem black;
+    background: white;
 }
