@@ -123,7 +123,6 @@ class Dashboard extends React.Component {
                                 // Just add this option
                                 is3D: true,
                             }}
-                            rootProps={{ 'data-testid': '2' }}
                         />
                     </section>
                 </Link>
@@ -140,7 +139,6 @@ class Dashboard extends React.Component {
                                 colors: ['#5C3292'],
                                 interpolateNulls: false,
                             }}
-                            rootProps={{ 'data-testid': '5' }}
                         />
                     </section>
                 </Link>
@@ -157,7 +155,6 @@ class Dashboard extends React.Component {
                                 colors: ['#871B47'],
                                 interpolateNulls: false,
                             }}
-                            rootProps={{ 'data-testid': '5' }}
                         />
                     </section>
                 </Link>

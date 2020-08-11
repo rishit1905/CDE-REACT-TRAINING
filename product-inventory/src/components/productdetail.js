@@ -44,7 +44,7 @@ class ProductDetail extends React.Component {
         }
         return (
             <tr>
-                <td><img src={"image/"+this.props.imageURL} alt="Unavailabe"></img></td>
+                <td><img src={"image/"+this.props.imageURL}></img></td>
                 <td style={titleStyle}>{this.props.name}</td>
                 <td>ID: {this.props.id}</td>
                 <td>BRAND: {this.props.brand}</td>

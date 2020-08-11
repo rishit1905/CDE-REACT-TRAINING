@@ -2,9 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './signup.css';
 
-const validEmailRegex = RegExp(
-    /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/
-);
 const validateForm = errors => {
     let valid = true;
     Object.values(errors).forEach(val => val.length > 0 && (valid = false));
@@ -15,54 +12,82 @@ class Signup extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: null,
-            password: null,
-            confirmpassword: null,
+            image: "",
+            username: "",
+            password: "",
+            confirmpassword: "",
             errors: {
-                username: '',
-                password: '',
-                confirmpassword: ''
-            }
+                image: "",
+                username: "",
+                password: "",
+                confirmpassword: ""
+            },
+            buttonStatus: true
         };
     }
+    getImage = (event) => {
+        this.setState({ image: event.target.value.substr(12) })
+    }
 
-    handleChange = (event) => {
-        event.preventDefault();
-        const { id, value } = event.target;
+    getUsername = (event) => {
+        let errors = this.state.errors
+        errors.username = "" || (!event.target.value.trim().match(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/)) ? "Invalid email" : ""
+        this.setState({ username: event.target.value })
+    }
+
+    getPassword = (event) => {
+        let errors = this.state.errors
+        errors.password = (!event.target.value.trim().match(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)) ? "Password must have atleast a letter, a number and should be equal to or greater than 8 digits" : ""
+        this.setState({ password: event.target.value })
+    }
+
+    confirmPassword = (event) => {
+        let errors = this.state.errors
+        errors.confirmpassword = (!event.target.value.trim().match(this.state.password)) ? "Password doesn't match !!" : ""
+        this.setState({ confirmpassword: event.target.value })
+    }
+
+    checkValidation = () => {
         let errors = this.state.errors;
-
-        switch (id) {
-            case 'username':
-                errors.username =
-                    validEmailRegex.test(value)
-                        ? ''
-                        : 'Email is not valid!';
-                break;
-            case 'password':
-                errors.password =
-                    value.length < 8
-                        ? 'Password must be at least 8 characters long!'
-                        : '';
-                break;
-            case 'confirmpassword':
-                errors.confirmpassword =
-                    value.length < 8
-                        ? 'Password must be at least 8 characters long!'
-                        : '';
-                break;
-            default:
-                break;
+        if (this.state.image === "") {
+            this.setState({ buttonStatus: true })
+            errors.image = "Image required!"
+            return false
         }
+        if (this.state.username === "") {
+            this.setState({ buttonStatus: true })
+            errors.username = "Username required!"
+            return false
+        }
+        if (this.state.password === "") {
+            this.setState({ buttonStatus: true })
+            errors.password = "Password required!"
+            return false
+        }
+        if (this.state.confirmpassword === "") {
+            this.setState({ buttonStatus: true })
+            errors.confirmpassword = "Confirm your password!"
+            return false
+        }
+        return true;
+    }
 
-        this.setState({ errors, [id]: value });
+    authorize = (e) => {
+        if (this.checkValidation()) {
+            e.preventDefault()
+            console.log("Login successful !")
+            this.props.history.push("/")
+        }
     }
 
     handleSubmit = (event) => {
         event.preventDefault();
         if (validateForm(this.state.errors)) {
             console.info('Valid Form')
+            this.setState({ buttonStatus: false })
         } else {
             console.error('Invalid Form')
+            this.setState({ buttonStatus: true })
         }
     }
 
@@ -71,25 +96,19 @@ class Signup extends React.Component {
         return (
             <div>
                 <div className="logsign">
-                    <figure>
-                        <input type="image" src="./image/profile-icon-9.png" alt="" />
-                        <figcaption>ADD PHOTO</figcaption>
-                    </figure>
-
                     <form onChange={this.handleSubmit} noValidate>
-                        <input id="username" type="email" onChange={this.handleChange} noValidate placeholder="Email" required />
+                        <input type="file" onChange={this.getImage} placeholder="Choose profile picture !" accept="image/*" alt="profile-icon-9.png" />
+                        {errors.image.length > 0 && <span className='error'>{errors.image}</span>}
+                        <input id="username" type="email" onChange={this.getUsername} noValidate placeholder="Email" required />
                         {errors.username.length > 0 && <span className='error'>{errors.username}</span>}
                         <br />
-                        <input id="password" type="password" onChange={this.handleChange} noValidate placeholder="Password" required />
+                        <input id="password" type="password" onChange={this.getPassword} noValidate placeholder="Password" required />
                         {errors.password.length > 0 && <span className='error'>{errors.password}</span>}
                         <br />
-                        <input id="confirmpassword" type="password" onChange={this.handleChange} noValidate placeholder="Confirm Password" required />
+                        <input id="confirmpassword" type="password" onChange={this.confirmPassword} noValidate placeholder="Confirm Password" required />
                         {errors.confirmpassword.length > 0 && <span className='error'>{errors.confirmpassword}</span>}
                         <br />
-                        <Link to="/" className="center">
-                            <button className="centersign">Create Account</button>
-                        </Link>
-
+                        <button onClick={this.authorize} className="centersign" disabled={this.buttonStatus}>Create Account</button>
                     </form>
                 </div>
             </div>

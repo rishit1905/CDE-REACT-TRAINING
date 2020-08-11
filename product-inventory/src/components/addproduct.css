@@ -23,7 +23,7 @@ form input {
 .error {
     color: #db2269;
     font-size: medium;
-    display: relative;
+    display: block;
 }
 
 button:disabled {

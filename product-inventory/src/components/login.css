@@ -9,27 +9,23 @@
     box-shadow: 0 0 1rem black;
 }
 
-.log::after {
-    clear: both;
-    display: block;
-}
-
-input {
+.log input {
     padding: 10px;
-    margin-bottom: 5px;
     text-align: center;
     background: rgb(189, 188, 188);
     border: 0px;
+    box-sizing: border-box;
+    width:180px;
+    margin: 0.5rem 0 0rem 0;
     transition: all 0.4s ease-in;
 }
 
-input::placeholder {
+.log input::placeholder {
     color: rgb(87, 85, 85);
 }
 
-input:hover {
+.log input:hover {
     padding: 10px;
-    margin-bottom: 5px;
     text-align: center;
     color: rgb(19, 18, 18);
     background: rgb(168, 167, 167);
@@ -40,8 +36,7 @@ input:hover {
     width: 100px;
     height: 100px;
     padding: 5px;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin:1.5rem auto 1.5rem auto;
     border-radius: 50%;
     background: rgb(226, 226, 226);
 }
@@ -72,13 +67,14 @@ button:hover {
 .error {
     color: #db2269;
     font-size: medium;
-    display: relative;
+    display: block;
 }
 
 button:disabled {
     background: rgb(38, 38, 44);
     color: white;
     padding: 10px 30px 10px 30px;
+    margin: 2.5rem 6rem 0.5rem 6rem;
     border-radius: 10px;
     border: 0px;
     transition: all 0.2s ease-in;
@@ -88,24 +84,8 @@ button:disabled:hover{
     background: rgb(38, 38, 44);
     color: white;
     padding: 10px 40px 10px 40px;
+    margin: 2.5rem 5rem 0.5rem 5rem;
     border-radius: 10px;
     border: 0px;
     transition: all 0.2s ease-in;
-}
-
-.error {
-    color: #db2269;
-    font-size: medium;
-    display: relative;
-}
-
-#login {
-    margin: 2.5rem 6rem 2.5rem 6rem;
-    justify-content: center;
-    align-items: center;
-}
-
-input[type=password], input[type=email]{
-    box-sizing: border-box;
-    width:200px;
 }

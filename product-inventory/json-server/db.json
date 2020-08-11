@@ -67,7 +67,7 @@
       "description": "Camera to use",
       "category": "Cameras",
       "price": "28000",
-      "stock": "50",
+      "stock": "76",
       "id": 7
     },
     {
@@ -89,6 +89,16 @@
       "price": "178550",
       "stock": "15",
       "id": 9
+    },
+    {
+      "imageURL": "down.jpg",
+      "name": "Redmi K20 Pro",
+      "brand": "Xiaomi",
+      "description": "6Gb+128GB Variant",
+      "category": "Mobiles",
+      "price": "24999",
+      "stock": "40",
+      "id": 12
     }
   ]
 }
