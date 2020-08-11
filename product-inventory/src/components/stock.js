@@ -11,6 +11,7 @@ class Stock extends React.Component {
         this.state = {
             products: [],
             filteredProducts: [],
+            stocked: [],
             deleted: false,
             pid: 0,
             searchValue: ""
@@ -37,6 +38,7 @@ class Stock extends React.Component {
                 console.log(response)
                 console.log(response.data)
                 this.setState({ products: response.data })
+                this.sortByKey(this.state.products)
                 console.log("Components loaded")
             }, error => {
                 console.log(error)
@@ -69,77 +71,44 @@ class Stock extends React.Component {
         })
     }
 
-    searchProduct = (event) => {
-        let searchV = event.target.value
-        if (searchV === "") {
-            this.getAllProducts()
-        }
-        this.setState({ searchValue: searchV })
-        console.log(searchV)
-        let searchF = this.state.products.filter(f => {
-            return f.name.toLowerCase().startsWith(searchV.trim().toLowerCase())
-        })
-        this.setState({ filteredProducts: searchF })
-        console.log(searchF)
+    sortByKey=(products)=>{
+        products.sort((a,b)=>{return a.stock-b.stock})
+        this.setState({stocked:products})
+    }
+
+    reverse=()=>{
+        this.setState({stocked:this.state.stocked.sort((a,b)=>{return b.stock-a.stock})})
+    }
+
+    sort=()=>{
+        this.setState({stocked:this.state.stocked.sort((a,b)=>{return a.stock-b.stock})})
     }
 
     renderAllProducts = () => {
-        if (this.state.searchValue !== "") {
-            if (this.state.filteredProducts.length === 0) {
-                return toast("Sorry ! No Such Product Found !")
-            }
-            else {
-                return this.state.filteredProducts.map(product => {
-                    return (
-                        <ProductDetail
-                            key={product.id}
-                            imageURL={product.imageURL}
-                            id={product.id}
-                            name={product.name}
-                            brand={product.brand}
-                            description={product.description}
-                            category={product.category}
-                            price={product.price}
-                            stock={product.stock}
-                            delete={this.deleteCurrentId}
-                            update={this.updCurrentId}
-                        ></ProductDetail>
-                    )
-                })
-            }
-        }
-        else {
-            return this.state.products.map(product => {
-                return (
-                    <ProductDetail
-                        key={product.id}
-                        imageURL={product.imageURL}
-                        id={product.id}
-                        name={product.name}
-                        brand={product.brand}
-                        description={product.description}
-                        category={product.category}
-                        price={product.price}
-                        stock={product.stock}
-                        delete={this.deleteCurrentId}
-                        update={this.updCurrentId}
-                    ></ProductDetail>
-                )
-            })
-        }
-
+        return this.state.stocked.map(product => {
+            return (
+                <ProductDetail
+                    key={product.id}
+                    imageURL={product.imageURL}
+                    id={product.id}
+                    name={product.name}
+                    brand={product.brand}
+                    description={product.description}
+                    category={product.category}
+                    price={product.price}
+                    stock={product.stock}
+                    delete={this.deleteCurrentId}
+                    update={this.updCurrentId}
+                ></ProductDetail>
+            )
+        })
     }
 
     render() {
-        let searchstyle = {
-            width: "96%",
-            display: "block",
-            margin: "1rem 2.1rem 0 0",
-            background: "white",
-        }
         return (
             <div className="row">
-                <input type="search" placeholder="Search" value={this.state.searchValue} onChange={this.searchProduct} style={searchstyle} />
+                <button className="inventoryButton" onClick={this.sort}>Sort</button>
+                <button className="inventoryButton" onClick={this.reverse}>Reverse Sort</button>
                 <ToastContainer autoClose={2250} />
                 <table id="product">
                     <tbody>

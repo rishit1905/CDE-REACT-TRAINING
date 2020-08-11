@@ -19,6 +19,11 @@ class VendorHead extends React.Component {
                                     </Link>
                                 </td>
                                 <td>
+                                    <Link to="/inventory">
+                                        <button className="headerButton">Inventory</button>
+                                    </Link>
+                                </td>
+                                <td>
                                     <Link to="/">
                                         <button className="headerButton">Signout</button>
                                     </Link>

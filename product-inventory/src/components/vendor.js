@@ -11,6 +11,7 @@ class Vendor extends React.Component {
         this.state = {
             products: [],
             filteredProducts: [],
+            branded:[],
             deleted: false,
             pid: 0,
             searchValue: ""
@@ -37,6 +38,7 @@ class Vendor extends React.Component {
                 console.log(response)
                 console.log(response.data)
                 this.setState({ products: response.data })
+                this.sortByKey(this.state.products)
                 console.log("Components loaded")
             }, error => {
                 console.log(error)
@@ -69,15 +71,20 @@ class Vendor extends React.Component {
         })
     }
 
-    searchProduct = (event) => {
+    sortByKey=(products)=>{
+        products.sort((a,b)=>a.brand.localeCompare(b.brand))
+        this.setState({branded:products})
+    }
+
+    searchBrand= (event) => {
         let searchV = event.target.value
         if (searchV === "") {
             this.getAllProducts()
         }
         this.setState({ searchValue: searchV })
         console.log(searchV)
-        let searchF = this.state.products.filter(f => {
-            return f.name.toLowerCase().startsWith(searchV.trim().toLowerCase())
+        let searchF = this.state.branded.filter(f => {
+            return f.brand.toLowerCase().startsWith(searchV.trim().toLowerCase())
         })
         this.setState({ filteredProducts: searchF })
         console.log(searchF)
@@ -109,7 +116,7 @@ class Vendor extends React.Component {
             }
         }
         else {
-            return this.state.products.map(product => {
+            return this.state.branded.map(product => {
                 return (
                     <ProductDetail
                         key={product.id}
@@ -139,7 +146,7 @@ class Vendor extends React.Component {
         }
         return (
             <div className="row">
-                <input type="search" placeholder="Search" value={this.state.searchValue} onChange={this.searchProduct} style={searchstyle} />
+                <input type="search" placeholder="Search Brand" value={this.state.searchValue} onChange={this.searchBrand} style={searchstyle} />
                 <ToastContainer autoClose={2250} />
                 <table id="product">
                     <tbody>
