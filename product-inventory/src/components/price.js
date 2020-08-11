@@ -75,11 +75,11 @@ class Price extends React.Component {
     }
 
     reverse=()=>{
-        this.setState({price:this.state.stocked.sort((a,b)=>{return b.price-a.price})})
+        this.setState({price:this.state.priced.sort((a,b)=>{return b.price-a.price})})
     }
 
-    sort=()=>{
-        this.setState({price:this.state.stocked.sort((a,b)=>{return a.price-b.price})})
+    sortp=()=>{
+        this.setState({price:this.state.priced.sort((a,b)=>{return a.price-b.price})})
     }
 
     renderAllProducts = () => {
@@ -105,7 +105,7 @@ class Price extends React.Component {
     render() {
         return (
             <div className="row">
-                <button className="inventoryButton" onClick={this.sort}>Sort</button>
+                <button className="inventoryButton" onClick={this.sortp}>Sort</button>
                 <button className="inventoryButton" onClick={this.reverse}>Reverse Sort</button>
                 <table id="product">
                     <tbody>
