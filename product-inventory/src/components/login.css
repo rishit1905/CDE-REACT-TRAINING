@@ -6,7 +6,7 @@
     margin: auto;  
     border-radius: 20px;
     transform: translateY(80px);
-    box-shadow: 0px 5px 6px 8px #888888;
+    box-shadow: 0 0 1rem black;
 }
 
 .log::after {

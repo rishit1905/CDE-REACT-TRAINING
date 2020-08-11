@@ -23,6 +23,7 @@ class Category extends React.Component {
             this.setState({ deleted: false })
         }, 3000)
     }
+    
     UNSAFE_componentWillMount() {
         console.log("Component Mounting")
         this.getAllProducts()

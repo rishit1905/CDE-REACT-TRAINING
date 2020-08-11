@@ -1,10 +1,73 @@
 import React from 'react';
 import Chart from "react-google-charts";
 import './dashboard.css';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
+import ProductDetail from './productdetail';
 
 class Dashboard extends React.Component {
-    state = {}
+    constructor(props) {
+        super(props)
+        this.state = {
+            products: [],
+            mobiles: 0,
+            laptops: 0,
+            cameras: 0,
+            brandData:[[]]
+        }
+    }
+
+    UNSAFE_componentWillMount() {
+        console.log("Component Mounting")
+        this.getAllProducts()
+    }
+
+    getAllProducts = () => {
+        axios.get("http://localhost:3000/products")
+            .then(response => {
+                console.log(response)
+                console.log(response.data)
+                this.setState({ products: response.data })
+                this.data()
+                this.datab(this.state.products)
+                // this.datas()
+                // this.datap()
+                console.log("Components loaded")
+            }, error => {
+                console.log(error)
+            })
+    }
+
+    data = () => {
+        this.state.products.map(product => {
+            if (product.category === "Mobiles") {
+                this.setState({ mobiles: this.state.mobiles + parseInt(product.stock) })
+            }
+            if (product.category === "Laptops") {
+                this.setState({ laptops: this.state.laptops + parseInt(product.stock) })
+            }
+            if (product.category === "Cameras") {
+                this.setState({ cameras: this.state.cameras + parseInt(product.stock) })
+            }
+        })
+    }
+
+    datab = (products) => {
+        let brand=[["Brand","Stock"]]
+        for(const data of products){
+            if(brand.includes(data.brand)){
+                var a=brand.indexOf(brand.name)
+                console.log(a)
+            }
+            else{
+                brand.push([data.brand,parseInt(data.stock)])
+            }
+            
+        }
+        console.log(brand)
+        this.setState({brandData:brand})
+    }
+
     render() {
         return (
             <div className="row">
@@ -12,45 +75,19 @@ class Dashboard extends React.Component {
                     <section id="category">
                         <p>Category</p>
                         <Chart
-                            chartType="Histogram"
-                            loader={<div>Loading Chart</div>}
+                            chartType="BarChart"
+                            loader={<div>Loading Chart...</div>}
                             data={[
-                                ['Dinosaur', 'Length'],
-                                ['Acrocanthosaurus (top-spined lizard)', 12.2],
-                                ['Albertosaurus (Alberta lizard)', 9.1],
-                                ['Allosaurus (other lizard)', 12.2],
-                                ['Apatosaurus (deceptive lizard)', 22.9],
-                                ['Archaeopteryx (ancient wing)', 0.9],
-                                ['Argentinosaurus (Argentina lizard)', 36.6],
-                                ['Baryonyx (heavy claws)', 9.1],
-                                ['Brachiosaurus (arm lizard)', 30.5],
-                                ['Ceratosaurus (horned lizard)', 6.1],
-                                ['Coelophysis (hollow form)', 2.7],
-                                ['Compsognathus (elegant jaw)', 0.9],
-                                ['Deinonychus (terrible claw)', 2.7],
-                                ['Diplodocus (double beam)', 27.1],
-                                ['Dromicelomimus (emu mimic)', 3.4],
-                                ['Gallimimus (fowl mimic)', 5.5],
-                                ['Mamenchisaurus (Mamenchi lizard)', 21.0],
-                                ['Megalosaurus (big lizard)', 7.9],
-                                ['Microvenator (small hunter)', 1.2],
-                                ['Ornithomimus (bird mimic)', 4.6],
-                                ['Oviraptor (egg robber)', 1.5],
-                                ['Plateosaurus (flat lizard)', 7.9],
-                                ['Sauronithoides (narrow-clawed lizard)', 2.0],
-                                ['Seismosaurus (tremor lizard)', 45.7],
-                                ['Spinosaurus (spiny lizard)', 12.2],
-                                ['Supersaurus (super lizard)', 30.5],
-                                ['Tyrannosaurus (tyrant lizard)', 15.2],
-                                ['Ultrasaurus (ultra lizard)', 30.5],
-                                ['Velociraptor (swift robber)', 1.8],
+                                ['Category', 'Stock'],
+                                ['Mobiles', this.state.mobiles],
+                                ['Cameras', this.state.cameras],
+                                ['Laptops', this.state.laptops],
                             ]}
                             options={{
-                                title: 'Lengths of dinosaurs, in meters',
+                                title: 'Category-wise stock',
                                 legend: { position: 'none' },
                                 colors: ['green'],
                             }}
-                            rootProps={{ 'data-testid': '2' }}
                         />
                     </section>
                 </Link>
@@ -59,15 +96,8 @@ class Dashboard extends React.Component {
                         <p>Vendor</p>
                         <Chart
                             chartType="PieChart"
-                            loader={<div>Loading Chart</div>}
-                            data={[
-                                ['Task', 'Hours per Day'],
-                                ['Work', 11],
-                                ['Eat', 2],
-                                ['Commute', 2],
-                                ['Watch TV', 2],
-                                ['Sleep', 7],
-                            ]}
+                            loader={<div>Loading Chart...</div>}
+                            data={this.state.brandData}
                             options={{
                                 title: 'My Daily Activities',
                                 // Just add this option
