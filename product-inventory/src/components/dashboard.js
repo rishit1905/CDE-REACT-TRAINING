@@ -3,7 +3,6 @@ import Chart from "react-google-charts";
 import './dashboard.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import ProductDetail from './productdetail';
 
 class Dashboard extends React.Component {
     constructor(props) {
@@ -13,7 +12,9 @@ class Dashboard extends React.Component {
             mobiles: 0,
             laptops: 0,
             cameras: 0,
-            brandData:[[]]
+            brandData:[[]],
+            stockData:[[]],
+            priceData:[[]]
         }
     }
 
@@ -30,8 +31,8 @@ class Dashboard extends React.Component {
                 this.setState({ products: response.data })
                 this.data()
                 this.datab(this.state.products)
-                // this.datas()
-                // this.datap()
+                this.datas(this.state.products)
+                this.datap(this.state.products)
                 console.log("Components loaded")
             }, error => {
                 console.log(error)
@@ -68,6 +69,25 @@ class Dashboard extends React.Component {
         this.setState({brandData:brand})
     }
 
+    datas = (products) => {
+        let stock=[["Product","Stock"]]
+        for(const data of products){
+               stock.push([data.name,parseInt(data.stock)])
+            
+        }
+        console.log(stock)
+        this.setState({stockData:stock})
+    }
+
+    datap = (products) => {
+        let price=[["Product","Price"]]
+        for(const data of products){
+                price.push([data.name,parseInt(data.price)])            
+        }
+        console.log(price)
+        this.setState({priceData:price})
+    }
+
     render() {
         return (
             <div className="row">
@@ -99,7 +119,7 @@ class Dashboard extends React.Component {
                             loader={<div>Loading Chart...</div>}
                             data={this.state.brandData}
                             options={{
-                                title: 'My Daily Activities',
+                                title: 'Brand-based Stock',
                                 // Just add this option
                                 is3D: true,
                             }}
@@ -112,21 +132,12 @@ class Dashboard extends React.Component {
                         <p>Stock</p>
                         <Chart
                             chartType="Histogram"
-                            loader={<div>Loading Chart</div>}
-                            data={[
-                                ['Quarks', 'Leptons', 'Gauge Bosons', 'Scalar Bosons'],
-                                [2 / 3, -1, 0, 0],
-                                [2 / 3, -1, 0, null],
-                                [2 / 3, -1, 0, null],
-                                [-1 / 3, 0, 1, null],
-                                [-1 / 3, 0, -1, null],
-                                [-1 / 3, 0, null, null],
-                                [-1 / 3, 0, null, null],
-                            ]}
+                            loader={<div>Loading Chart...</div>}
+                            data={this.state.stockData}
                             options={{
-                                title: 'Charges of subatomic particles',
+                                title: 'Brand-based Stock',
                                 legend: { position: 'top', maxLines: 2 },
-                                colors: ['#5C3292', '#1A8763', '#871B47', '#999999'],
+                                colors: ['#5C3292'],
                                 interpolateNulls: false,
                             }}
                             rootProps={{ 'data-testid': '5' }}
@@ -137,22 +148,13 @@ class Dashboard extends React.Component {
                     <section id="price">
                         <p>Price</p>
                         <Chart
-                            chartType="Histogram"
-                            loader={<div>Loading Chart</div>}
-                            data={[
-                                ['Quarks', 'Leptons', 'Gauge Bosons', 'Scalar Bosons'],
-                                [2 / 3, -1, 0, 0],
-                                [2 / 3, -1, 0, null],
-                                [2 / 3, -1, 0, null],
-                                [-1 / 3, 0, 1, null],
-                                [-1 / 3, 0, -1, null],
-                                [-1 / 3, 0, null, null],
-                                [-1 / 3, 0, null, null],
-                            ]}
+                            chartType="ScatterChart"
+                            loader={<div>Loading Chart...</div>}
+                            data={this.state.priceData}
                             options={{
                                 title: 'Charges of subatomic particles',
                                 legend: { position: 'top', maxLines: 2 },
-                                colors: ['#5C3292', '#1A8763', '#871B47', '#999999'],
+                                colors: ['#871B47'],
                                 interpolateNulls: false,
                             }}
                             rootProps={{ 'data-testid': '5' }}
