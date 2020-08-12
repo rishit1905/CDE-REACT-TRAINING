@@ -5,8 +5,17 @@
     height: 450px;
     margin: auto;  
     border-radius: 20px;
-    transform: translateY(80px);
+    transform: translateY(100px);
     box-shadow: 0 0 1rem black;
+}
+
+.log img {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    margin:3rem auto 1.5rem auto;
+    border-radius: 50%;
+    background: rgb(226, 226, 226);
 }
 
 .log input {
@@ -32,45 +41,27 @@
     transition: all 0.4s ease-in;
 }
 
-.log img {
-    width: 100px;
-    height: 100px;
-    padding: 5px;
-    margin:1.5rem auto 1.5rem auto;
-    border-radius: 50%;
-    background: rgb(226, 226, 226);
-}
-
-#signup:hover {
-    color: black;
-    transition: all 0.2s ease-in;
-}
-
-button {
+.log button {
     background: rgb(76, 76, 230);
     color: white;
     padding: 10px 30px 10px 30px;
+    margin: 2.5rem 6rem 0.5rem 6rem;
     border-radius: 10px;
     border: 0px;
     transition: all 0.2s ease-in;
 }
 
-button:hover {
+.log button:hover {
     background: rgb(37, 37, 158);
     color: white;
     padding: 10px 40px 10px 40px;
+    margin: 2.5rem 5rem 0.5rem 5rem;
     border-radius: 10px;
     border: 0px;
     transition: all 0.2s ease-in;
 }
 
-.error {
-    color: #db2269;
-    font-size: medium;
-    display: block;
-}
-
-button:disabled {
+.log button:disabled {
     background: rgb(38, 38, 44);
     color: white;
     padding: 10px 30px 10px 30px;
@@ -80,7 +71,7 @@ button:disabled {
     transition: all 0.2s ease-in;
 }
 
-button:disabled:hover{
+.log button:disabled:hover{
     background: rgb(38, 38, 44);
     color: white;
     padding: 10px 40px 10px 40px;
@@ -88,4 +79,15 @@ button:disabled:hover{
     border-radius: 10px;
     border: 0px;
     transition: all 0.2s ease-in;
+}
+
+#signup:hover {
+    color: black;
+    transition: all 0.2s ease-in;
+}
+
+.error {
+    color: #db2269;
+    font-size: small;
+    display: block;
 }

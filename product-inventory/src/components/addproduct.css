@@ -1,28 +1,41 @@
-form {
-    margin: 0.5%;
-    padding: 1%;
+#add form {
+    margin: 0.5rem;
+    padding: 1rem;
     background: white;
 }
 
-.columns {
-    margin: 2%;
-}
-
-fieldset legend {
+#add fieldset legend {
     font-size: x-large;
 }
 
+#add .columns {
+    margin-top: 1rem;
+}
+
+#add input[type=text], #add input[type=file]{
+    all:unset;
+    display: block;
+    text-align: left;
+    padding: 10px;
+    background: rgb(189, 188, 188);
+    border: 0px;
+    box-sizing: border-box;
+    width:90rem;
+    margin: 0;
+    transition: all 0.4s ease-in;
+}
+/* 
 fieldset label {
     padding: 3px;
-}
+} */
 
-form input {
-    width: 100%;
-}
+/* form input {
+    width: 100rem;
+} */
 
-.error {
+/* .error {
     color: #db2269;
-    font-size: medium;
+    font-size: small;
     display: block;
 }
 
@@ -58,4 +71,4 @@ button:disabled:hover{
 .columns input[type=text], .columns input[type=file]{
     width:100%;
     text-align: left;
-}
+} */

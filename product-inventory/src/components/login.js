@@ -71,7 +71,7 @@ class Login extends React.Component {
         const { errors } = this.state;
         return (
             <div className="log">
-                <img src="./image/profile-icon-9.png" alt="" />
+                <img src="./image/Profile.png" alt="" />
                 <form onChange={this.handleSubmit} noValidate>
                     <input type="email" id="username" placeholder="Username" onChange={this.getUsername} required noValidate />
                     {errors.username.length > 0 && <span className='error'>{errors.username}</span>}

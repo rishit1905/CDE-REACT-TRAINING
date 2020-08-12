@@ -208,21 +208,21 @@ class UpdateProduct extends React.Component {
                 <form onChange={this.handleSubmit} noValidate>
                     <fieldset>
                         <legend>UPDATE PRODUCT</legend>
-                        <div className="columns">
+                        <div className="column">
                             <label>Image:</label>
                             <input type="file" id="imageURL" onChange={this.getUrl} multiple accept="image/*" noValidate />
                             {errors.imageError.length > 0 && <span className="error">{errors.imageError}</span>}
-                            <br /><br />
+                            <br />
                             <label>Product ID:</label>
-                            <input type="text" value={this.state.id} readOnly /><br /><br />
+                            <input type="text" value={this.state.id} readOnly /><br />
                             <label>Product Name:</label>
                             <input type="text" id="name" value={this.state.name} onChange={this.getName} noValidate />
                             {errors.nameError.length > 0 && <span className="error">{errors.nameError}</span>}
-                            <br /><br />
+                            <br />
                             <label>Brand:</label>
                             <input type="text" id="brand" value={this.state.brand} onChange={this.getBrand} noValidate />
                             {errors.brandError.length > 0 && <span className="error">{errors.brandError}</span>}
-                            <br /><br />
+                            <br />
                             <label>Description:</label>
                             <input type="text" id="description" value={this.state.description} onChange={this.getDescription} noValidate />
                             {errors.descriptionError.length > 0 && <span className="error">{errors.descriptionError}</span>}
@@ -233,7 +233,7 @@ class UpdateProduct extends React.Component {
                                 <option value="Mobiles">Mobiles</option>
                                 <option value="Cameras">Cameras</option>
                                 <option value="Laptops">Laptops</option>
-                            </select><br />
+                            </select>
                             {errors.categoryError.length > 0 && <span className="error">{errors.categoryError}</span>}
                             <br /><br />
                             <label>Price:</label>

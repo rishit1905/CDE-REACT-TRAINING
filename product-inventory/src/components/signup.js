@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './signup.css';
 
 const validateForm = errors => {
@@ -31,7 +30,7 @@ class Signup extends React.Component {
 
     getUsername = (event) => {
         let errors = this.state.errors
-        errors.username = "" || (!event.target.value.trim().match(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/)) ? "Invalid email" : ""
+        errors.username = "" || (!event.target.value.trim().match(/^([a-zA-Z0-9_\- \.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/)) ? "Invalid email" : ""
         this.setState({ username: event.target.value })
     }
 
@@ -108,7 +107,7 @@ class Signup extends React.Component {
                         <input id="confirmpassword" type="password" onChange={this.confirmPassword} noValidate placeholder="Confirm Password" required />
                         {errors.confirmpassword.length > 0 && <span className='error'>{errors.confirmpassword}</span>}
                         <br />
-                        <button onClick={this.authorize} className="centersign" disabled={this.buttonStatus}>Create Account</button>
+                        <button onClick={this.authorize} className="centersign" disabled={this.state.buttonStatus}>Create Account</button>
                     </form>
                 </div>
             </div>
