@@ -25,6 +25,8 @@ class Signup extends React.Component {
         };
     }
     getImage = (event) => {
+        let errors = this.state.errors
+        errors.image = event.target.value.substr(12) === "" ? "Upload Image !" : ""
         this.setState({ image: event.target.value.substr(12) })
     }
 
