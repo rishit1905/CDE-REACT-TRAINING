@@ -20,8 +20,8 @@ class ProductDetail extends React.Component {
             customUI: ({ onClose }) => {
                 return (
                     <div className="custom-ui">
-                        <h1>Are you sure ?</h1>
-                        <p>You want to delete this product?</p>
+                        <h1 id="h">Are you sure ?</h1>
+                        <p id="p">You want to delete this product?</p>
                         <button className="delete" onClick={onClose}>No</button>
                         &nbsp;
                         <button className="delete" onClick={() => {
@@ -44,7 +44,7 @@ class ProductDetail extends React.Component {
         }
         return (
             <tr>
-                <td><img src={"image/"+this.props.imageURL}></img></td>
+                <td><img src={"image/"+this.props.imageURL} alt=""></img></td>
                 <td style={titleStyle}>{this.props.name}</td>
                 <td>ID: {this.props.id}</td>
                 <td>BRAND: {this.props.brand}</td>

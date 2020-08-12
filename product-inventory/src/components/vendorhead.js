@@ -1,4 +1,5 @@
 import React from 'react';
+import "./headerfooter.css";
 import { Link } from 'react-router-dom';
 
 class VendorHead extends React.Component {

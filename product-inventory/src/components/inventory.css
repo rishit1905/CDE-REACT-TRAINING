@@ -75,19 +75,35 @@
     transition: all 0.2s ease-in;
 }
 
-/* .deleteButton:hover {
+.delete {
     background: rgb(37, 37, 158);
     color: white;
     margin-top: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding:10px 30px 10px 30px;
+    margin: 2.5rem 2.5rem 0rem 2.5rem;
     border-radius: 10px;
     border: 0px;
     transition: all 0.2s ease-in;
-} */
+}
 
+.delete:hover {
+    background: rgb(165, 40, 40);
+    color: white;
+    margin-top: 10px;
+    padding:10px 40px 10px 40px;
+    margin: 2.5rem 1.5rem 0rem 1.5rem;
+    border-radius: 10px;
+    border: 0px;
+    transition: all 0.2s ease-in;
+}
+
+#h{
+    margin: 2.5rem 0 0.5rem 5.5rem;
+}
+
+#p{
+    margin: 0.5rem 0 0.5rem 5rem;
+}
 
 input[type=search] {
     width: 89%;
