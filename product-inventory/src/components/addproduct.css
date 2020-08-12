@@ -24,7 +24,6 @@
 }
 
 #add input[type=text], #add input[type=file] {
-    all: unset;
     display: block;
     text-align: left;
     padding: 10px;

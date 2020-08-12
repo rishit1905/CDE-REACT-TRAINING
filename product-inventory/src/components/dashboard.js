@@ -143,7 +143,7 @@ class Dashboard extends React.Component {
                     </section>
                 </Link>
                 <Link to="/price">
-                    <section id="price">
+                    <section id="priceDashboard">
                         <p>Price</p>
                         <Chart
                             chartType="ScatterChart"

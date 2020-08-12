@@ -9,13 +9,12 @@ header {
 
 .element {
     float: left;
-    margin-left: 6rem;
-    vertical-align: middle;
+    margin: 0.3rem 0 0.3rem 6rem;
 }
 
 .tables {
     float: right;
-    margin-right: 2rem;
+    margin: 0.3rem 2rem 0.3rem 0;
 }
 
 td {
@@ -50,9 +49,8 @@ input[type=search]{
 }
 
 .profile {
-    width: 20px;
-    height: 20px;
-    padding: 5px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: rgb(226, 226, 226);
 }

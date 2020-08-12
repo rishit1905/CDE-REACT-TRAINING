@@ -10,7 +10,6 @@ header {
 }
 
 header:after {
-    content: "";
-    display: inline-flexbox;
+    display: block;
     clear: both;
 }

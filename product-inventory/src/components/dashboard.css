@@ -18,12 +18,12 @@ section:hover{
     display: block;
 }
 
-#price{
+#priceDashboard{
     display: block;
     float: left;
     width: 495px;
     height:310px;
-    margin:0.9rem 32rem 0 32rem;
+    margin:0.6rem 32rem 0.5rem 32rem;
     text-align: center;
     box-shadow: 0 0 1rem black;
     background: white;
