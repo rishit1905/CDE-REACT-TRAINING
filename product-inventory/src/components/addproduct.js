@@ -36,6 +36,8 @@ class AddProduct extends React.Component {
         console.log(event)
         console.log(event.target)
         console.log(event.target.value.substr(12))
+        let errors = this.state.errors
+        errors.imageURL = event.target.value.substr(12) === "" ? "Upload Image !" : ""
         this.setState({ imageURL: event.target.value.substr(12) })
 
     }

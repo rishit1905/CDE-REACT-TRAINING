@@ -24,7 +24,7 @@ class UpdateProductHead extends React.Component {
                                         <button className="headerButton">Signout</button>
                                     </Link>
                                 </td>
-                                <td><img className="profile" src="./image/profile-icon-9.png" alt=""/></td>
+                                <td><img className="profile" src="./image/Profile.png" alt=""/></td>
                             </tr>
                         </tbody>
 
