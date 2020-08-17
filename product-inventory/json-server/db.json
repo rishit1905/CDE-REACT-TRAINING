@@ -6,19 +6,9 @@
       "brand": "Samsung",
       "description": "Mobiles to use",
       "category": "Mobiles",
-      "price": "35000",
+      "price": "35999",
       "stock": "201",
       "id": 1
-    },
-    {
-      "imageURL": "mob4.jpg",
-      "name": "Asus ",
-      "brand": "Asus",
-      "description": "Mobiles to use",
-      "category": "Mobiles",
-      "price": "15676",
-      "stock": "476",
-      "id": 2
     },
     {
       "imageURL": "mob1.jpg",
@@ -89,6 +79,16 @@
       "price": "178550",
       "stock": "15",
       "id": 9
+    },
+    {
+      "imageURL": "down.jpg",
+      "name": "Redmi K20 Pro",
+      "brand": "Xiaomi",
+      "description": "6Gb+128GB Variant",
+      "category": "Mobiles",
+      "price": "24999",
+      "stock": "10",
+      "id": 10
     }
   ]
 }
