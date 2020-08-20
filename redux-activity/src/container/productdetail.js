@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import deleteProductBroadcast from "../action/deleteProductBroadcast";
+import deleteProductBroadcast from "../action/deleteproductbroadcast";
 import axios from "axios";
+import editClickedBroadcast from '../action/editclickedbroadcast';
 
 class ProductDetail extends React.Component {
 
@@ -15,7 +16,7 @@ class ProductDetail extends React.Component {
                 console.log(error)
             })
     }
-
+    
     deleteProduct=()=>{
         axios.delete("http://localhost:3000/products/"+this.props.product.id)
         .then(response=>{
@@ -41,7 +42,7 @@ class ProductDetail extends React.Component {
                     &nbsp;&nbsp;<b>Price:</b> {this.props.product.price}<br></br>
                     &nbsp;&nbsp;<b>Quantity:</b> {this.props.product.quantity}<br></br>
                     &nbsp;&nbsp;<b>Stock Available:</b> {this.props.product.stock}<br></br><br></br>
-                    &nbsp;&nbsp;<button>Edit</button>
+                    &nbsp;&nbsp;<button onClick={()=>{this.props.editProduct(this.props.product)}}>Edit</button>
                     &nbsp;&nbsp;&nbsp;&nbsp;<button onClick={this.deleteProduct}>Delete</button>
                 </div>
             );
@@ -60,7 +61,8 @@ function convertStoreToProps(store) {
 
 function eventDispatch(dispatch){
     return bindActionCreators({
-        delete:deleteProductBroadcast
+        delete:deleteProductBroadcast,
+        editProduct:editClickedBroadcast
     },dispatch)
 }
 

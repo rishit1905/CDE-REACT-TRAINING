@@ -8,7 +8,11 @@ const allProductReducer = function allProductReducer(state = null, action) {
             return action.payload
         case "ADD_PRODUCT":
             return action.payload
+        case "EDIT_PRODUCT":
+            return action.payload
         case "PRODUCT_CLICKED":
+            return state
+        case "EDIT_CLICKED":
             return state
         case "DELETE_PRODUCT":
             console.log(action.payload)

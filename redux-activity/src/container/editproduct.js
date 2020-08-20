@@ -1,15 +1,15 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import addProductBroadcast from '../action/addproductbroadcast';
 import axios from "axios";
+import editProductBroadcast from '../action/editproductbroadcast';
 
 const validateForm = errors => {
     let valid = true;
     Object.values(errors).forEach(val => val.length > 0 && (valid = false));
     return valid;
 }
-class AddProduct extends React.Component {
+class EditProduct extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -26,6 +26,25 @@ class AddProduct extends React.Component {
                 stockError: ""
             },
             buttonStatus: true
+        }
+    }
+
+    componentWillMount() {
+        if (this.props.product !== null) {
+            axios.get("http://localhost:3000/products/" + this.props.product.pid)
+                .then(response => {
+                    console.log(response)
+                    this.setState({
+                        id: response.data.id,
+                        name: response.data.name,
+                        category: response.data.category,
+                        price: response.data.price,
+                        quantity:response.data.quantity,
+                        stock: response.data.stock
+                    })
+                }, error => {
+                    console.log(error);
+                })
         }
     }
 
@@ -126,26 +145,26 @@ class AddProduct extends React.Component {
         axios.get("http://localhost:3000/products")
             .then(response => {
                 console.log(response)
-                this.props.newProduct(response.data)
+                this.props.editProduct(response.data)
             }, error => {
                 console.log(error)
             })
     }
 
-    addProduct = (event) => {
+    edit = (event) => {
         if (this.checkValidation()) {
             event.preventDefault()
-            let product = {
+            let editedproduct = {
                 name: this.state.name,
                 category: this.state.category,
                 price: this.state.price,
                 quantity: this.state.quantity,
                 stock: this.state.stock
             }
-            axios.post("http://localhost:3000/products", product)
+            axios.put("http://localhost:3000/products/"+this.state.id, editedproduct)
                 .then(response => {
                     console.log(response)
-                    console.log("New Product Added !")
+                    console.log("Product Edited !")
                     this.allProducts()
                 }, error => {
                     console.log(error)
@@ -162,10 +181,17 @@ class AddProduct extends React.Component {
             marging: '8px 0',
             display: 'inline-block'
         }
+        if (this.props.product === null) {
+            return (
+                <div>
+                    <h2>No edit option clicked yet !</h2>
+                </div>
+            )
+        }
         return (
             <div>
                 <form name="form" onChange={this.handleSubmit} style={{ textAlign: 'center', margin: '60px', backgroundColor: '#f2f2f2', padding: '20px' }}>
-                    <h2>Add Product</h2>
+                    <h2>Edit Product</h2>
                     <div className="name">
                         <label htmlFor="name">Name:</label> &emsp;  &emsp;
                             <input type="text" style={textStyle} id="name" onChange={this.getName}
@@ -228,7 +254,7 @@ class AddProduct extends React.Component {
                         )}
                     </div><br />
                     <div>
-                        <button disabled={this.state.buttonStatus} onClick={this.addProduct}>Add</button>
+                        <button disabled={this.state.buttonStatus} onClick={this.edit}>Edit product</button>
                     </div>
                     <br />
                 </form>
@@ -237,9 +263,17 @@ class AddProduct extends React.Component {
     }
 }
 
+function convertStoreToProps(store) {
+    console.log("Product detail received from store")
+    console.log(store)
+    return {
+        product: store.editClicked
+    }
+}
+
 function convertPropsToEvent(dispatch) {
     return bindActionCreators({
-        newProduct: addProductBroadcast
+        editProduct:editProductBroadcast
     }, dispatch)
 }
-export default connect(null, convertPropsToEvent)(AddProduct);
+export default connect(convertStoreToProps, convertPropsToEvent)(EditProduct);

@@ -81,14 +81,6 @@
       "id": 10
     },
     {
-      "name": "Redmi Note 8",
-      "category": "Mobiles",
-      "price": "13999",
-      "quantity": "25",
-      "stock": "Yes",
-      "id": 11
-    },
-    {
       "name": "Samsung Galaxy M01",
       "category": "Mobiles",
       "price": "6500",
@@ -105,28 +97,12 @@
       "id": 14
     },
     {
-      "name": "Moto 6s",
-      "category": "Mobiles",
-      "price": "8599",
-      "quantity": "21",
-      "stock": "Yes",
-      "id": 15
-    },
-    {
       "name": "Samsung M10",
       "category": "Mobiles",
       "price": "6770",
       "quantity": "87",
       "stock": "Yes",
       "id": 16
-    },
-    {
-      "name": "Lenovo Legion",
-      "category": "Laptops",
-      "price": "78990",
-      "quantity": "14",
-      "stock": "Yes",
-      "id": 18
     },
     {
       "name": "Fujifilm X-T30",
