@@ -2,6 +2,7 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import addProductBroadcast from '../action/addproductbroadcast';
+import axios from "axios";
 
 const validateForm = errors => {
     let valid = true;
@@ -123,6 +124,7 @@ class AddProduct extends React.Component {
     addProduct = (event) => {
         if (this.checkValidation()) {
             event.preventDefault()
+            console.log("Adding product..");
             let product = {
                 name: this.state.name,
                 category: this.state.category,
@@ -130,7 +132,15 @@ class AddProduct extends React.Component {
                 quantity: this.state.quantity,
                 stock: this.state.stock
             }
-            this.props.newProduct(product)
+            axios.post("http://localhost:3000/products", product)
+                .then(response => {
+                    console.log(response)
+                    console.log("Done")
+                    this.props.newProduct(response.data)
+                }, error => {
+                    console.log(error)
+            })
+            
         }
     }
     render() {

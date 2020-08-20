@@ -1,12 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import deleteProductBroadcast from "../action/deleteProductBroadcast"
+import deleteProductBroadcast from "../action/deleteProductBroadcast";
+import axios from "axios";
 
 class ProductDetail extends React.Component {
 
     deleteProduct=()=>{
-        this.props.delete(this.props.product)
+        // axios.delete("")
+        return this.props.delete(this.props.product)
     }
     render() {
         if (this.props.product === null) {
