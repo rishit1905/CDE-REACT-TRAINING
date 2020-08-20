@@ -29,17 +29,18 @@ class EditProduct extends React.Component {
         }
     }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         if (this.props.product !== null) {
-            axios.get("http://localhost:3000/products/" + this.props.product.pid)
+            axios.get("http://localhost:3000/products/" + this.props.product.id)
                 .then(response => {
                     console.log(response)
+                    console.log("Product to be edited: ")
+                    console.log(response.data)
                     this.setState({
-                        id: response.data.id,
                         name: response.data.name,
                         category: response.data.category,
                         price: response.data.price,
-                        quantity:response.data.quantity,
+                        quantity: response.data.quantity,
                         stock: response.data.stock
                     })
                 }, error => {
@@ -161,7 +162,7 @@ class EditProduct extends React.Component {
                 quantity: this.state.quantity,
                 stock: this.state.stock
             }
-            axios.put("http://localhost:3000/products/"+this.state.id, editedproduct)
+            axios.put("http://localhost:3000/products/" + this.state.id, editedproduct)
                 .then(response => {
                     console.log(response)
                     console.log("Product Edited !")
@@ -194,7 +195,7 @@ class EditProduct extends React.Component {
                     <h2>Edit Product</h2>
                     <div className="name">
                         <label htmlFor="name">Name:</label> &emsp;  &emsp;
-                            <input type="text" style={textStyle} id="name" onChange={this.getName}
+                            <input type="text" value={this.state.name} style={textStyle} id="name" onChange={this.getName}
                             placeholder="Product Name *" noValidate />
                         <br></br>
                         {errors.nameError.length > 0 && (
@@ -203,7 +204,7 @@ class EditProduct extends React.Component {
                     </div><br />
                     <div>
                         <label>Category:</label> &emsp;
-                            <select defaultValue={this.state.selectValue} id="category" style={textStyle}
+                            <select defaultValue={this.state.category} id="category" style={textStyle}
                             onChange={this.getCategory}
                         >
                             <option value="">--select--</option>
@@ -219,19 +220,18 @@ class EditProduct extends React.Component {
                     <div className="price">
                         <label htmlFor="price">Price:</label> &emsp;  &emsp;  &nbsp;
                             <input
-                            type="number" name="price" style={textStyle} id="price" onChange={this.getPrice} required
+                            type="number" name="price" value={this.state.price} style={textStyle} id="price" onChange={this.getPrice} required
                             placeholder="Product Price *"
                             noValidate />
                         <br></br>
                         {errors.priceError.length > 0 && (
                             <span className="error">{errors.priceError}</span>
                         )}
-
                     </div><br />
                     <div className="quantity">
                         <label htmlFor="quantity">Quantity:</label> &nbsp;
                             <input
-                            type="number" name="quantity" style={textStyle} id="quantity" onChange={this.getQuantity} required
+                            type="number" name="quantity" value={this.state.quantity} style={textStyle} id="quantity" onChange={this.getQuantity} required
                             placeholder="Product Quantity *"
                             noValidate />
                         <br></br>
@@ -241,7 +241,7 @@ class EditProduct extends React.Component {
                     </div><br />
                     <div className="stock">
                         <label htmlFor="stock">Stock Available:</label> &emsp; &emsp; &nbsp;
-                        <select defaultValue={this.state.selectValue} id="stock" style={textStyle}
+                        <select defaultValue={this.state.stock} id="stock" style={textStyle}
                             onChange={this.getStock}
                         >
                             <option value="">--select--</option>
@@ -259,7 +259,7 @@ class EditProduct extends React.Component {
                     <br />
                 </form>
             </div>
-        );
+        )
     }
 }
 
@@ -273,7 +273,7 @@ function convertStoreToProps(store) {
 
 function convertPropsToEvent(dispatch) {
     return bindActionCreators({
-        editProduct:editProductBroadcast
+        editProduct: editProductBroadcast
     }, dispatch)
 }
 export default connect(convertStoreToProps, convertPropsToEvent)(EditProduct);
