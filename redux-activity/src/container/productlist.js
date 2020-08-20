@@ -2,17 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import productClickedBroadcast from "../action/productclickedbroadcast";
-import axios from "axios"
+import axios from "axios";
 import displayProductBroadcast from '../action/displayproductbroadcast';
 
 class ProductList extends React.Component {
     componentWillMount() {
         console.log("Mounting all products");
         this.allProducts()
-    }
-
-    componentDidMount(){
-        console.log(this.props)
     }
 
     allProducts() {

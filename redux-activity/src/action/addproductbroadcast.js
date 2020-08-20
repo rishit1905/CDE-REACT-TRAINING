@@ -3,7 +3,7 @@ const addProductBroadcast=function(product){
     console.log(product);
     console.log("Reducer will capture the event and payload..")
     return({
-        type:"NEW_PRODUCT",
+        type:"ALL_PRODUCT",
         payload:product
     })
 }

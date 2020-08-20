@@ -7,7 +7,7 @@ import axios from "axios";
 class ProductDetail extends React.Component {
 
     deleteProduct=()=>{
-        // axios.delete("")
+        axios.delete("")
         return this.props.delete(this.props.product)
     }
     render() {

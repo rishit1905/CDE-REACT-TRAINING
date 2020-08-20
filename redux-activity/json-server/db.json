@@ -135,6 +135,38 @@
       "quantity": "14",
       "stock": "Yes",
       "id": 17
+    },
+    {
+      "name": "Lenovo Legion",
+      "category": "Laptops",
+      "price": "78990",
+      "quantity": "14",
+      "stock": "Yes",
+      "id": 18
+    },
+    {
+      "name": "Dell Inspiron 14",
+      "category": "Laptops",
+      "price": "46790",
+      "quantity": "87",
+      "stock": "Yes",
+      "id": 19
+    },
+    {
+      "name": "Lenovo 2NIN",
+      "category": "Laptops",
+      "price": "24800",
+      "quantity": "24",
+      "stock": "Yes",
+      "id": 20
+    },
+    {
+      "name": "HP Pavilion",
+      "category": "Laptops",
+      "price": "64990",
+      "quantity": "87",
+      "stock": "Yes",
+      "id": 21
     }
   ]
 }

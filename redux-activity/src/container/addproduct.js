@@ -28,6 +28,7 @@ class AddProduct extends React.Component {
             buttonStatus: true
         }
     }
+
     handleSubmit = (event) => {
         event.preventDefault()
         if (validateForm(this.state.errors)) {
@@ -121,6 +122,16 @@ class AddProduct extends React.Component {
 
     }
 
+    allProducts() {
+        axios.get("http://localhost:3000/products")
+            .then(response => {
+                console.log(response)
+                this.props.newProduct(response.data)
+        }, error => {
+                console.log(error)
+            })
+    }
+
     addProduct = (event) => {
         if (this.checkValidation()) {
             event.preventDefault()
@@ -136,13 +147,14 @@ class AddProduct extends React.Component {
                 .then(response => {
                     console.log(response)
                     console.log("Done")
-                    this.props.newProduct(response.data)
+                    this.allProducts()
                 }, error => {
                     console.log(error)
             })
             
         }
     }
+
     render() {
         const { errors } = this.state;
         const textStyle = {

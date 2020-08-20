@@ -1,15 +1,11 @@
 const allProductReducer = function allProductReducer(state = null, action) {
     var products = []
-
+    
     switch (action.type) {
         case "ALL_PRODUCT":
             console.log("All products loaded !")
             console.log(action.payload)
             return action.payload
-        case "NEW_PRODUCT":
-            console.log("Product added successfully !");
-            console.log(action.payload)
-            return state
         case "PRODUCT_CLICKED":
             return state
         case "DELETE_PRODUCT":

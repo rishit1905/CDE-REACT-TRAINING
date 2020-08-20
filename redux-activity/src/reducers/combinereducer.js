@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux';
-import ProductReducer from './allproductreducer';
 import productClickedReducer from './productclickedreducer';
+import allProductReducer from './allproductreducer';
 
 const allReducers=combineReducers({
-    allProductReducer:ProductReducer,
+    allProductReducer:allProductReducer,
     productClicked:productClickedReducer
 });
 
