@@ -1,5 +1,4 @@
 const deleteProductBroadcast=function(product){
-    console.log("Received product for delete");
     console.log(product);
     console.log("Reducer will capture the event and payload..")
     return({

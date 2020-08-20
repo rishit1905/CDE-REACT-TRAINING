@@ -5,10 +5,8 @@ const productClickedReducer = function productClickedBroadcast(state = null, act
             console.log("Action with payload received")
             console.log(action.payload);
             return action.payload
-        // case "ALL_PRODUCT":
-        //     return state
-        // case "NEW_PRODUCT":
-        //     return state
+        case "DELETE_PRODUCT":
+            return null
         default:
             break;
     }

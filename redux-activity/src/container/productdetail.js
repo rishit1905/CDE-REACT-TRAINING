@@ -6,9 +6,23 @@ import axios from "axios";
 
 class ProductDetail extends React.Component {
 
+    allProducts() {
+        axios.get("http://localhost:3000/products")
+            .then(response => {
+                console.log(response)
+                this.props.delete(response.data)
+        }, error => {
+                console.log(error)
+            })
+    }
+
     deleteProduct=()=>{
-        axios.delete("")
-        return this.props.delete(this.props.product)
+        axios.delete("http://localhost:3000/products/"+this.props.product.id)
+        .then(response=>{
+            console.log(response);
+            console.log("Product with id: "+this.props.product.id+" and name: "+this.props.product.name+" deleted")
+            this.allProducts()
+        }, error=>{})
     }
     render() {
         if (this.props.product === null) {

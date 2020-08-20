@@ -1,17 +1,18 @@
 const allProductReducer = function allProductReducer(state = null, action) {
     var products = []
-    
+
     switch (action.type) {
         case "ALL_PRODUCT":
             console.log("All products loaded !")
             console.log(action.payload)
             return action.payload
+        case "ADD_PRODUCT":
+            return action.payload
         case "PRODUCT_CLICKED":
             return state
         case "DELETE_PRODUCT":
-            let productId=action.payload.id
-            console.log("Product deleted successfully !");
-            return state.filter(p=>p.id!==productId)
+            console.log(action.payload)
+            return action.payload
         default:
             break
     }

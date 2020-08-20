@@ -89,14 +89,6 @@
       "id": 11
     },
     {
-      "name": "Mi Poco F1",
-      "category": "Mobiles",
-      "price": "21999",
-      "quantity": "50",
-      "stock": "Yes",
-      "id": 12
-    },
-    {
       "name": "Samsung Galaxy M01",
       "category": "Mobiles",
       "price": "6500",
@@ -129,14 +121,6 @@
       "id": 16
     },
     {
-      "name": "Nokia 21",
-      "category": "Mobiles",
-      "price": "5799",
-      "quantity": "14",
-      "stock": "Yes",
-      "id": 17
-    },
-    {
       "name": "Lenovo Legion",
       "category": "Laptops",
       "price": "78990",
@@ -145,28 +129,12 @@
       "id": 18
     },
     {
-      "name": "Dell Inspiron 14",
-      "category": "Laptops",
-      "price": "46790",
-      "quantity": "87",
+      "name": "Fujifilm X-T30",
+      "category": "Cameras",
+      "price": "82999",
+      "quantity": "89",
       "stock": "Yes",
-      "id": 19
-    },
-    {
-      "name": "Lenovo 2NIN",
-      "category": "Laptops",
-      "price": "24800",
-      "quantity": "24",
-      "stock": "Yes",
-      "id": 20
-    },
-    {
-      "name": "HP Pavilion",
-      "category": "Laptops",
-      "price": "64990",
-      "quantity": "87",
-      "stock": "Yes",
-      "id": 21
+      "id": 22
     }
   ]
 }

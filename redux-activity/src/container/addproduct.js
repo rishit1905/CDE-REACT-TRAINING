@@ -135,7 +135,6 @@ class AddProduct extends React.Component {
     addProduct = (event) => {
         if (this.checkValidation()) {
             event.preventDefault()
-            console.log("Adding product..");
             let product = {
                 name: this.state.name,
                 category: this.state.category,
@@ -146,7 +145,7 @@ class AddProduct extends React.Component {
             axios.post("http://localhost:3000/products", product)
                 .then(response => {
                     console.log(response)
-                    console.log("Done")
+                    console.log("New Product Added !")
                     this.allProducts()
                 }, error => {
                     console.log(error)
