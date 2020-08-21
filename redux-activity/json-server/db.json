@@ -95,6 +95,14 @@
       "quantity": "189",
       "stock": "Yes",
       "id": 26
+    },
+    {
+      "name": "Lenovo Ideapad",
+      "category": "Laptops",
+      "price": "50099",
+      "quantity": "219",
+      "stock": "Yes",
+      "id": 27
     }
   ]
 }

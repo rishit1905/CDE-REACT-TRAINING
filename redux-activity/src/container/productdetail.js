@@ -43,7 +43,6 @@ class ProductDetail extends React.Component {
             return (
                 <div>
                     <h2>Product Detail:</h2>
-                    &nbsp;&nbsp;<b>ID:</b>{this.props.product.id}<br></br>
                     &nbsp;&nbsp;<b>Name:</b> {this.props.product.name}<br></br>
                     &nbsp;&nbsp;<b>Category:</b> {this.props.product.category}<br></br>
                     &nbsp;&nbsp;<b>Price:</b> {this.props.product.price}<br></br>
