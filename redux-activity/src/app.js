@@ -1,18 +1,12 @@
 import React from 'react';
-import AddProduct from './container/addproduct';
-import ProductList from './container/productlist';
-import ProductDetail from './container/productdetail';
-import EditProduct from './container/editproduct';
+import Menu from './container/menu';
+import Content from './container/content';
 
 const App = () => (
     <div>
-        <AddProduct />
-        <hr />
-        <ProductList />
-        <hr />
-        <ProductDetail />
-        <hr />
-        <EditProduct />
+        <Menu/>
+        <hr></hr>
+        <Content></Content>
     </div>
 );
 

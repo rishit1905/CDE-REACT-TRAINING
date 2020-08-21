@@ -7,6 +7,12 @@ const productClickedReducer = function productClickedBroadcast(state = null, act
             return action.payload
         case "DELETE_PRODUCT":
             return null
+        case "ALL_PRODUCT":
+            return state
+        case "ADD_PRODUCT":
+            return null
+        case "EDIT_PRODUCT":
+            return state
         default:
             break;
     }

@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import axios from "axios";
 import editProductBroadcast from '../action/editproductbroadcast';
+import productClickedBroadcast from '../action/productclickedbroadcast';
 
 const validateForm = errors => {
     let valid = true;
@@ -13,11 +14,12 @@ class EditProduct extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            name: "",
-            category: "",
-            price: 0,
-            quantity: 0,
-            stock: "",
+            id: this.props.product.id,
+            name: this.props.product.name,
+            category: this.props.product.category,
+            price: this.props.product.price,
+            quantity: this.props.product.quantity,
+            stock: this.props.product.stock,
             errors: {
                 nameError: "",
                 categoryError: "",
@@ -26,26 +28,6 @@ class EditProduct extends React.Component {
                 stockError: ""
             },
             buttonStatus: true
-        }
-    }
-
-    UNSAFE_componentWillMount() {
-        if (this.props.product !== null) {
-            axios.get("http://localhost:3000/products/" + this.props.product.id)
-                .then(response => {
-                    console.log(response)
-                    console.log("Product to be edited: ")
-                    console.log(response.data)
-                    this.setState({
-                        name: response.data.name,
-                        category: response.data.category,
-                        price: response.data.price,
-                        quantity: response.data.quantity,
-                        stock: response.data.stock
-                    })
-                }, error => {
-                    console.log(error);
-                })
         }
     }
 
@@ -147,6 +129,7 @@ class EditProduct extends React.Component {
             .then(response => {
                 console.log(response)
                 this.props.editProduct(response.data)
+                this.props.history.push("/")
             }, error => {
                 console.log(error)
             })
@@ -165,6 +148,8 @@ class EditProduct extends React.Component {
             axios.put("http://localhost:3000/products/" + this.state.id, editedproduct)
                 .then(response => {
                     console.log(response)
+                    console.log(response.data)
+                    this.props.update(response.data)
                     console.log("Product Edited !")
                     this.allProducts()
                 }, error => {
@@ -175,19 +160,18 @@ class EditProduct extends React.Component {
     }
 
     render() {
-        const { errors } = this.state;
-        const textStyle = {
-            width: '500px',
-            padding: '10px 30px',
-            marging: '8px 0',
-            display: 'inline-block'
-        }
         if (this.props.product === null) {
             return (
                 <div>
                     <h2>No edit option clicked yet !</h2>
                 </div>
             )
+        }
+        const textStyle = {
+            width: '500px',
+            padding: '10px 30px',
+            marging: '8px 0',
+            display: 'inline-block'
         }
         return (
             <div>
@@ -198,8 +182,8 @@ class EditProduct extends React.Component {
                             <input type="text" value={this.state.name} style={textStyle} id="name" onChange={this.getName}
                             placeholder="Product Name *" noValidate />
                         <br></br>
-                        {errors.nameError.length > 0 && (
-                            <span className="error">{errors.nameError}</span>
+                        {this.state.errors.nameError.length > 0 && (
+                            <span className="error">{this.state.errors.nameError}</span>
                         )}
                     </div><br />
                     <div>
@@ -213,8 +197,8 @@ class EditProduct extends React.Component {
                             <option value="Cameras">Cameras</option>
                         </select>
                         <br></br>
-                        {errors.categoryError.length > 0 && (
-                            <span className="error">{errors.categoryError}</span>
+                        {this.state.errors.categoryError.length > 0 && (
+                            <span className="error">{this.state.errors.categoryError}</span>
                         )}
                     </div><br />
                     <div className="price">
@@ -224,8 +208,8 @@ class EditProduct extends React.Component {
                             placeholder="Product Price *"
                             noValidate />
                         <br></br>
-                        {errors.priceError.length > 0 && (
-                            <span className="error">{errors.priceError}</span>
+                        {this.state.errors.priceError.length > 0 && (
+                            <span className="error">{this.state.errors.priceError}</span>
                         )}
                     </div><br />
                     <div className="quantity">
@@ -235,8 +219,8 @@ class EditProduct extends React.Component {
                             placeholder="Product Quantity *"
                             noValidate />
                         <br></br>
-                        {errors.quantityError.length > 0 && (
-                            <span className="error">{errors.quantityError}</span>
+                        {this.state.errors.quantityError.length > 0 && (
+                            <span className="error">{this.state.errors.quantityError}</span>
                         )}
                     </div><br />
                     <div className="stock">
@@ -249,8 +233,8 @@ class EditProduct extends React.Component {
                             <option value="No">No</option>
                         </select>
                         <br></br>
-                        {errors.stockError.length > 0 && (
-                            <span className="error">{errors.stockError}</span>
+                        {this.state.errors.stockError.length > 0 && (
+                            <span className="error">{this.state.errors.stockError}</span>
                         )}
                     </div><br />
                     <div>
@@ -267,13 +251,14 @@ function convertStoreToProps(store) {
     console.log("Product detail received from store")
     console.log(store)
     return {
-        product: store.editClicked
+        product: store.productClicked
     }
 }
 
 function convertPropsToEvent(dispatch) {
     return bindActionCreators({
-        editProduct: editProductBroadcast
+        editProduct: editProductBroadcast,
+        update:productClickedBroadcast
     }, dispatch)
 }
 export default connect(convertStoreToProps, convertPropsToEvent)(EditProduct);

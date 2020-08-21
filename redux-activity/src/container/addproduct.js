@@ -127,6 +127,7 @@ class AddProduct extends React.Component {
             .then(response => {
                 console.log(response)
                 this.props.newProduct(response.data)
+                this.props.history.push("/")
             }, error => {
                 console.log(error)
             })

@@ -17,36 +17,12 @@
       "id": 2
     },
     {
-      "name": "HP Laptop",
-      "category": "Laptops",
-      "price": "89099",
-      "quantity": "10",
-      "stock": "Yes",
-      "id": 3
-    },
-    {
       "name": "Dell Inspiron",
       "category": "Laptops",
       "price": "115000",
       "quantity": "10",
       "stock": "Yes",
       "id": 4
-    },
-    {
-      "name": "ASUS Classic",
-      "category": "Laptops",
-      "price": "51000",
-      "quantity": "10",
-      "stock": "Yes",
-      "id": 5
-    },
-    {
-      "name": "Cannon EOS",
-      "category": "Cameras",
-      "price": "28000",
-      "quantity": "10",
-      "stock": "Yes",
-      "id": 6
     },
     {
       "name": "Sony Camera",
@@ -57,36 +33,12 @@
       "id": 7
     },
     {
-      "name": "Nikon D750",
-      "category": "Cameras",
-      "price": "178550",
-      "quantity": "10",
-      "stock": "Yes",
-      "id": 8
-    },
-    {
-      "name": "Redmi K20 Pro",
-      "category": "Mobiles",
-      "price": "24999",
-      "quantity": "10",
-      "stock": "Yes",
-      "id": 9
-    },
-    {
       "name": "Redmi Note 8 Pro",
       "category": "Mobiles",
       "price": "17999",
       "quantity": "15",
       "stock": "Yes",
       "id": 10
-    },
-    {
-      "name": "Samsung Galaxy M01",
-      "category": "Mobiles",
-      "price": "6500",
-      "quantity": "25",
-      "stock": "Yes",
-      "id": 13
     },
     {
       "name": "Realme C2",
@@ -111,6 +63,38 @@
       "quantity": "89",
       "stock": "Yes",
       "id": 22
+    },
+    {
+      "name": "Redmi K20 Pro",
+      "category": "Mobiles",
+      "price": "24999",
+      "quantity": "89",
+      "stock": "Yes",
+      "id": 23
+    },
+    {
+      "name": "Cannon EOS",
+      "category": "Cameras",
+      "price": "50999",
+      "quantity": "54",
+      "stock": "Yes",
+      "id": 24
+    },
+    {
+      "name": "HP Laptop",
+      "category": "Laptops",
+      "price": "92999",
+      "quantity": "53",
+      "stock": "Yes",
+      "id": 25
+    },
+    {
+      "name": "Apple Iphone6",
+      "category": "Mobiles",
+      "price": "28000",
+      "quantity": "189",
+      "stock": "Yes",
+      "id": 26
     }
   ]
 }

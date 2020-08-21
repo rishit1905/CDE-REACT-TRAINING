@@ -6,7 +6,7 @@ import axios from "axios";
 import displayProductBroadcast from '../action/displayproductbroadcast';
 
 class ProductList extends React.Component {
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         console.log("Mounting all products");
         this.allProducts()
     }
