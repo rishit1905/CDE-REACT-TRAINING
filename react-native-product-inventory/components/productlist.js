@@ -26,7 +26,7 @@ export default function ProductList() {
                             <View key={product.id}>
                                 <TouchableOpacity>
                                     <Image source=
-                                        {require('../assets/favicon.png')} ></Image>
+                                        {{uri:product.imageURL}} ></Image>
                                     <Text>{product.name}</Text>
                                 </TouchableOpacity>
                             </View>
