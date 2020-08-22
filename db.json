@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
+      "imageURL": "mob2.jpg",
       "name": "Samsung",
       "brand": "Samsung",
       "description": "Mobiles to use",
@@ -11,7 +11,7 @@
       "id": 1
     },
     {
-      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
+      "imageURL": "mob1.jpg",
       "name": "One Plus",
       "brand": "One Plus",
       "description": "Mobiles to use",
@@ -21,7 +21,7 @@
       "id": 3
     },
     {
-      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
+      "imageURL": "lap1.jpg",
       "name": "HP Laptop",
       "brand": "HP",
       "description": "Laptops to use",
@@ -31,7 +31,7 @@
       "id": 4
     },
     {
-      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
+      "imageURL": "lap2.jpg",
       "name": "Dell Inspiron",
       "brand": "Dell",
       "description": "Laptops to use",
@@ -41,7 +41,7 @@
       "id": 5
     },
     {
-      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
+      "imageURL": "lap.jpg",
       "name": "ASUS Classic",
       "brand": "Asus",
       "description": "Laptop to use",
@@ -51,7 +51,7 @@
       "id": 6
     },
     {
-      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
+      "imageURL": "cannon.jpg",
       "name": "Cannon EOS",
       "brand": "Canon",
       "description": "Camera to use",
@@ -61,7 +61,7 @@
       "id": 7
     },
     {
-      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
+      "imageURL": "sony.jpg",
       "name": "Sony Camera",
       "brand": "Sony",
       "description": "Cameras to use",
@@ -71,7 +71,7 @@
       "id": 8
     },
     {
-      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
+      "imageURL": "nikon2.jpg",
       "name": "Nikon D750",
       "brand": "Nikon",
       "description": "Camera at its best",
@@ -81,7 +81,7 @@
       "id": 9
     },
     {
-      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
+      "imageURL": "down.jpg",
       "name": "Redmi K20 Pro",
       "brand": "Xiaomi",
       "description": "6Gb+128GB Variant",
