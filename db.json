@@ -11,7 +11,7 @@
       "id": 1
     },
     {
-      "imageURL": "mob1.jpg",
+      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
       "name": "One Plus",
       "brand": "One Plus",
       "description": "Mobiles to use",
@@ -21,7 +21,7 @@
       "id": 3
     },
     {
-      "imageURL": "lap1.jpg",
+      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
       "name": "HP Laptop",
       "brand": "HP",
       "description": "Laptops to use",
@@ -31,7 +31,7 @@
       "id": 4
     },
     {
-      "imageURL": "lap2.jpg",
+      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
       "name": "Dell Inspiron",
       "brand": "Dell",
       "description": "Laptops to use",
@@ -41,7 +41,7 @@
       "id": 5
     },
     {
-      "imageURL": "lap.jpg",
+      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
       "name": "ASUS Classic",
       "brand": "Asus",
       "description": "Laptop to use",
@@ -51,7 +51,7 @@
       "id": 6
     },
     {
-      "imageURL": "cannon.jpg",
+      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
       "name": "Cannon EOS",
       "brand": "Canon",
       "description": "Camera to use",
@@ -61,7 +61,7 @@
       "id": 7
     },
     {
-      "imageURL": "sony.jpg",
+      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
       "name": "Sony Camera",
       "brand": "Sony",
       "description": "Cameras to use",
@@ -71,7 +71,7 @@
       "id": 8
     },
     {
-      "imageURL": "nikon2.jpg",
+      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
       "name": "Nikon D750",
       "brand": "Nikon",
       "description": "Camera at its best",
