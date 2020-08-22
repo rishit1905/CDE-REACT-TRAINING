@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "imageURL": "mob2.jpg",
+      "imageURL": "https://static.toiimg.com/thumb/msid-71646686,width-320,resizemode-4/OnePlus-8-Pro.jpg",
       "name": "Samsung",
       "brand": "Samsung",
       "description": "Mobiles to use",
@@ -21,7 +21,7 @@
       "id": 3
     },
     {
-      "imageURL": "lap1.jpg",
+      "imageURL": "https://static.toiimg.com/thumb/msid-71646686,width-320,resizemode-4/OnePlus-8-Pro.jpg",
       "name": "HP Laptop",
       "brand": "HP",
       "description": "Laptops to use",
@@ -31,7 +31,7 @@
       "id": 4
     },
     {
-      "imageURL": "lap2.jpg",
+      "imageURL": "https://static.toiimg.com/thumb/msid-71646686,width-320,resizemode-4/OnePlus-8-Pro.jpg",
       "name": "Dell Inspiron",
       "brand": "Dell",
       "description": "Laptops to use",
@@ -41,7 +41,7 @@
       "id": 5
     },
     {
-      "imageURL": "lap.jpg",
+      "imageURL": "https://static.toiimg.com/thumb/msid-71646686,width-320,resizemode-4/OnePlus-8-Pro.jpg",
       "name": "ASUS Classic",
       "brand": "Asus",
       "description": "Laptop to use",
@@ -51,7 +51,7 @@
       "id": 6
     },
     {
-      "imageURL": "cannon.jpg",
+      "imageURL": "https://static.toiimg.com/thumb/msid-71646686,width-320,resizemode-4/OnePlus-8-Pro.jpg",
       "name": "Cannon EOS",
       "brand": "Canon",
       "description": "Camera to use",
@@ -61,7 +61,7 @@
       "id": 7
     },
     {
-      "imageURL": "sony.jpg",
+      "imageURL": "https://static.toiimg.com/thumb/msid-71646686,width-320,resizemode-4/OnePlus-8-Pro.jpg",
       "name": "Sony Camera",
       "brand": "Sony",
       "description": "Cameras to use",
@@ -71,7 +71,7 @@
       "id": 8
     },
     {
-      "imageURL": "nikon2.jpg",
+      "imageURL": "https://static.toiimg.com/thumb/msid-71646686,width-320,resizemode-4/OnePlus-8-Pro.jpg",
       "name": "Nikon D750",
       "brand": "Nikon",
       "description": "Camera at its best",
@@ -81,7 +81,7 @@
       "id": 9
     },
     {
-      "imageURL": "down.jpg",
+      "imageURL": "https://static.toiimg.com/thumb/msid-71646686,width-320,resizemode-4/OnePlus-8-Pro.jpg",
       "name": "Redmi K20 Pro",
       "brand": "Xiaomi",
       "description": "6Gb+128GB Variant",

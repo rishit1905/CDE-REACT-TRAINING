@@ -25,7 +25,9 @@ export default function ProductList() {
                         return (
                             <View key={product.id}>
                                 <TouchableOpacity>
-                                    <Image source={product.imageURL}></Image>
+                                    <Image 
+                                    style={{ width: 200, height: 200 }}
+                                    source={product.imageURL}></Image>
                                     <Text>{product.name}</Text>
                                 </TouchableOpacity>
                             </View>
