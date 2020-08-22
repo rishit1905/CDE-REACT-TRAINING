@@ -24,10 +24,11 @@ export default function ProductList() {
                     products.map(product => {
                         return (
                             <View key={product.id}>
+                                <Image
+                                        source={product.imageURL}
+                                        style={{ width: 200, height: 200 }}
+                                    />
                                 <TouchableOpacity>
-                                    <Image 
-                                    style={{ width: 200, height: 200 }}
-                                    source={product.imageURL}></Image>
                                     <Text>{product.name}</Text>
                                 </TouchableOpacity>
                             </View>
