@@ -2,7 +2,6 @@ import React from 'react';
 import ProductDetail from './productdetail';
 import axios from "axios";
 import "./headerfooter.css";
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 class Category extends React.Component {
@@ -11,7 +10,7 @@ class Category extends React.Component {
         this.state = {
             products: [],
             filteredProducts: [],
-            categorized:[],
+            categorized: [],
             deleted: false,
             pid: 0,
             searchValue: ""
@@ -23,7 +22,7 @@ class Category extends React.Component {
             this.setState({ deleted: false })
         }, 3000)
     }
-    
+
     UNSAFE_componentWillMount() {
         console.log("Component Mounting")
         this.getAllProducts()
@@ -86,15 +85,19 @@ class Category extends React.Component {
         console.log(searchF)
     }
 
-    sortByKey=(products)=>{
-        products.sort((a,b)=>a.category.localeCompare(b.category))
-        this.setState({categorized:products})
+    sortByKey = (products) => {
+        products.sort((a, b) => a.category.localeCompare(b.category))
+        this.setState({ categorized: products })
     }
 
     renderAllProducts = () => {
         if (this.state.searchValue !== "") {
             if (this.state.filteredProducts.length === 0) {
-                return toast("Sorry ! No Such Category Found !")
+                return (
+                    <tr>
+                        <td>No such category found !!</td>
+                    </tr>
+                )
             }
             else {
                 return this.state.filteredProducts.map(product => {
@@ -139,7 +142,7 @@ class Category extends React.Component {
     }
 
     render() {
-        let searchstyle={
+        let searchstyle = {
             width: "96%",
             display: "block",
             margin: "1rem 2.1rem 0 0",
@@ -147,8 +150,7 @@ class Category extends React.Component {
         }
         return (
             <div className="row">
-                <input type="search" placeholder="Search Category" value={this.state.searchValue} onChange={this.searchCategory} style={searchstyle}/>
-                <ToastContainer autoClose={2250} />
+                <input type="search" placeholder="Search Category" value={this.state.searchValue} onChange={this.searchCategory} style={searchstyle} />
                 <table id="product">
                     <tbody>
                         {this.renderAllProducts()}
@@ -158,5 +160,5 @@ class Category extends React.Component {
         )
     }
 }
- 
+
 export default Category;

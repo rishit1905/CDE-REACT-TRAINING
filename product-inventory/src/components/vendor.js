@@ -2,7 +2,6 @@ import React from 'react';
 import "./headerfooter.css";
 import axios from "axios";
 import ProductDetail from './productdetail';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 class Vendor extends React.Component {
@@ -93,7 +92,11 @@ class Vendor extends React.Component {
     renderAllProducts = () => {
         if (this.state.searchValue !== "") {
             if (this.state.filteredProducts.length === 0) {
-                return toast("Sorry ! No Such Product Found !")
+                return (
+                    <tr>
+                        <td>No such vendor found !!</td>
+                    </tr>
+                )
             }
             else {
                 return this.state.filteredProducts.map(product => {
@@ -147,7 +150,6 @@ class Vendor extends React.Component {
         return (
             <div className="row">
                 <input type="search" placeholder="Search Brand" value={this.state.searchValue} onChange={this.searchBrand} style={searchstyle} />
-                <ToastContainer autoClose={2250} />
                 <table id="product">
                     <tbody>
                         {this.renderAllProducts()}

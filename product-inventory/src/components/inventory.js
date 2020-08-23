@@ -2,7 +2,6 @@ import React from 'react';
 import "./inventory.css";
 import axios from 'axios';
 import ProductDetail from './productdetail';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 class Inventory extends React.Component {
@@ -86,7 +85,11 @@ class Inventory extends React.Component {
     renderAllProducts = () => {
         if (this.state.searchValue !== "") {
             if (this.state.filteredProducts.length === 0) {
-                return toast("Sorry ! No Such Product Found !")
+                return ( 
+                    <tr>
+                        <td>No such product found !!</td>
+                    </tr>
+                )
             }
             else {
                 return this.state.filteredProducts.map(product => {
@@ -135,7 +138,6 @@ class Inventory extends React.Component {
             <div className="row">
                 <button className="inventoryButton" onClick={this.goToAddProduct}>Add Product</button>
                 <input type="search" placeholder="Search" value={this.state.searchValue} onChange={this.searchProduct} />
-                <ToastContainer autoClose={2250} />
                 <table id="product">
                     <tbody>
                         {this.renderAllProducts()}
