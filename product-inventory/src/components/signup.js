@@ -1,5 +1,6 @@
 import React from 'react';
 import './signup.css';
+import axios from 'axios';
 
 const validateForm = errors => {
     let valid = true;
@@ -76,8 +77,20 @@ class Signup extends React.Component {
     authorize = (e) => {
         if (this.checkValidation()) {
             e.preventDefault()
-            console.log("Login successful !")
-            this.props.history.push("/")
+            let signupRequestBody = {
+                "image":this.state.image,
+                "username": this.state.username,
+                "password": this.state.password,
+                "confirmpassword": this.state.confirmpassword
+            }
+            axios.post('http://localhost:3000/users', signupRequestBody)
+                .then(response => {
+                    console.log(response.data);
+                    console.log("Signup successful!!");
+                    this.props.history.push('/')
+                }, error => {
+                    console.error(error)
+                })
         }
     }
 

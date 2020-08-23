@@ -7,8 +7,8 @@ import { ScrollView, TouchableOpacity, View, Text, Image } from "react-native";
 export default function ProductList() {
 
     const [products, setProducts] = useState([])
-
-    const [search, setSearch] = useState("")
+    // const [filteredproducts, setFilteredProducts] = useState([])
+    // const [searchTerm, setSearchTerm] = useState("") 
 
     useEffect(() => {
         axios.get("https://my-json-server.typicode.com/rishit1905/CDE-REACT-TRAINING/products")
@@ -20,14 +20,32 @@ export default function ProductList() {
             })
     })
 
-    const updateSearch = query => setSearch(query)
+    // useEffect(() => {
+    //     const searchF = products.filter(f => {
+    //         return f.name.toLowerCase().startsWith(searchTerm.trim().toLowerCase())
+    //     })
+    //     setFilteredProducts(searchF)
+    // }, [searchTerm])
+
+    // const handleChange = event => {
+    //     setSearchTerm(event)
+    //     // if (searchTerm !== "") {
+    //     //    const newlist = products.filter(f => {
+    //     //         return f.name.toLowerCase().startsWith(searchTerm.trim().toLowerCase())
+    //     //     })
+    //     //     setFilteredProducts(newlist)
+    //     // }
+    //     // else {
+    //     //     setFilteredProducts(products)
+    //     // }
+    // }
 
     return (
         <View>
             <SearchBar
                 placeholder="search product here..."
-                onChangeText={updateSearch}
-                value={search}
+                // value={searchTerm}
+                // onChangeText={handleChange}
             />
             <ScrollView>
                 {
@@ -45,6 +63,8 @@ export default function ProductList() {
                         )
                     })
                 }
+
+
             </ScrollView>
         </View>
     )
