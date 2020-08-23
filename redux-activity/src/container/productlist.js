@@ -6,6 +6,15 @@ import axios from "axios";
 import displayProductBroadcast from '../action/displayproductbroadcast';
 
 class ProductList extends React.Component {
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            searchValue: "",
+            filteredProducts: []
+        }
+    }
+
     UNSAFE_componentWillMount() {
         console.log("Mounting all products");
         this.allProducts()
@@ -16,31 +25,63 @@ class ProductList extends React.Component {
             .then(response => {
                 console.log(response)
                 this.props.sendAllProduct(response.data)
-        }, error => {
+            }, error => {
                 console.log(error)
             })
     }
 
-    getAllProducts = () => {
-        console.log("Received props from store")
-        return this.props.products.map(p => {
-            return (
-                <li key={p.id} onClick={() => { this.props.clickedProduct(p) }}>
-                    {p.name}<br></br>
-                </li>
-            )
+    searchProduct = (event) => {
+        let searchV = event.target.value
+        if (searchV === "") {
+            this.allProducts()
+        }
+        this.setState({ searchValue: searchV })
+        console.log(searchV)
+        let searchF=[]
+        searchF = this.props.products.filter(f => {
+            return f.name.toLowerCase().startsWith(searchV.trim().toLowerCase())
         })
+        this.setState({ filteredProducts: searchF })
+        console.log(searchF)
+    }
 
+    getAllProducts = () => {
+        if (this.state.searchValue !== "") {
+            if (this.state.filteredProducts.length === 0) {
+                return <li>No such product exists</li>
+            }
+            else {
+                console.log("Received props from store")
+                return this.state.filteredProducts.map(p => {
+                    return (
+                        <li key={p.id} onClick={() => { this.props.clickedProduct(p) }}>
+                            {p.name}<br></br>
+                        </li>
+                    )
+                })
+            }
+        }
+        else {
+            console.log("Received props from store")
+            return this.props.products.map(p => {
+                return (
+                    <li key={p.id} onClick={() => { this.props.clickedProduct(p) }}>
+                        {p.name}<br></br>
+                    </li>
+                )
+            })
+        }
     }
 
     render() {
-        if(this.props.products.length === 0){
-            return ( 
+        if (this.props.products.length === 0) {
+            return (
                 <div><h2>All products will be displayed here!!</h2></div>
-             );
+            );
         }
         return (
             <div>
+                <input type="search" placeholder="Search" value={this.state.searchValue} onChange={this.searchProduct} />
                 <h2>Product List:</h2>
                 <ol>
                     {this.getAllProducts()}

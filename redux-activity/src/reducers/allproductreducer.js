@@ -13,7 +13,7 @@ const allProductReducer = function allProductReducer(state = null, action) {
         case "PRODUCT_CLICKED":
             return state
         case "DELETE_PRODUCT":
-            return action.payload
+            return action.payload 
         default:
             break
     }
