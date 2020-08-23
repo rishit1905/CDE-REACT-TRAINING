@@ -37,7 +37,7 @@ class ProductList extends React.Component {
         }
         this.setState({ searchValue: searchV })
         console.log(searchV)
-        let searchF=[]
+        let searchF = []
         searchF = this.props.products.filter(f => {
             return f.name.toLowerCase().startsWith(searchV.trim().toLowerCase())
         })
@@ -48,7 +48,7 @@ class ProductList extends React.Component {
     getAllProducts = () => {
         if (this.state.searchValue !== "") {
             if (this.state.filteredProducts.length === 0) {
-                return <li>No such product exists</li>
+                return <li onClick={() => { this.props.clickedProduct(null) }}>No such product exists</li>
             }
             else {
                 console.log("Received props from store")
