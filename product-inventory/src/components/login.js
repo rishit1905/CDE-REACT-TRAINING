@@ -1,6 +1,7 @@
 import React from 'react';
 import './login.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const validateForm = errors => {
     let valid = true;
@@ -14,6 +15,7 @@ class Login extends React.Component {
         this.state = {
             username: "",
             password: "",
+            users: [],
             errors: {
                 username: "",
                 password: "",
@@ -51,8 +53,26 @@ class Login extends React.Component {
     authorize = (e) => {
         if (this.checkValidation()) {
             e.preventDefault()
-            console.log("Login successful !")
-            this.props.history.push("/dashboard")
+            let errors = this.state.errors;
+            axios.get('http://localhost:3000/users')
+                .then(response => {
+                    this.setState({ users: response.data })
+                    let user = this.state.users.find(u => u.username === this.state.username)
+                    if (user === undefined) {
+                        console.log("Incorrect username!")
+                        this.setState({ buttonStatus: true })
+                    } else {
+                        if (user.password === this.state.password) {
+                            this.setState({ username: user.username })
+                            this.setState({ buttonStatus: false })
+                            console.log("Login successful!");
+                            this.props.history.push("/dashboard")
+                        } else {
+                            console.log("Incorrect password!")
+                            this.setState({ buttonStatus: true })
+                        }
+                    }
+                }, error => { console.error(error); })
         }
     }
 

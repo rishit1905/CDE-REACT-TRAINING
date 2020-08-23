@@ -112,6 +112,13 @@
       "password": "abcd1234",
       "confirmpassword": "abcd1234",
       "id": 3
+    },
+    {
+      "image": "Profile.png",
+      "username": "rishabhnag1997@gmail.com",
+      "password": "abcd1234",
+      "confirmpassword": "abcd1234",
+      "id": 4
     }
   ]
 }
