@@ -4,25 +4,15 @@ import axios from 'axios';
 import { Card } from 'react-native-elements';
 
 export default function UpdateProduct({ route, navigation }) {
-    
-    const { item } = route.params
-    const [imageURL, setImageURL] = useState("")
-    const [name, setName] = useState("")
-    const [brand, setBrand] = useState("")
-    const [description, setDescription] = useState("")
-    const [category, setCategory] = useState("Mobiles")
-    const [price, setPrice] = useState(0)
-    const [stock, setStock] = useState(0)
 
-    useEffect(() => {
-        setImageURL(item.imageURL)
-        setName(item.name)
-        setBrand(item.brand)
-        setDescription(item.description)
-        setCategory(item.category)
-        setPrice(item.price)
-        setStock(item.stock)
-    })
+    const { items } = route.params
+    const [imageURL, setImageURL] = useState(items.imageURL)
+    const [name, setName] = useState(items.name)
+    const [brand, setBrand] = useState(items.brand)
+    const [description, setDescription] = useState(items.description)
+    const [category, setCategory] = useState(items.category)
+    const [price, setPrice] = useState(items.price)
+    const [stock, setStock] = useState(items.stock)
 
     const submit = () => {
         let productBody = {
@@ -34,11 +24,11 @@ export default function UpdateProduct({ route, navigation }) {
             "price": price,
             "stock": stock
         }
-        axios.post("http://localhost:3000/products", productBody)
+        axios.put("http://localhost:3000/products/" + items.id, productBody)
             .then(response => {
                 console.log(response)
                 console.log("Done")
-                navigation.push("Home")
+                navigation.push("Product Details")
             }, error => {
                 console.log(error)
             })
@@ -49,29 +39,32 @@ export default function UpdateProduct({ route, navigation }) {
             <Card>
                 <Text>Image:</Text>
                 <TextInput
+                    defaultValue={imageURL}
                     placeholder="Enter image url*"
                     onChangeText={(text) => setImageURL(text)}
-                    value
                 ></TextInput>
                 <Text>Product Name:</Text>
                 <TextInput
                     placeholder="Product Name*"
+                    defaultValue={name}
                     onChangeText={(text) => setName(text)}
                 ></TextInput>
                 <Text>Brand:</Text>
                 <TextInput
                     placeholder="Brand*"
+                    defaultValue={brand}
                     onChangeText={(text) => setBrand(text)}
                 ></TextInput>
                 <Text>Description:</Text>
                 <TextInput
                     placeholder="Description*"
                     multiline={true}
+                    defaultValue={description}
                     onChangeText={(text) => setDescription(text)}
                 ></TextInput>
                 <Text>Category:</Text>
                 <Picker
-                    selectedValue={category}
+                    defaultValue={category}
                     style={{ height: 50, width: 150 }}
                     onValueChange={(itemValue, itemIndex) => setCategory(itemValue)}
                 >
@@ -83,16 +76,18 @@ export default function UpdateProduct({ route, navigation }) {
                 <TextInput
                     placeholder="Price*"
                     keyboardType='number-pad'
+                    defaultValue={`${price}`}
                     onChangeText={(text) => setPrice(text)}
                 ></TextInput>
                 <Text>Stock:</Text>
                 <TextInput
                     placeholder="Stock*"
                     keyboardType='number-pad'
+                    defaultValue={`${stock}`}
                     onChangeText={(text) => setStock(text)}
                 ></TextInput>
                 <Button
-                    title="Add"
+                    title="Update"
                     onPress={submit}
                 ></Button>
             </Card>

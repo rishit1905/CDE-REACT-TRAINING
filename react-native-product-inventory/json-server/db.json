@@ -7,7 +7,7 @@
       "description": "Mobiles to use",
       "category": "Mobiles",
       "price": "35999",
-      "stock": "201",
+      "stock": "210",
       "id": 1
     },
     {
@@ -17,7 +17,7 @@
       "description": "Laptops to use",
       "category": "Laptops",
       "price": "89099",
-      "stock": "5",
+      "stock": "11",
       "id": 4
     },
     {

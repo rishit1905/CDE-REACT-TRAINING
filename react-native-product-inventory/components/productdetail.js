@@ -14,6 +14,7 @@ export default function ProductDetail({ route, navigation }) {
     const [category, setCategory] = useState("Mobiles")
     const [price, setPrice] = useState(0)
     const [stock, setStock] = useState(0)
+    const [product, setProduct] = useState([])
 
     useEffect(() => {
         setImageURL(item.imageURL)
@@ -23,6 +24,7 @@ export default function ProductDetail({ route, navigation }) {
         setCategory(item.category)
         setPrice(item.price)
         setStock(item.stock)
+        setProduct(item)
     })
 
     const deleteProduct = () => {
@@ -49,7 +51,7 @@ export default function ProductDetail({ route, navigation }) {
                 <Text>Stock: {stock}</Text>
                 <Button
                     title="Update"
-                    onPress={()=>navigation.navigate("Update Product",{item:item})}
+                    onPress={()=>navigation.navigate("Update Product",{items:product})}
                 ></Button>
                 <Button
                     title="Delete"
