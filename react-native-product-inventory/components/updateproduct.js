@@ -28,7 +28,7 @@ export default function UpdateProduct({ route, navigation }) {
             .then(response => {
                 console.log(response)
                 console.log("Done")
-                navigation.push("Product Details")
+                navigation.push("Home")
             }, error => {
                 console.log(error)
             })
