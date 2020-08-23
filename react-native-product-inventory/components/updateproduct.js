@@ -3,7 +3,9 @@ import { View, Text, TextInput, Picker, Button } from 'react-native';
 import axios from 'axios';
 import { Card } from 'react-native-elements';
 
-export default function AddProduct({ navigation }) {
+export default function UpdateProduct({ route, navigation }) {
+    
+    const { item } = route.params
     const [imageURL, setImageURL] = useState("")
     const [name, setName] = useState("")
     const [brand, setBrand] = useState("")
@@ -11,6 +13,16 @@ export default function AddProduct({ navigation }) {
     const [category, setCategory] = useState("Mobiles")
     const [price, setPrice] = useState(0)
     const [stock, setStock] = useState(0)
+
+    useEffect(() => {
+        setImageURL(item.imageURL)
+        setName(item.name)
+        setBrand(item.brand)
+        setDescription(item.description)
+        setCategory(item.category)
+        setPrice(item.price)
+        setStock(item.stock)
+    })
 
     const submit = () => {
         let productBody = {
@@ -39,6 +51,7 @@ export default function AddProduct({ navigation }) {
                 <TextInput
                     placeholder="Enter image url*"
                     onChangeText={(text) => setImageURL(text)}
+                    value
                 ></TextInput>
                 <Text>Product Name:</Text>
                 <TextInput

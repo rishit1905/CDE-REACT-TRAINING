@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView, View, Text, Image } from 'react-native';
+import { ScrollView, View, Text, Image, Button } from 'react-native';
 import { Card } from 'react-native-elements';
+import axios from "axios";
 
-export default function ProductDetail({ route }) {
+export default function ProductDetail({ route, navigation }) {
 
     const { item } = route.params
 
@@ -24,6 +25,15 @@ export default function ProductDetail({ route }) {
         setStock(item.stock)
     })
 
+    const deleteProduct = () => {
+        console.log("Delete product with received id: " + item.id)
+        axios.delete("http://localhost:3000/products/" + item.id)
+            .then(response => {
+                console.log(response.data);
+                navigation.push("Home")
+            }, error => { console.log(error);})
+    }
+
     return (
         <View>
             <Card>
@@ -37,7 +47,16 @@ export default function ProductDetail({ route }) {
                 <Text>Category: {category}</Text>
                 <Text>Price: {price}</Text>
                 <Text>Stock: {stock}</Text>
+                <Button
+                    title="Update"
+                    onPress={()=>navigation.navigate("Update Product",{item:item})}
+                ></Button>
+                <Button
+                    title="Delete"
+                    onPress={deleteProduct}
+                ></Button>
             </Card>
+
 
 
         </View>
