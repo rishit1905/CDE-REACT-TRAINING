@@ -36,7 +36,7 @@ class ProductDetail extends React.Component {
         if (this.props.product === null) {
             return (
                 <div>
-                    <h2>No products..</h2>
+                    <h2>No products clicked for details..</h2>
                 </div>
             )
         }
