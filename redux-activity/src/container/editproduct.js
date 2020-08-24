@@ -85,7 +85,7 @@ class EditProduct extends React.Component {
         console.log(event.target)
         console.log(event.target.value)
         let errors = this.state.errors
-        errors.imageURL = event.target.value.substr(12) === "" ? "Upload Image !" : ""
+        errors.imageError = "" || (!event.target.value.trim().match(/[(http(s)?)://(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/)) ? "Enter authentic URL !" : ""
         this.setState({ imageURL: event.target.value })
 
     }

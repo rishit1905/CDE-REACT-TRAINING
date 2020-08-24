@@ -91,7 +91,7 @@
       "id": 24
     },
     {
-      "imageURL": "https://i0.wp.com/technosports.co.in/wp-content/uploads/2020/04/HP-OMEN-15-2020-Ryzen4800H-RTX2060-2.jpg?fit=1450%2C1050&ssl=1",
+      "imageURL": "https://www.digitaldreamsjaipur.com/wp-content/uploads/2020/07/hp-laptop-15s-du2058tu-1.jpg",
       "name": "HP Laptop",
       "category": "Laptops",
       "price": "92999",
@@ -116,6 +116,15 @@
       "quantity": "220",
       "stock": "Yes",
       "id": 27
+    },
+    {
+      "imageURL": "https://my-techspace.com/wp-content/uploads/2020/07/OPPO-Reno-4-Pro-Global-Version-Renders-Leaked.jpg",
+      "name": "Oppo Reno 4 Pro",
+      "category": "Mobiles",
+      "price": "38000",
+      "quantity": "89",
+      "stock": "Yes",
+      "id": 28
     }
   ]
 }

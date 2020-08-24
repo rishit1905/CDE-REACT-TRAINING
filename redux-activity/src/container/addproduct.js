@@ -84,7 +84,7 @@ class AddProduct extends React.Component {
         console.log(event.target)
         console.log(event.target.value)
         let errors = this.state.errors
-        errors.imageURL = event.target.value.substr(12) === "" ? "Upload Image !" : ""
+        errors.imageError = "" || (!event.target.value.trim().match(/[(http(s)?)://(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/)) ? "Enter authentic URL !" : ""
         this.setState({ imageURL: event.target.value })
 
     }
@@ -155,7 +155,7 @@ class AddProduct extends React.Component {
         if (this.checkValidation()) {
             event.preventDefault()
             let product = {
-                imageURL:this.state.imageURL,
+                imageURL: this.state.imageURL,
                 name: this.state.name,
                 category: this.state.category,
                 price: this.state.price,
@@ -182,7 +182,7 @@ class AddProduct extends React.Component {
                     <fieldset>
                         <legend>Add Product</legend>
                         <label htmlFor="Image">Image:</label>
-                        <input type="url" id="imageURL" value={this.state.imageURL} onChange={this.getUrl} placeholder="Image URL*" noValidate />
+                        <input type="url" id="imageURL" onChange={this.getUrl} placeholder="Image URL*" noValidate />
                         <br></br>
                         {errors.imageError.length > 0 && <span className="error">{errors.imageError}</span>}
                         <br />
@@ -209,7 +209,7 @@ class AddProduct extends React.Component {
                         )}
                         <br />
                         <label htmlFor="price">Price:</label>
-                            <input
+                        <input
                             type="number" name="price" id="price" onChange={this.getPrice} required
                             placeholder="Product Price *"
                             noValidate />
@@ -220,7 +220,7 @@ class AddProduct extends React.Component {
 
                         <br />
                         <label htmlFor="quantity">Quantity:</label>
-                            <input
+                        <input
                             type="number" name="quantity" id="quantity" onChange={this.getQuantity} required
                             placeholder="Product Quantity *"
                             noValidate />

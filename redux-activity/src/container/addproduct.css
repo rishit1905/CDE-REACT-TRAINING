@@ -55,3 +55,8 @@ fieldset button:hover{
     cursor: pointer;
     transition: all 0.2s ease-in;
 }
+
+.error {
+    color: #db2269;
+    font-size: small;
+}
