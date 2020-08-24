@@ -15,12 +15,14 @@ class EditProduct extends React.Component {
         super(props)
         this.state = {
             id: this.props.product.id,
+            imageURL: this.props.product.imageURL,
             name: this.props.product.name,
             category: this.props.product.category,
             price: this.props.product.price,
             quantity: this.props.product.quantity,
             stock: this.props.product.stock,
             errors: {
+                imageError: "",
                 nameError: "",
                 categoryError: "",
                 priceError: "",
@@ -44,6 +46,11 @@ class EditProduct extends React.Component {
 
     checkValidation = () => {
         let errors = this.state.errors;
+        if (this.state.imageURL === "") {
+            this.setState({ buttonStatus: true })
+            errors.imageError = "Kindly upload the image!"
+            return false
+        }
         if (this.state.name === "") {
             this.setState({ buttonStatus: true })
             errors.nameError = "Product name required!"
@@ -73,6 +80,15 @@ class EditProduct extends React.Component {
         return true;
     }
 
+    getUrl = (event) => {
+        console.log(event)
+        console.log(event.target)
+        console.log(event.target.value)
+        let errors = this.state.errors
+        errors.imageURL = event.target.value.substr(12) === "" ? "Upload Image !" : ""
+        this.setState({ imageURL: event.target.value })
+
+    }
     getName = (event) => {
         console.log(event)
         console.log(event.target)
@@ -139,6 +155,7 @@ class EditProduct extends React.Component {
         if (this.checkValidation()) {
             event.preventDefault()
             let editedproduct = {
+                imageURL: this.state.imageURL,
                 name: this.state.name,
                 category: this.state.category,
                 price: this.state.price,
@@ -177,6 +194,11 @@ class EditProduct extends React.Component {
             <div>
                 <form name="form" onChange={this.handleSubmit} style={{ textAlign: 'center', margin: '60px', backgroundColor: '#f2f2f2', padding: '20px' }}>
                     <h2>Edit Product</h2>
+                    <label htmlFor="Image">Image:</label> &emsp;  &emsp;
+                    <input type="url" id="imageURL" value={this.state.imageURL} onChange={this.getUrl} style={textStyle} placeholder="Image URL* *" noValidate />
+                    <br></br>
+                    {this.state.errors.imageError.length > 0 && <span className="error">{this.state.errors.imageError}</span>}
+                    <br />
                     <div className="name">
                         <label htmlFor="name">Name:</label> &emsp;  &emsp;
                             <input type="text" value={this.state.name} style={textStyle} id="name" onChange={this.getName}
@@ -258,7 +280,7 @@ function convertStoreToProps(store) {
 function convertPropsToEvent(dispatch) {
     return bindActionCreators({
         editProduct: editProductBroadcast,
-        update:productClickedBroadcast
+        update: productClickedBroadcast
     }, dispatch)
 }
 export default connect(convertStoreToProps, convertPropsToEvent)(EditProduct);

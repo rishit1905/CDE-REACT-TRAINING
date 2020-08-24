@@ -1,6 +1,7 @@
 {
   "products": [
     {
+      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
       "name": "Samsung",
       "category": "Mobiles",
       "price": "35999",
@@ -9,6 +10,7 @@
       "id": 1
     },
     {
+      "imageURL": "https://www.gizmochina.com/wp-content/uploads/2019/05/OnePlus-7-Pro-5G-500x500.jpg",
       "name": "One Plus",
       "category": "Mobiles",
       "price": "47000",
@@ -17,6 +19,7 @@
       "id": 2
     },
     {
+      "imageURL": "https://images.jdmagicbox.com/quickquotes/images_main/dell-inspiron-3493-14-fhd-thin-and-light-laptop-10th-gen-ci5-1035g1-8gb-1tb-hdd-windows-10-ms-office-intel-hd-graphics-silver-no-bag-184486158-msjik.jpg",
       "name": "Dell Inspiron",
       "category": "Laptops",
       "price": "115000",
@@ -25,6 +28,7 @@
       "id": 4
     },
     {
+      "imageURL": "https://www.sony.co.in/image/d1e9f71c93a7e1310fac09b244d6b24c?fmt=pjpeg&wid=660&hei=660&bgcolor=F1F5F9&bgc=F1F5F9",
       "name": "Sony Camera",
       "category": "Cameras",
       "price": "30000",
@@ -33,6 +37,7 @@
       "id": 7
     },
     {
+      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
       "name": "Redmi Note 8 Pro",
       "category": "Mobiles",
       "price": "17999",
@@ -41,6 +46,7 @@
       "id": 10
     },
     {
+      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
       "name": "Realme C2",
       "category": "Mobiles",
       "price": "6499",
@@ -49,6 +55,7 @@
       "id": 14
     },
     {
+      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
       "name": "Samsung M10",
       "category": "Mobiles",
       "price": "6770",
@@ -57,6 +64,7 @@
       "id": 16
     },
     {
+      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
       "name": "Fujifilm X-T30",
       "category": "Cameras",
       "price": "82999",
@@ -65,6 +73,7 @@
       "id": 22
     },
     {
+      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
       "name": "Redmi K20 Pro",
       "category": "Mobiles",
       "price": "24999",
@@ -73,6 +82,7 @@
       "id": 23
     },
     {
+      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
       "name": "Cannon EOS",
       "category": "Cameras",
       "price": "50999",
@@ -81,6 +91,7 @@
       "id": 24
     },
     {
+      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
       "name": "HP Laptop",
       "category": "Laptops",
       "price": "92999",
@@ -89,6 +100,7 @@
       "id": 25
     },
     {
+      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
       "name": "Apple Iphone6",
       "category": "Mobiles",
       "price": "28000",
@@ -97,6 +109,7 @@
       "id": 26
     },
     {
+      "imageURL": "https://i.gadgets360cdn.com/products/large/1555507135_635_samsung_galaxy_a60.jpg",
       "name": "Lenovo Ideapad",
       "category": "Laptops",
       "price": "50099",

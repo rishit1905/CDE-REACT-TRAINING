@@ -67,7 +67,8 @@ class ProductList extends React.Component {
             return this.props.products.map(p => {
                 return (
                     <li key={p.id} onClick={() => { this.props.clickedProduct(p) }}>
-                        {p.name}<br></br>
+                        <img src={p.imageURL} alt="" /><br></br>
+                        <p>{p.name}</p><br></br>
                     </li>
                 )
             })
@@ -87,10 +88,11 @@ class ProductList extends React.Component {
                         <input type="search" placeholder="Search" value={this.state.searchValue} onChange={this.searchProduct} />
                     </div>
                 </div>
-                <ol>
+                <ul>
                     {this.getAllProducts()}
-                </ol>
-            </div>
+                </ul>
+
+            </div >
         );
     }
 }
