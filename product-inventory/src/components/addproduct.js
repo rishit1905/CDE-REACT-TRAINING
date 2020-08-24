@@ -224,7 +224,7 @@ class AddProduct extends React.Component {
                             {errors.stockError.length > 0 && <span className="error">{errors.stockError}</span>}
                             <br /><br />
                         </div>
-                        <button onClick={this.addProduct} disabled={this.state.buttonStatus}>Add</button>
+                        <button id="addbutton" onClick={this.addProduct} disabled={this.state.buttonStatus}>Add</button>
                     </fieldset>
                 </form>
             </div>
