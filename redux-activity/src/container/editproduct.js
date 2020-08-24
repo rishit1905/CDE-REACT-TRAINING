@@ -184,33 +184,26 @@ class EditProduct extends React.Component {
                 </div>
             )
         }
-        const textStyle = {
-            width: '500px',
-            padding: '10px 30px',
-            marging: '8px 0',
-            display: 'inline-block'
-        }
         return (
             <div>
-                <form name="form" onChange={this.handleSubmit} style={{ textAlign: 'center', margin: '60px', backgroundColor: '#f2f2f2', padding: '20px' }}>
-                    <h2>Edit Product</h2>
-                    <label htmlFor="Image">Image:</label> &emsp;  &emsp;
-                    <input type="url" id="imageURL" value={this.state.imageURL} onChange={this.getUrl} style={textStyle} placeholder="Image URL* *" noValidate />
-                    <br></br>
-                    {this.state.errors.imageError.length > 0 && <span className="error">{this.state.errors.imageError}</span>}
-                    <br />
-                    <div className="name">
-                        <label htmlFor="name">Name:</label> &emsp;  &emsp;
-                            <input type="text" value={this.state.name} style={textStyle} id="name" onChange={this.getName}
+                <form onChange={this.handleSubmit} noValidate>
+                    <fieldset>
+                        <legend>Add Product</legend>
+                        <label htmlFor="Image">Image:</label>
+                        <input type="url" id="imageURL" value={this.state.imageURL} onChange={this.getUrl} placeholder="Image URL*" noValidate />
+                        <br></br>
+                        {this.state.errors.imageError.length > 0 && <span className="error">{this.state.errors.imageError}</span>}
+                        <br />
+                        <label htmlFor="name">Name:</label>
+                        <input type="text" id="name" value={this.state.name} onChange={this.getName}
                             placeholder="Product Name *" noValidate />
                         <br></br>
                         {this.state.errors.nameError.length > 0 && (
                             <span className="error">{this.state.errors.nameError}</span>
                         )}
-                    </div><br />
-                    <div>
-                        <label>Category:</label> &emsp;
-                            <select defaultValue={this.state.category} id="category" style={textStyle}
+                        <br />
+                        <label>Category:</label>
+                        <select defaultValue={this.state.category} id="category"
                             onChange={this.getCategory}
                         >
                             <option value="">--select--</option>
@@ -222,32 +215,30 @@ class EditProduct extends React.Component {
                         {this.state.errors.categoryError.length > 0 && (
                             <span className="error">{this.state.errors.categoryError}</span>
                         )}
-                    </div><br />
-                    <div className="price">
-                        <label htmlFor="price">Price:</label> &emsp;  &emsp;  &nbsp;
-                            <input
-                            type="number" name="price" value={this.state.price} style={textStyle} id="price" onChange={this.getPrice} required
+                        <br />
+                        <label htmlFor="price">Price:</label>
+                        <input
+                            type="number" name="price" id="price" value={this.state.price} onChange={this.getPrice} required
                             placeholder="Product Price *"
                             noValidate />
                         <br></br>
                         {this.state.errors.priceError.length > 0 && (
                             <span className="error">{this.state.errors.priceError}</span>
                         )}
-                    </div><br />
-                    <div className="quantity">
-                        <label htmlFor="quantity">Quantity:</label> &nbsp;
-                            <input
-                            type="number" name="quantity" value={this.state.quantity} style={textStyle} id="quantity" onChange={this.getQuantity} required
+
+                        <br />
+                        <label htmlFor="quantity">Quantity:</label>
+                        <input
+                            type="number" name="quantity" id="quantity" value={this.state.quantity} onChange={this.getQuantity} required
                             placeholder="Product Quantity *"
                             noValidate />
                         <br></br>
                         {this.state.errors.quantityError.length > 0 && (
                             <span className="error">{this.state.errors.quantityError}</span>
                         )}
-                    </div><br />
-                    <div className="stock">
-                        <label htmlFor="stock">Stock Available:</label> &emsp; &emsp; &nbsp;
-                        <select defaultValue={this.state.stock} id="stock" style={textStyle}
+                        <br />
+                        <label htmlFor="stock">Stock Available:</label>
+                        <select defaultValue={this.state.stock} id="stock"
                             onChange={this.getStock}
                         >
                             <option value="">--select--</option>
@@ -258,11 +249,10 @@ class EditProduct extends React.Component {
                         {this.state.errors.stockError.length > 0 && (
                             <span className="error">{this.state.errors.stockError}</span>
                         )}
-                    </div><br />
-                    <div>
-                        <button disabled={this.state.buttonStatus} onClick={this.edit}>Edit product</button>
-                    </div>
-                    <br />
+                        <br />
+                        <button disabled={this.state.buttonStatus} onClick={this.edit}>Edit</button>
+                        <br />
+                    </fieldset>
                 </form>
             </div>
         )
