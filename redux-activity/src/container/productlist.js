@@ -49,14 +49,15 @@ class ProductList extends React.Component {
     getAllProducts = () => {
         if (this.state.searchValue !== "") {
             if (this.state.filteredProducts.length === 0) {
-                return <li onClick={() => { this.props.clickedProduct(null) }}>No such product exists</li>
+                return <li onClick={() => { this.props.clickedProduct(null) }}>No such product exists !!</li>
             }
             else {
                 console.log("Received props from store")
                 return this.state.filteredProducts.map(p => {
                     return (
                         <li key={p.id} onClick={() => { this.props.clickedProduct(p) }}>
-                            {p.name}<br></br>
+                            <img src={p.imageURL} alt="" /><br></br>
+                            <p>{p.name}</p><br></br>
                         </li>
                     )
                 })
