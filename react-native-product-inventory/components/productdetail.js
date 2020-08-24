@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ScrollView, View, Text, Image, Button } from 'react-native';
 import { Card } from 'react-native-elements';
 import axios from "axios";
+import { globalstyles } from '../globalstyles/globalstyles';
 
 export default function ProductDetail({ route, navigation }) {
 
@@ -33,34 +34,35 @@ export default function ProductDetail({ route, navigation }) {
             .then(response => {
                 console.log(response.data);
                 navigation.push("Home")
-            }, error => { console.log(error);})
+            }, error => { console.log(error); })
     }
 
     return (
-        <View>
-            <Card>
-                <Image
-                    source={{ uri: imageURL }}
-                    style={{ width: 200, height: 200 }}
-                />
-                <Text>Product Name: {name}</Text>
-                <Text>Brand: {brand}</Text>
-                <Text>Description: {description}</Text>
-                <Text>Category: {category}</Text>
-                <Text>Price: {price}</Text>
-                <Text>Stock: {stock}</Text>
-                <Button
-                    title="Update"
-                    onPress={()=>navigation.navigate("Update Product",{items:product})}
-                ></Button>
-                <Button
-                    title="Delete"
-                    onPress={deleteProduct}
-                ></Button>
-            </Card>
-
-
-
+        <View style={globalstyles.view}>
+            <ScrollView>
+                <Card>
+                    <Image
+                        source={{ uri: imageURL }}
+                        style={globalstyles.images}
+                    />
+                    <Text style={globalstyles.textDetail}><b>Product Name:</b> {name}</Text>
+                    <Text style={globalstyles.textDetail}><b>Brand:</b> {brand}</Text>
+                    <Text style={globalstyles.textDetail}><b>Description:</b> {description}</Text>
+                    <Text style={globalstyles.textDetail}><b>Category:</b> {category}</Text>
+                    <Text style={globalstyles.textDetail}><b>Price:</b> {price}</Text>
+                    <Text style={globalstyles.textDetail}><b>Stock:</b> {stock}</Text>
+                    <Button
+                        title="Update"
+                        style={globalstyles.button}
+                        onPress={() => navigation.navigate("Update Product", { items: product })}
+                    ></Button>
+                    <Button
+                        title="Delete"
+                        style={globalstyles.button}
+                        onPress={deleteProduct}
+                    ></Button>
+                </Card>
+            </ScrollView>
         </View>
     )
 }

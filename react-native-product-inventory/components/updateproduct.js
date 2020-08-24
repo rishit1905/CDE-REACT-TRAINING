@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Picker, Button } from 'react-native';
 import axios from 'axios';
 import { Card } from 'react-native-elements';
+import { globalstyles } from '../globalstyles/globalstyles';
 
 export default function UpdateProduct({ route, navigation }) {
 
@@ -35,7 +36,7 @@ export default function UpdateProduct({ route, navigation }) {
     }
 
     return (
-        <View>
+        <View style={globalstyles.view}>
             <Card>
                 <Text>Image:</Text>
                 <TextInput

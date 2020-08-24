@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import productClickedBroadcast from "../action/productclickedbroadcast";
 import axios from "axios";
+import "./productlist.css";
 import displayProductBroadcast from '../action/displayproductbroadcast';
 
 class ProductList extends React.Component {
@@ -81,8 +82,11 @@ class ProductList extends React.Component {
         }
         return (
             <div>
-                <input type="search" placeholder="Search" value={this.state.searchValue} onChange={this.searchProduct} />
-                <h2>Product List:</h2>
+                <div id="flex-container">
+                    <div id="item">
+                        <input type="search" placeholder="Search" value={this.state.searchValue} onChange={this.searchProduct} />
+                    </div>
+                </div>
                 <ol>
                     {this.getAllProducts()}
                 </ol>

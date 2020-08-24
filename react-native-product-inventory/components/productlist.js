@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-import { SearchBar, Card } from 'react-native-elements';
+import { Card } from 'react-native-elements';
+import { globalstyles } from '../globalstyles/globalstyles';
 import { ScrollView, TouchableOpacity, View, Text, Image, Button } from "react-native";
 
 
 export default function ProductList({ navigation }) {
 
     const [products, setProducts] = useState([])
-    // const [filteredproducts, setFilteredProducts] = useState([])
-    // const [searchTerm, setSearchTerm] = useState("") 
 
     useEffect(() => {
         axios.get("http://localhost:3000/products")
@@ -22,14 +21,10 @@ export default function ProductList({ navigation }) {
 
     return (
 
-        <View>
-            {/* <SearchBar
-                placeholder="search product here..."
-                // value={searchTerm}
-                // onChangeText={handleChange}
-            /> */}
+        <View style={globalstyles.view}>
             <Button
                 title="Add Product"
+                style={globalstyles.button}
                 onPress={() => navigation.navigate("Add Product", { item: products })}
             ></Button>
 
@@ -43,9 +38,9 @@ export default function ProductList({ navigation }) {
                                     <TouchableOpacity onPress={() => navigation.navigate("Product Detail", { item: product })}>
                                         <Image
                                             source={{ uri: product.imageURL }}
-                                            style={{ width: 200, height: 200 }}
+                                            style={globalstyles.images}
                                         />
-                                        <Text>{product.name}</Text>
+                                        <Text style={globalstyles.text}>{product.name}</Text>
                                     </TouchableOpacity>
                                 </Card>
                             </View>

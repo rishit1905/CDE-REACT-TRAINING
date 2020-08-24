@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import addProductBroadcast from '../action/addproductbroadcast';
 import axios from "axios";
+// import "./addproduct.css"
 
 const validateForm = errors => {
     let valid = true;
@@ -157,81 +158,77 @@ class AddProduct extends React.Component {
 
     render() {
         const { errors } = this.state;
-        const textStyle = {
-            width: '500px',
-            padding: '10px 30px',
-            marging: '8px 0',
-            display: 'inline-block'
-        }
         return (
-            <div>
-                <form name="form" onChange={this.handleSubmit} style={{ textAlign: 'center', margin: '60px', backgroundColor: '#f2f2f2', padding: '20px' }}>
-                    <h2>Add Product</h2>
-                    <div className="name">
-                        <label htmlFor="name">Name:</label> &emsp;  &emsp;
-                            <input type="text" style={textStyle} id="name" onChange={this.getName}
-                            placeholder="Product Name *" noValidate />
-                        <br></br>
-                        {errors.nameError.length > 0 && (
-                            <span className="error">{errors.nameError}</span>
-                        )}
-                    </div><br />
-                    <div>
-                        <label>Category:</label> &emsp;
-                            <select defaultValue={this.state.selectValue} id="category" style={textStyle}
-                            onChange={this.getCategory}
-                        >
-                            <option value="">--select--</option>
-                            <option value="Mobiles">Mobiles</option>
-                            <option value="Laptops">Laptops</option>
-                            <option value="Cameras">Cameras</option>
-                        </select>
-                        <br></br>
-                        {errors.categoryError.length > 0 && (
-                            <span className="error">{errors.categoryError}</span>
-                        )}
-                    </div><br />
-                    <div className="price">
-                        <label htmlFor="price">Price:</label> &emsp;  &emsp;  &nbsp;
+            <div id="add">
+                <form onChange={this.handleSubmit} noValidate>
+                    <fieldset>
+                        <legend>Add Product</legend>
+                        <div className="columns">
+                            <label htmlFor="name">Name:</label> &emsp;  &emsp;
+                            <input type="text" id="name" onChange={this.getName}
+                                placeholder="Product Name *" noValidate />
+                            <br></br>
+                            {errors.nameError.length > 0 && (
+                                <span className="error">{errors.nameError}</span>
+                            )}
+                        </div><br />
+                        <div>
+                            <label>Category:</label> &emsp;
+                            <select defaultValue={this.state.selectValue} id="category"
+                                onChange={this.getCategory}
+                            >
+                                <option value="">--select--</option>
+                                <option value="Mobiles">Mobiles</option>
+                                <option value="Laptops">Laptops</option>
+                                <option value="Cameras">Cameras</option>
+                            </select>
+                            <br></br>
+                            {errors.categoryError.length > 0 && (
+                                <span className="error">{errors.categoryError}</span>
+                            )}
+                        </div><br />
+                        <div className="price">
+                            <label htmlFor="price">Price:</label> &emsp;  &emsp;  &nbsp;
                             <input
-                            type="number" name="price" style={textStyle} id="price" onChange={this.getPrice} required
-                            placeholder="Product Price *"
-                            noValidate />
-                        <br></br>
-                        {errors.priceError.length > 0 && (
-                            <span className="error">{errors.priceError}</span>
-                        )}
+                                type="number" name="price" id="price" onChange={this.getPrice} required
+                                placeholder="Product Price *"
+                                noValidate />
+                            <br></br>
+                            {errors.priceError.length > 0 && (
+                                <span className="error">{errors.priceError}</span>
+                            )}
 
-                    </div><br />
-                    <div className="quantity">
-                        <label htmlFor="quantity">Quantity:</label> &nbsp;
+                        </div><br />
+                        <div className="quantity">
+                            <label htmlFor="quantity">Quantity:</label> &nbsp;
                             <input
-                            type="number" name="quantity" style={textStyle} id="quantity" onChange={this.getQuantity} required
-                            placeholder="Product Quantity *"
-                            noValidate />
-                        <br></br>
-                        {errors.quantityError.length > 0 && (
-                            <span className="error">{errors.quantityError}</span>
-                        )}
-                    </div><br />
-                    <div className="stock">
-                        <label htmlFor="stock">Stock Available:</label> &emsp; &emsp; &nbsp;
-                        <select defaultValue={this.state.selectValue} id="stock" style={textStyle}
-                            onChange={this.getStock}
-                        >
-                            <option value="">--select--</option>
-                            <option value="Yes">Yes</option>
-                            <option value="No">No</option>
-                        </select>
-                        <br></br>
-                        {errors.stockError.length > 0 && (
-                            <span className="error">{errors.stockError}</span>
-                        )}
-                    </div><br />
-                    <div>
-                        <button disabled={this.state.buttonStatus} onClick={this.addProduct}>Add</button>
-                    </div>
-                    <br />
+                                type="number" name="quantity" id="quantity" onChange={this.getQuantity} required
+                                placeholder="Product Quantity *"
+                                noValidate />
+                            <br></br>
+                            {errors.quantityError.length > 0 && (
+                                <span className="error">{errors.quantityError}</span>
+                            )}
+                        </div><br />
+                        <div className="stock">
+                            <label htmlFor="stock">Stock Available:</label> &emsp; &emsp; &nbsp;
+                        <select defaultValue={this.state.selectValue} id="stock"
+                                onChange={this.getStock}
+                            >
+                                <option value="">--select--</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                            <br></br>
+                            {errors.stockError.length > 0 && (
+                                <span className="error">{errors.stockError}</span>
+                            )}
+                        </div><br />
+                        <div>
+                            <button disabled={this.state.buttonStatus} onClick={this.addProduct}>Add</button>
+                        </div>
+                        <br />
+                    </fieldset>
                 </form>
             </div>
         );
