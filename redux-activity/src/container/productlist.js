@@ -84,7 +84,7 @@ class ProductList extends React.Component {
         }
         return (
             <div>
-                <div id="flex-container">
+                <div id="flex-container2">
                     <div id="item">
                         <input type="search" placeholder="Search" value={this.state.searchValue} onChange={this.searchProduct} />
                     </div>

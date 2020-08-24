@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import deleteProductBroadcast from "../action/deleteproductbroadcast";
 import axios from "axios";
+import "./productdetail.css";
 import { withRouter } from 'react-router-dom';
 
 class ProductDetail extends React.Component {
@@ -41,16 +42,16 @@ class ProductDetail extends React.Component {
         }
         else {
             return (
-                <div>
-                    <h2>Product Detail:</h2>
-                    <img src={this.props.product.imageURL} alt=""/><br></br>
-                    &nbsp;&nbsp;<b>Name:</b> {this.props.product.name}<br></br>
-                    &nbsp;&nbsp;<b>Category:</b> {this.props.product.category}<br></br>
-                    &nbsp;&nbsp;<b>Price:</b> {this.props.product.price}<br></br>
-                    &nbsp;&nbsp;<b>Quantity:</b> {this.props.product.quantity}<br></br>
-                    &nbsp;&nbsp;<b>Stock Available:</b> {this.props.product.stock}<br></br><br></br>
-                    &nbsp;&nbsp;<button onClick={this.editProduct}>Edit</button>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<button onClick={this.deleteProduct}>Delete</button>
+                <div id="flex-containers">
+                    <h3>PRODUCT DETAIL</h3>
+                    <img src={this.props.product.imageURL} alt="" />
+                    <b>Name:</b> <p>{this.props.product.name}</p>
+                    <b>Category:</b><p>{this.props.product.category}</p>
+                    <b>Price:</b> <p>{this.props.product.price}</p>
+                    <b>Quantity:</b> <p>{this.props.product.quantity}</p>
+                    <b>Stock Available:</b> <p>{this.props.product.stock}</p>
+                    <button onClick={this.editProduct}>Edit</button>
+                    <button onClick={this.deleteProduct}>Delete</button>
                 </div>
             );
         }
