@@ -22,6 +22,7 @@ ul {
 li {
     width:225px;
     background: white;
+    box-shadow: 0 0 0.5rem black;
     text-align: center;
     margin:1rem 1rem 0 0;
     font-weight: 550;
