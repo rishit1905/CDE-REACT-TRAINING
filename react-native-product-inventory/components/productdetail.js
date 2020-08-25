@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView, View, Text, Image, Button } from 'react-native';
+import { ScrollView, TouchableOpacity, View, Text, Image, Button } from 'react-native';
 import { Card } from 'react-native-elements';
 import axios from "axios";
 import { globalstyles } from '../globalstyles/globalstyles';
@@ -51,16 +51,20 @@ export default function ProductDetail({ route, navigation }) {
                     <Text style={globalstyles.textDetail}><b>Category:</b> {category}</Text>
                     <Text style={globalstyles.textDetail}><b>Price:</b> {price}</Text>
                     <Text style={globalstyles.textDetail}><b>Stock:</b> {stock}</Text>
-                    <Button
-                        title="Update"
-                        style={globalstyles.button}
-                        onPress={() => navigation.navigate("Update Product", { items: product })}
-                    ></Button>
-                    <Button
-                        title="Delete"
-                        style={globalstyles.button}
-                        onPress={deleteProduct}
-                    ></Button>
+                    <TouchableOpacity style={globalstyles.button}>
+                        <Button
+                            title="Update"
+                            onPress={() => navigation.navigate("Update Product", { items: product })}
+                        ></Button>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={globalstyles.button}>
+                        <Button
+                            title="Delete"                            
+                            onPress={deleteProduct}
+                        ></Button>
+                    </TouchableOpacity>
+
+
                 </Card>
             </ScrollView>
         </View>

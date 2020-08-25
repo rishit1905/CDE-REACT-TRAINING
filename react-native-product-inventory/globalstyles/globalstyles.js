@@ -22,8 +22,10 @@ export const globalstyles = StyleSheet.create({
     textDetail: {
         paddingBottom: "1rem"
     },
-    button: {
-        marginBottom: 5
+    button:{
+        width:"50%",
+        alignSelf:"center",
+        marginTop:10
     },
     input: {
         margin: 10,

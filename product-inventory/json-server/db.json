@@ -1,16 +1,6 @@
 {
   "products": [
     {
-      "imageURL": "mob2.jpg",
-      "name": "Samsung",
-      "brand": "Samsung",
-      "description": "Mobiles to use",
-      "category": "Mobiles",
-      "price": "35999",
-      "stock": "250",
-      "id": 1
-    },
-    {
       "imageURL": "mob1.jpg",
       "name": "One Plus",
       "brand": "One Plus",
@@ -119,6 +109,13 @@
       "password": "abcd1234",
       "confirmpassword": "abcd1234",
       "id": 4
+    },
+    {
+      "image": "Profile.png",
+      "username": "abcd@gmail.com",
+      "password": "abcd1234",
+      "confirmpassword": "abcd1234",
+      "id": 5
     }
   ]
 }

@@ -39,12 +39,12 @@ export default function ProductList({ navigation }) {
                 value={search}
             >
             </SearchBar>
-            <Button
-                title="Add Product"
-                style={globalstyles.button}
-                onPress={() => navigation.navigate("Add Product", { item: products })}
-            ></Button>
-
+            <TouchableOpacity style={globalstyles.button}>
+                <Button
+                    title="Add Product"
+                    onPress={() => navigation.navigate("Add Product", { item: products })}
+                ></Button>
+            </TouchableOpacity>
             <ScrollView>
                 {
                     products.map(product => {

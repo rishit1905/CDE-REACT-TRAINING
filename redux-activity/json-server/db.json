@@ -10,15 +10,6 @@
       "id": 1
     },
     {
-      "imageURL": "https://www.gizmochina.com/wp-content/uploads/2019/05/OnePlus-7-Pro-5G-500x500.jpg",
-      "name": "One Plus",
-      "category": "Mobiles",
-      "price": "47000",
-      "quantity": "10",
-      "stock": "Yes",
-      "id": 2
-    },
-    {
       "imageURL": "https://images.jdmagicbox.com/quickquotes/images_main/dell-inspiron-3493-14-fhd-thin-and-light-laptop-10th-gen-ci5-1035g1-8gb-1tb-hdd-windows-10-ms-office-intel-hd-graphics-silver-no-bag-184486158-msjik.jpg",
       "name": "Dell Inspiron",
       "category": "Laptops",
@@ -116,6 +107,15 @@
       "quantity": "91",
       "stock": "Yes",
       "id": 28
+    },
+    {
+      "imageURL": "https://i.gadgets360cdn.com/products/large/1559043000_635_redmi_k20_pro.jpg",
+      "name": "K20",
+      "category": "Mobiles",
+      "price": "18000",
+      "quantity": "98",
+      "stock": "Yes",
+      "id": 29
     }
   ]
 }
