@@ -12,3 +12,4 @@ it("category renders without crash",()=>{
     const div=document.createElement("div")
     ReactDOM.render(<Category></Category>, div)
 })
+

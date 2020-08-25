@@ -11,3 +11,8 @@ it("Signup renders without crash",()=>{
     const div=document.createElement("div")
     ReactDOM.render(<Signup></Signup>, div)
 })
+
+it('Button renders in correct way', ()=>{
+    const {getByTestId} = render(<Signup></Signup>)
+    expect(getByTestId('signup')).toHaveTextContent('Create Account')
+})

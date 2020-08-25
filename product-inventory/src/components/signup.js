@@ -122,7 +122,7 @@ class Signup extends React.Component {
                         <input id="confirmpassword" type="password" onChange={this.confirmPassword} noValidate placeholder="Confirm Password" required />
                         {errors.confirmpassword.length > 0 && <span className='error'>{errors.confirmpassword}</span>}
                         <br />
-                        <button onClick={this.authorize} className="centersign" disabled={this.state.buttonStatus}>Create Account</button>
+                        <button data-testid="signup" onClick={this.authorize} className="centersign" disabled={this.state.buttonStatus}>Create Account</button>
                     </form>
                 </div>
             </div>

@@ -12,3 +12,8 @@ it("Inventory renders without crash",()=>{
     const div=document.createElement("div")
     ReactDOM.render(<Inventory></Inventory>, div)
 })
+
+it('Button renders in correct way', ()=>{
+    const {getByTestId} = render(<Inventory></Inventory>)
+    expect(getByTestId('inventorybutton')).toHaveTextContent('Add Product')
+})

@@ -105,8 +105,8 @@ class Stock extends React.Component {
     render() {
         return (
             <div className="row">
-                <button className="inventoryButton" onClick={this.sort}>Sort</button>
-                <button className="inventoryButton" onClick={this.reverse}>Reverse Sort</button>
+                <button data-testid="sort" className="inventoryButton" onClick={this.sort}>Sort</button>
+                <button data-testid="reverse" className="inventoryButton" onClick={this.reverse}>Reverse Sort</button>
                 <table id="product">
                     <tbody>
                         {this.renderAllProducts()}

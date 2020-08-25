@@ -11,3 +11,13 @@ it("Stock renders without crash",()=>{
     const div=document.createElement("div")
     ReactDOM.render(<Stock></Stock>, div)
 })
+
+it('Button renders in correct way', ()=>{
+    const {getByTestId} = render(<Stock></Stock>)
+    expect(getByTestId('sort')).toHaveTextContent('Sort')
+})
+
+it('Button renders in correct way', ()=>{
+    const {getByTestId} = render(<Stock></Stock>)
+    expect(getByTestId('reverse')).toHaveTextContent('Reverse Sort')
+})
