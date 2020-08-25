@@ -41,6 +41,7 @@ export default function ProductList({ navigation }) {
             </SearchBar>
             <TouchableOpacity style={globalstyles.button}>
                 <Button
+                    color="rgb(37, 37, 158)"
                     title="Add Product"
                     onPress={() => navigation.navigate("Add Product", { item: products })}
                 ></Button>

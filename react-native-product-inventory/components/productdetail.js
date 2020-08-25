@@ -53,13 +53,15 @@ export default function ProductDetail({ route, navigation }) {
                     <Text style={globalstyles.textDetail}><b>Stock:</b> {stock}</Text>
                     <TouchableOpacity style={globalstyles.button}>
                         <Button
+                            color="rgb(173, 42, 42)"
                             title="Update"
                             onPress={() => navigation.navigate("Update Product", { items: product })}
                         ></Button>
                     </TouchableOpacity>
                     <TouchableOpacity style={globalstyles.button}>
                         <Button
-                            title="Delete"                            
+                            color="rgb(81, 23, 146)"
+                            title="Delete"
                             onPress={deleteProduct}
                         ></Button>
                     </TouchableOpacity>

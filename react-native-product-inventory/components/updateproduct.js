@@ -95,6 +95,7 @@ export default function UpdateProduct({ route, navigation }) {
                 ></TextInput>
                 <TouchableOpacity style={globalstyles.button}>
                     <Button
+                        color="rgb(19, 100, 30)"
                         title="Update"
                         onPress={submit}
                     ></Button>

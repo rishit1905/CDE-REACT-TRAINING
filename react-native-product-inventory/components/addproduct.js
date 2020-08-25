@@ -87,6 +87,7 @@ export default function AddProduct({ navigation }) {
                 ></TextInput>
                 <TouchableOpacity style={globalstyles.button}>
                     <Button
+                        color="rgb(38, 38, 44)"
                         title="Add"
                         onPress={submit}
                     ></Button>

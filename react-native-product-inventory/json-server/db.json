@@ -31,16 +31,6 @@
       "id": 5
     },
     {
-      "imageURL": "https://www.asus.com/media/global/products/gperw1cncy0gejah/P_setting_F5F5F5_1_90_end_225.png",
-      "name": "ASUS Classic",
-      "brand": "Asus",
-      "description": "Laptop to use",
-      "category": "Laptops",
-      "price": "51000",
-      "stock": "98",
-      "id": 6
-    },
-    {
       "imageURL": "https://i.pinimg.com/originals/a2/d9/f2/a2d9f24d12f6a429e4e84261b8d1255e.jpg",
       "name": "Cannon EOS",
       "brand": "Canon",
