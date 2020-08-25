@@ -38,52 +38,58 @@ export default function UpdateProduct({ route, navigation }) {
     return (
         <View style={globalstyles.view}>
             <Card>
-                <Text>Image:</Text>
+                <Text style={globalstyles.text1}>Image:</Text>
                 <TextInput
                     defaultValue={imageURL}
                     placeholder="Enter image url*"
+                    style={globalstyles.input}
                     onChangeText={(text) => setImageURL(text)}
                 ></TextInput>
-                <Text>Product Name:</Text>
+                <Text style={globalstyles.text1}>Product Name:</Text>
                 <TextInput
                     placeholder="Product Name*"
                     defaultValue={name}
+                    style={globalstyles.input}
                     onChangeText={(text) => setName(text)}
                 ></TextInput>
-                <Text>Brand:</Text>
+                <Text style={globalstyles.text1}>Brand:</Text>
                 <TextInput
                     placeholder="Brand*"
                     defaultValue={brand}
+                    style={globalstyles.input}
                     onChangeText={(text) => setBrand(text)}
                 ></TextInput>
-                <Text>Description:</Text>
+                <Text style={globalstyles.text1}>Description:</Text>
                 <TextInput
                     placeholder="Description*"
                     multiline={true}
+                    style={globalstyles.input}
                     defaultValue={description}
                     onChangeText={(text) => setDescription(text)}
                 ></TextInput>
-                <Text>Category:</Text>
+                <Text style={globalstyles.text1}>Category:</Text>
                 <Picker
                     defaultValue={category}
-                    style={{ height: 50, width: 150 }}
+                    style={globalstyles.input1}
                     onValueChange={(itemValue, itemIndex) => setCategory(itemValue)}
                 >
                     <Picker.Item label="Mobiles" value="Mobiles" />
                     <Picker.Item label="Cameras" value="Cameras" />
                     <Picker.Item label="Laptops" value="Laptops" />
                 </Picker>
-                <Text>Price:</Text>
+                <Text style={globalstyles.text1}>Price:</Text>
                 <TextInput
                     placeholder="Price*"
                     keyboardType='number-pad'
+                    style={globalstyles.input}
                     defaultValue={`${price}`}
                     onChangeText={(text) => setPrice(text)}
                 ></TextInput>
-                <Text>Stock:</Text>
+                <Text style={globalstyles.text1}>Stock:</Text>
                 <TextInput
                     placeholder="Stock*"
                     keyboardType='number-pad'
+                    style={globalstyles.input}
                     defaultValue={`${stock}`}
                     onChangeText={(text) => setStock(text)}
                 ></TextInput>

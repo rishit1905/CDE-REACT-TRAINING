@@ -36,48 +36,54 @@ export default function AddProduct({ navigation }) {
     return (
         <View style={globalstyles.view}>
             <Card>
-                <Text>Image:</Text>
+                <Text style={globalstyles.text1}>Image:</Text>
                 <TextInput
                     placeholder="Enter image url*"
                     onChangeText={(text) => setImageURL(text)}
+                    style={globalstyles.input}
                 ></TextInput>
-                <Text>Product Name:</Text>
+                <Text style={globalstyles.text1}>Product Name:</Text>
                 <TextInput
                     placeholder="Product Name*"
                     onChangeText={(text) => setName(text)}
+                    style={globalstyles.input}
                 ></TextInput>
-                <Text>Brand:</Text>
+                <Text style={globalstyles.text1}>Brand:</Text>
                 <TextInput
                     placeholder="Brand*"
                     onChangeText={(text) => setBrand(text)}
+                    style={globalstyles.input}
                 ></TextInput>
-                <Text>Description:</Text>
+                <Text style={globalstyles.text1}>Description:</Text>
                 <TextInput
                     placeholder="Description*"
                     multiline={true}
                     onChangeText={(text) => setDescription(text)}
+                    style={globalstyles.input}
                 ></TextInput>
-                <Text>Category:</Text>
+                <Text style={globalstyles.text1}>Category:</Text>
                 <Picker
                     selectedValue={category}
-                    style={{ height: 50, width: 150 }}
+                    style={globalstyles.input1}
                     onValueChange={(itemValue, itemIndex) => setCategory(itemValue)}
                 >
                     <Picker.Item label="Mobiles" value="Mobiles" />
                     <Picker.Item label="Cameras" value="Cameras" />
                     <Picker.Item label="Laptops" value="Laptops" />
                 </Picker>
-                <Text>Price:</Text>
+                <Text style={globalstyles.text1}>Price:</Text>
                 <TextInput
                     placeholder="Price*"
                     keyboardType='number-pad'
                     onChangeText={(text) => setPrice(text)}
+                    style={globalstyles.input}
                 ></TextInput>
-                <Text>Stock:</Text>
+                <Text style={globalstyles.text1}>Stock:</Text>
                 <TextInput
                     placeholder="Stock*"
                     keyboardType='number-pad'
                     onChangeText={(text) => setStock(text)}
+                    style={globalstyles.input}
                 ></TextInput>
                 <Button
                     title="Add"

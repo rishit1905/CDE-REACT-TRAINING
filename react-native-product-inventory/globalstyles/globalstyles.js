@@ -9,16 +9,36 @@ export const globalstyles = StyleSheet.create({
         width: 300,
         height: 250,
         marginBottom: "1.5rem",
-        alignSelf:"center"
+        alignSelf: "center"
     },
     text: {
         alignSelf: "center",
-        fontWeight:"600"
+        fontWeight: "600"
+    },
+    text1: {
+        fontWeight: "600",
+        alignSelf: "center"
     },
     textDetail: {
-        paddingBottom:"1rem"
+        paddingBottom: "1rem"
     },
-    button:{
-        marginBottom:5
+    button: {
+        marginBottom: 5
+    },
+    input: {
+        margin: 10,
+        height: 40,
+        borderColor: 'grey',
+        borderWidth: 1,
+        borderRadius:"5px",
+        textAlign: "center"
+    },
+    input1: {
+        margin: 10,
+        height: 40,
+        borderColor: 'grey',
+        borderWidth: 1,
+        borderRadius:"5px",
+        alignSelf:"center"
     }
 })
