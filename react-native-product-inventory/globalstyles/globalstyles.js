@@ -13,34 +13,62 @@ export const globalstyles = StyleSheet.create({
     },
     text: {
         alignSelf: "center",
-        fontWeight: "600"
+        fontWeight: "600",
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 5,
+        },
+        shadowOpacity: 0.58,
+        shadowRadius: 16.00,
+        padding: 5,
+        color: "rgb(34, 34, 34)"
     },
     text1: {
         fontWeight: "600",
         alignSelf: "center"
     },
     textDetail: {
-        paddingBottom: "1rem"
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 4,
+        },
+        shadowOpacity: 0.30,
+        shadowRadius: 4.65,
+        marginTop:"0.5rem",
+        padding: "1rem"
     },
-    button:{
-        width:"50%",
-        alignSelf:"center",
-        marginTop:10
+    button: {
+        width: "50%",
+        alignSelf: "center",
+        marginTop: 15
     },
     input: {
         margin: 10,
         height: 40,
-        borderColor: 'grey',
-        borderWidth: 1,
-        borderRadius:"5px",
-        textAlign: "center"
+        borderRadius: "5px",
+        textAlign: "center",
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84
     },
     input1: {
         margin: 10,
         height: 40,
-        borderColor: 'grey',
-        borderWidth: 1,
-        borderRadius:"5px",
-        alignSelf:"center"
+        borderColor: 'white',
+        borderRadius: "5px",
+        alignSelf: "center",
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84
     }
 })

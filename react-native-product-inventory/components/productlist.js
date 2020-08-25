@@ -50,15 +50,17 @@ export default function ProductList({ navigation }) {
                     products.map(product => {
                         return (
                             <View key={product.id}>
-                                <Card>
-                                    <TouchableOpacity onPress={() => navigation.navigate("Product Detail", { item: product })}>
+                                <TouchableOpacity onPress={() => navigation.navigate("Product Detail", { item: product })}>
+                                    <Card>
                                         <Image
                                             source={{ uri: product.imageURL }}
                                             style={globalstyles.images}
                                         />
-                                        <Text style={globalstyles.text}>{product.name}</Text>
-                                    </TouchableOpacity>
-                                </Card>
+                                        <TouchableOpacity onPress={() => navigation.navigate("Product Detail", { item: product })}>
+                                            <Text style={globalstyles.text}>{product.name}</Text>
+                                        </TouchableOpacity>
+                                    </Card>
+                                </TouchableOpacity>
                             </View>
                         )
                     })
